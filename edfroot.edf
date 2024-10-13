@@ -43,5 +43,10 @@ include("edf/deltas/weapondeltas/rocketlauncherdelta.edf")
 include("edf/deltas/weapondeltas/plasmarifledelta.edf")
 include("edf/deltas/weapondeltas/bfgdelta.edf")
 
+// Modded items
+include("edf/deltas/itemdeltas/ammodeltas.edf")
+include("edf/deltas/itemdeltas/armordeltas.edf")
+include("edf/deltas/itemdeltas/keydeltas.edf")
+
 //sound code
 include("edf/sound/sounddefs.edf")

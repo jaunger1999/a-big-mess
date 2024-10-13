@@ -1,7 +1,6 @@
 [MAP01]
 	levelname = Map 1: A Big Mess
 	creator = jaunger
-	music = D_CLUB
 	inter-levelname = A Big Mess
 	nextlevel = MAP02
 	disable-jump = true
@@ -22,9 +21,23 @@
 	killfinale = true
 	disable-jump = true
 [MAP04]
-	levelname = Map 3: Ripping Off Romero
+	levelname = Map 4: Ripping Off Romero
 	creator = jaunger
 	nextlevel = MAP05
 	partime = 840
 	killfinale = true
 	disable-jump = true
+[MAP05]
+	levelname = Map 5: The Devil's Punch Bowl
+	creator = jaunger
+	music = D_APRIL
+	partime = 720
+	disable-jump = true
+	finale-early = true
+[MAP06]
+	levelname = Map 6: Consternation! in da Club
+	creator = jaunger
+	music = D_CLUB
+	partime = 720
+	disable-jump = true
+	finale-early = true
