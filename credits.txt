@@ -1,0 +1,188 @@
+* Credits *
+
+Bowling Strike Sound by SieuAmThanh from freesound.org
+
+A midi rendition of "My Spirit Will Go On" by Dragonforce, midi sequenced by Knightrider of Doom
+
+Resources:
+Aquila Chrysaetos - SKYE4BLU; SKYE4BRO; SKYE4FIX; SKYE4GRA; SKYE4GRE; SKYE4RED
+Cage - SKY-R01
+Chaingunner - SKY-B02; SKY-GR01; SKY-O02; SKY-R03; SKY-R04; SKYTREE1; SKYTREE2; SKYTREE3
+elend - SKY-G03; SKY-R05
+Eradrop - SKY-G04
+Fuzzball - SKY-B01; SKY-B03; SKY-B04; SKY-B05; SKY-B06; SKY-G01; SKY-G02; SKY-GR02; SKY-GR03; SKY-O03; SKY-O04; SKY-O05; SKY-R06; SKY-Y01; SKY-Y02; SKY-Y03
+Hellstorm Archon - SKY-CIT1
+IMX - SKY-R07; SKY-ST01; SKYO01 (Fuzzball recolour)
+osjclatchford - SKYCLOU1; SKYCLOU2; SKYCLOU3; SKY-R08
+RoboNuclear Asshat - SKY-ST02
+YukiHerz - SKYSKULL
+Yuki Senmatsu - SKY_R02
+zrrion the insect - SKY1TALL; SKY3TALL
+
+Enjay - STATIC13; STATIC14; STATIC15; STATIC16
+FuzzballFox - STATIC01; STATIC02; STATIC03; STATIC04; STATIC05; STATIC06; STATIC07; STATIC08; STATIC09; STATIC10; STATIC11; STATIC12
+
+OTEX by ukiro
+Duke Nukem 3D Textures by 3D Realms
+Custom Weapon/Sky Graphics and various effects sourced from Paradise by Tango
+
+Custom Environment Graphics from Walk in the Park by Danlex.
+
+Allied Marines Pack Credits from Realm667
+Submitted by: DBJ87
+Decorate Created by: DBJ87
+Palette: PNG Palette
+Brightmaps: Yes
+Sprites: ID Software, DBJ87, Mark Quinn, Anthony Cole, Xim, CaptainToenail, FuzzballFox, Alando1, Skulltag
+Sprite Edit: DBJ87
+Brightmaps Edit: DBJ87
+SFX: Custom, That_One_Doom_Mod, Doom3, CthulhuCultist, Tormentor667, Skulltag Team, Eriance, Raven Software, Rise of the Triad,
+Xim's Marine Pack, Doom64
+Idea Base: Own Idea, yuraofthehairfan (Colour Blending & Captive Marines)
+
+I take no credit for other people's work, such as the sprites & sounds used.
+I only take credit for:
+-The Decorate & SoundInfo
+-Editing the 2nd Rocket Marine (from Xim’s Marine pack) to make the Bombardier.
+-Creating both of the Sniper Marine's (from Alando1’s Allied Marines V3) Death Sprites.
+-*Adding the colour-blends & a tutorial on how to use this. (See COLOURS on File).
+-Creating all the Brightmaps used by the Marines, excluding Marine 3 which has Doom's Marine Brightmaps.
+-Creating a new/updated Plasma Marine Firing Sprite set F.
+-Creating a new Chaingun Marine Firing Sprite set X.
+-**Creating a Captive Marine Situation where you can decide the fate of captured allies
+
+*Credit & thank you to yuraofthehairfan for suggesting this as a replacement to 
+Team Deathmatch or Co-operative style game play. And extra variety to the Marines. 
+-**Credit & thank you to yuraofthehairfan for suggesting this too for and all 
+the help given throughout this whole project.
+-Thank you to MagicWazard for helping to simplify freeing the Marines.
+-Thank You to Blue Shadow for helping to simplify activation Radius of Captives.
+
+Credit for the sprites:
+ID Software: Machinegun Marine (Doom Player)
+Marine Mark Quinn: Melee, Pistol, Chainsaw & Shotgun Marines
+Anthony Cole: Chaingun Marine Xim, CaptainToenail & FuzzballFox: Minigunner, 
+Plasma Rocket, BFG-9000, Railgun Marines & Alternative Rocket Launcher Sprites 
+that I used for the Bombardier.
+Bombardier's Seeker Missile: Taken from several Rocket Launcher alternatives 
+from the99 Weapons Wad submitted to Doomworld.com by Daniel
+Alando1's Friendly Co-operatives2: Sniper Marine
+Xim's Sniper Marine for Bullet Sprites, Sound & Decorate Set up, used to help me 
+set up my own Sniper Marine.
+Skulltag & Captain Toenail: The Bound Marines
+
+Thank you to yuraofthehairfan, Blue Shadow, DreadOpp & MagicWazard.
+Thank you to the Epidermis Emporium, DoomLegends, DoomWorld.
+--
+
+From Heartland:
+Custom Weapon and Gore Graphics/EDF from Heartland by Xaser & Esselfortium 
+respectively.
+Custom Smoke/Glass Graphics/Effects.
+Orange Armor & Megapack.
+
+ReaperAA's Coldpal color palette as a base for my own color palette.
+
+The Minor Sprite Fixing Project by Revenant100
+Smooth Doom by Gifty
+
+Custom Monsters:
+
+From Realm667 {
+Cybruiser
+ - Submitted: Tormentor667
+ - Code: Amuscaria, Ghastly (ZScript conversion)
+ - GLDefs: Dreadopp, SandyPaper (Brightmaps)
+ - Sounds: id Software, Amuscaria
+ - Sprites: id Software, Raven Software, Wolfendoom
+ - Sprite Edit: Amuscaria
+ - Idea Base: Doom 2 Cyberdemon
+
+Grell
+ - Submitted: Xaser
+ - Code: Xaser, Ghastly (ZScript conversion)
+ - GLDefs: Eriance (from Vulgar), Sandypaper (brightmaps)
+ - Sounds: id Software (from Quake II)
+ - Sprites: NMN (enemy), Eriance (projectile)
+ - Idea Base: D&D's Grell enemy
+
+Rocket Zombie
+ - Submitted: Tormentor667
+ - Code: Graf Zahl, Ghastly (ZScript conversion)
+ - GLDefs: Dreadopp, Sandypaper (Brightmaps)
+ - Sounds: Id Software
+ - Sprites: Id Software
+ - Sprite Edit: The Innocent Crew
+
+Suicide Bomber
+ - Submitted: Tormentor667
+ - Code: Tormentor667, Ghastly (ZScript conversion)
+ - GLDefs: Dreadopp, Sandypaper (Brightmaps)
+ - Sounds: Id Software, Croteam (Serious Sam)
+ - Sprites: Id Software, Mark Quinn, Anthony Cole
+ - Sprite Edit: Tormentor667
+ - Idea Base: Suicide Bomber from Serious Sam
+
+Afrit
+ - Submitted: Tormentor667
+ - Code: Nanami, Ghastly_dragon
+ - GLDefs: Keksdose, Herculine (Brightmaps)
+ - Sounds: Id Software
+ - Sprites: Id Software
+ - Sprite Edit: Espi, Ebola
+
+Arachnorb 
+ - Submitted: Jimmy91
+ - Decorate: Jimmy91
+ - GLDEFs: Jimmy91, Sandypaper (Brightmaps)
+ - Sounds: Jimmy91 (edits), id Software, 3DRealms
+ - Sprites: id Software, 3DRealms
+ - Sprite Edit: Jimmy91, Yurithehairfan
+ - Idea Base: Duke Nukem 3D Octabrain
+ 
+Baby Cacodemon
+ - Submitted: Yuraofthehairfan
+ - Decorate: Yuraofthehairfan, MagicWazard, IMX
+ - GLDefs: MagicWazard
+ - Sounds: Scroton, IMX, MagicWazard, id Software, Raven Software
+ - Sprites: id Software
+ - Sprite Edit: osjclatchford
+ - Idea Base: A baby version of the Cacodemon from the ZDoom forums
+}
+
+Demon gib death - Jimmy
+Baron/Hell Knight gib death - Eriance
+Cacodemon gib death - David G.
+
+Amuscaria (Formerly Eriance) Nightmare Demon Sprites & Sounds from Eviternity,
+ which were sourced from Hellforged and edited by Eris Falling
+
+Amuscaria (Formerly Eriance) & Vader Astral Cacodemon Sprites - Sourced from 
+the Realm667 Bestiary: "Poe"
+
+Alien Guardian sourced from Ancient Aliens
+
+Plasma Zombie sourced from Headless Chicken
+
+Balrog???
+From the NES game Punch-Out. 
+Submitted by evildevil, Mr. L on www.spriters-resource.com.
+
+Map 1: Me
+	Music: Lucretia My Reflection by Sisters of Mercy, sequenced by Supreme MIDI
+	
+Map 2: Residence Malevolence
+	Music: D_DDTBL2 from Rock it! Electronic Edition by Mr. Chris.
+	The layout is loosely based on my memory of the Resident Evil mansion from 
+	several years ago.
+	
+Map 3: Mike Tyson's Lunch Out
+	Music: Gossamer by James Paddock/Punch Out's Fight Theme by Kenji Yamamoto
+	The handicap parking space design is from UAC: The Supply Depot by DooMknight.
+	The NES Punch Out section is based on the one from Skillsaw's Vanguard.
+	
+Map 6: Based on Walk in the Park by Danlex.
+	Music:
+	
+If I all of a sudden used something that is yours and you don't want me to use
+it, I'll take it out without question.

@@ -1,0 +1,36 @@
+thingdelta
+{
+  name Sergeant
+
+  bloodtype.normal DoomBloodSpray
+  bloodtype.impact DoomBloodSpray
+  bloodtype.rip DoomBloodSpray
+  bloodtype.crush DoomBloodSpray
+
+  cleardropitems
+  droptype AmmoShells 
+  
+  states
+  @"
+  XDeath:
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 17)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 19)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 11)
+    SPOS M 5
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 12)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 10)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 6)
+    SPOS N 5 A_XScream()
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)
+    SPOS O 5 A_Fall()
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 4)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+    SPOS PQRST 5 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+  RestingXDeath:
+    SPOS U -1
+    stop
+	"@
+}

@@ -1,0 +1,19 @@
+thingdelta
+{
+  name ComputerMap
+  
+  pickupeffect
+  {
+    effects Allmap
+    message $GOTMAP
+    sound   getpow
+	flags   ALWAYSPICKUP
+  }
+
+  states
+  @"
+  Spawn:
+    CMAP ABCDEFGH 3 bright
+    loop
+  "@
+}

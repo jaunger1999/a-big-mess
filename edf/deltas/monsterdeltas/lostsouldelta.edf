@@ -1,0 +1,13 @@
+thingdelta
+{
+  name LostSoul
+	
+  spawnhealth 80
+	
+  addflags NOBLOOD
+
+  bloodtype.normal BulletPuff
+  bloodtype.impact BulletPuff
+  bloodtype.rip  BulletPuff
+  bloodtype.crush  NonBlood
+}

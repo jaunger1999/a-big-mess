@@ -1,0 +1,134 @@
+thingdelta
+{
+  name DoomBlueCard
+
+  pickupeffect
+  { 
+    effects BlueCard
+    message $GOTBLUECARD
+    sound   "getkey"
+    flags   ALWAYSPICKUP|LEAVEINMULTI
+  }
+
+  states
+  @"
+  Spawn:
+    BKEY ABC 4 bright
+    BKEY DEF 4
+    BKEY GHI 4 bright
+    BKEY JKL 4
+    loop
+  "@
+}
+
+thingdelta
+{
+  name DoomRedCard
+  
+  pickupeffect
+  {
+    effects RedCard
+    message $GOTREDCARD
+    sound   "getkey"
+    flags   ALWAYSPICKUP|LEAVEINMULTI
+  }
+
+  states
+  @"
+  Spawn:
+    RKEY ABC 4 bright
+    RKEY DEF 4
+    RKEY GHI 4 bright
+    RKEY JKL 4
+    loop
+  "@
+}
+
+thingdelta
+{
+  name DoomYellowCard
+
+  pickupeffect
+  {
+    effects YellowCard
+    message $GOTYELWCARD
+    sound   "getkey"
+    flags   ALWAYSPICKUP|LEAVEINMULTI
+  }
+
+  states
+  @"
+  Spawn:
+    YKEY ABC 4 bright
+    YKEY DEF 4
+    YKEY GHI 4 bright
+    YKEY JKL 4
+    loop
+  "@
+}
+
+thingdelta
+{
+  name DoomBlueSkull
+
+  pickupeffect
+  {
+    effects BlueSkull
+    message $GOTBLUESKUL
+    sound   "getskull"
+    flags   ALWAYSPICKUP|LEAVEINMULTI
+  }
+
+  states
+  @"
+  Spawn:
+    BSKU ABCD 4 bright
+    BSKU EFGH 4
+    loop
+  "@
+}
+
+thingdelta
+{
+  name DoomRedSkull
+
+  pickupeffect
+  {
+    effects RedSkull
+    message $GOTREDSKULL
+    sound   "getskull"
+    flags   ALWAYSPICKUP|LEAVEINMULTI
+  }
+
+  states
+  @"
+  Spawn:
+    RSKU ABCD 4 bright
+    RSKU EFGH 4
+    loop
+  "@
+}
+
+thingdelta
+{
+  name DoomYellowSkull
+
+  pickupeffect
+  {
+    effects YellowSkull
+    message $GOTYELWSKUL
+    sound   "getskull"
+    flags   ALWAYSPICKUP|LEAVEINMULTI
+  }
+
+  states
+  @"
+  Spawn:
+    YSKU ABCD 4 bright
+    YSKU EFGH 4
+    loop
+  "@
+}
+
+sound "getkey"    { lump "DSGETKEY"; pitchvariance Doom; }
+sound "getskull"  { lump "DSGETSKL"; pitchvariance Doom; }

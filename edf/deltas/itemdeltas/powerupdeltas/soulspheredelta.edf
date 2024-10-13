@@ -1,0 +1,37 @@
+thingdelta
+{
+  name SoulSphere
+  
+  pickupeffect
+  {
+    effects Soulsphere
+    message $GOTSUPER
+    sound   getpow
+    flags   ALWAYSPICKUP
+  }
+
+  states
+  @"
+  Spawn:
+    ZOUL A 7 bright
+    ZOUL B 2 bright
+	ZOUL C 3 bright
+	ZOUL D 2 bright
+	ZOUL E 3 bright
+	ZOUL F 2 bright
+	ZOUL G 2 bright
+	ZOUL H 2 bright
+	ZOUL I 2 bright
+	ZOUL J 2 bright
+	ZOUL K 6 bright
+    ZOUL I 2 bright
+	ZOUL H 3 bright
+	ZOUL G 2 bright
+	ZOUL F 3 bright
+	ZOUL E 2 bright
+	ZOUL D 3 bright
+	ZOUL C 2 bright
+	ZOUL B 3 bright
+    loop
+  "@
+}

@@ -1,0 +1,31 @@
+thingdelta {
+  name Spectre
+  
+  gibhealth -75
+  
+  bloodtype.normal DoomBloodSpray
+  bloodtype.impact DoomBloodSpray
+  bloodtype.rip DoomBloodSpray
+  bloodtype.crush DoomBloodSpray
+  
+  states
+  @"
+    XDeath:
+      TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 14)
+      TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 12)
+      TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 11)
+      SARG O 7
+	  TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 11)
+      TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 10)
+      TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 9)
+      SARG P 7 A_XScream
+	  TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 14)
+      TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 12)
+      TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 11)
+      SARG Q 7
+      SARG R 7 A_Fall
+      SARG ST 7
+      SARG U -1
+      stop
+  "@
+}

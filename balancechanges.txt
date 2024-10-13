@@ -1,0 +1,46 @@
+Weapons:
+ - Chainsaw "firerate" has been lowered from every 5 to every 4 tics. 
+   (Actually a huge difference that keeps you stuck to fast enemies.)
+ - Pistol firerate has been lowered from every 14 to every 13 tics.
+   (A bigger difference than you would think)
+ - Shotgun firerate has been lowered from every 35 to every 32 tics.
+
+ - Fist damage has been increased from [2-20] in multiples of 2 to [3-60] damage 
+   in multiples of 3.
+ - Berserk multipler has been decreased from 10 to 6.
+ - Pistol damage increased from [5-15] in multiples of 5 to [6-18] in multiples 
+   of 6.
+ - Chaingun damage increased from [5-15] in multiples of 5 to [6-18] in 
+   multiples of 6.
+ 
+ - The Pistol is always perfectly accurate.
+ - The Chaingun is never perfectly accurate.
+   (Try the pistol for sniping instead.)
+   
+ - The BFG can now be fired after holding the fire button during its raise
+   animation.
+ - The Rocket Launcher can now be fired after holding the fire button during 
+   its raise animation.
+
+Enemies:
+ - Revenant Fireballs deal [9-72] damage in multiples of 9.
+ - Arachnotron Bolts deal [4-32] damage in multiples of 4.
+
+ - Shotgunners drop 4 shells now.
+ - Chaingunners drop a clip now.
+
+ - Lost Souls have 80 health.
+
+ - Revenants are 72 map units tall.
+
+ - Arachnotrons have a 48 map unit radius.
+ - Mancubi have a 42 map unit radius.
+
+ - Mancubi painchance increased from 80 to 90 (for chainsaw reliability)
+
+ - Enemies randomly wander after a period of time without interaction with their 
+   target.
+
+Player:
+ - Starting bullets lowered from 50 to 30 (for the purposes of making
+   UV Tyson more interesting.)

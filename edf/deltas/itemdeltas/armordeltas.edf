@@ -1,0 +1,25 @@
+thingdelta {
+  name GreenArmor
+	
+  states
+  @"
+  Spawn:
+    ARM1 AABC 2 bright
+    ARM1 DEFGHGFED 3
+    ARM1 CB 2 bright
+    loop
+  "@
+}
+
+thingdelta {
+  name BlueArmor
+	
+  states
+  @"
+  Spawn:
+    ARM2 AABC 2 bright
+    ARM2 DEFGHGFED 3
+    ARM2 CB 2 bright
+    loop
+  "@
+}

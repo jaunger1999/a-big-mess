@@ -1,0 +1,19 @@
+thingdelta
+{
+  name InvisiSphere
+  
+  pickupeffect
+  {
+    effects BlurSphere
+    message $GOTINVIS
+    sound   getpow
+    flags   ALWAYSPICKUP
+  }
+
+  states
+  @"
+  Spawn:
+    NVIS ABCDEFGFEDBC 4 bright
+    loop
+  "@
+}

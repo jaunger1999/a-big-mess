@@ -1,0 +1,10 @@
+thingdelta {
+  name Spiderdemon
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood  
+  bloodtype.crush DoomBloodSpray
+  
+  remflags NORADIUSDMG
+}

@@ -1,0 +1,35 @@
+/**
+ * [skillsaw project]
+ *
+ * Effects: Glass
+ */
+
+thingtype GlassJunk
+{
+  basictype Projectile
+
+  radius       2.0
+  height       2.0
+  addflags     SPACMISSILE|NOBLOCKMAP|MISSILE|TRANSLUCENT|TLSTYLEADD|LOGRAV
+  remflags     NOGRAVITY
+  translucency 45%
+
+  acs_spawndata
+  {
+    num 252
+    modes doom
+  }
+
+  states
+  @"
+  Spawn:
+    NJGL ABCDE 4
+    loop
+  Death:
+    NJGL E 150
+    TNT1 A 1
+    stop
+  "@
+}
+
+sound "glass1"  { lump "DSGLASS1"; pitchvariance Doom; }

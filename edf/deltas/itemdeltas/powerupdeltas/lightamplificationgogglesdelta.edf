@@ -1,0 +1,22 @@
+thingdelta
+{
+  name LightAmpVisor
+  
+  pickupeffect
+  {
+    effects Infrared
+    message $GOTVISOR
+    sound   getpow
+    flags   ALWAYSPICKUP
+  }
+
+  states
+  @"
+  Spawn:
+    SVIS A             12
+	SVIS BC             3
+    SVIS DEFGHIJKLMNOED 2 bright
+    SVIS CB             3
+    loop
+  "@
+}

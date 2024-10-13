@@ -1,0 +1,20 @@
+playerdelta
+{
+  name DoomMarine
+  
+  clearrebornitems
+      
+  rebornitem AmmoClip, 25
+  rebornitem Fist
+  rebornitem Pistol
+}
+
+thingdelta
+{
+  name DoomPlayer
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood
+  bloodtype.crush PersistentDoomBlood
+}

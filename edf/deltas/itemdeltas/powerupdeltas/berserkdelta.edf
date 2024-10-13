@@ -1,0 +1,12 @@
+thingdelta
+{
+  name BerzerkBox
+  
+  pickupeffect
+  {
+    effects      Berserk, BerserkHealth
+    changeweapon Fist
+    message      $GOTBERSERK
+    sound        "bigboypowerup"
+  } 
+}

@@ -1,0 +1,17 @@
+thingdelta {
+  name CommanderKeen
+  
+  bloodtype.normal DoomBloodSpray
+  bloodtype.impact DoomBloodSpray
+  bloodtype.rip DoomBloodSpray  
+  bloodtype.crush DoomBloodSpray
+}
+
+thingdelta {
+  name BossBrain
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood  
+  bloodtype.crush DoomBloodSpray
+}

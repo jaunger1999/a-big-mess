@@ -1,0 +1,28 @@
+thingtype PainElementalChunk
+{  
+  cflags      NOSPLASH|NOCROSS|CORPSE|FLOORCLIP
+  radius      8.0
+  height      1.0
+  mass        1
+  spawnhealth 1
+
+  states
+  @"
+  Spawn:
+    CAGI IJKLMNOP 2 A_SpawnAbove(BloodTrail, -1, 0)
+    loop
+  Crash:
+    TNT1 A 0 A_Jump(128, DeathA)
+    goto DeathB
+  DeathA:
+    CAGI Q 1500
+    CAGI Q 0 A_SetCounter(1, 1, add)
+    CAGI Q 1 A_FadeOut(0.025)
+    CAGI Q 0 A_CounterJumpEx(-2, less, 40, 1)
+  DeathB:
+    CAGI R 1500
+    CAGI R 0 A_SetCounter(1, 1, add)
+    CAGI R 1 A_FadeOut(0.025)
+    CAGI R 0 A_CounterJumpEx(-2, less, 40, 1)
+  "@
+}

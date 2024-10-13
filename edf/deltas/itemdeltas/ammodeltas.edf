@@ -1,0 +1,110 @@
+/*
+ * Change item pickup sounds for better audio feedback.
+ */
+thingdelta {
+  name Backpack
+
+  pickupeffect {
+    effects BackpackItem
+    message $GOTBACKPACK
+    sound "getbackpack"
+    flags   ALWAYSPICKUP|GIVESBACKPACKAMMO    
+  }
+}
+
+thingdelta {
+  name AmmoCell
+  
+  pickupeffect {
+    effects Cell
+    message $GOTCELL
+    sound   "getcell"
+  }
+}
+
+thingdelta {
+  name AmmoCellPack
+  
+  pickupeffect {
+    effects CellPack
+    message $GOTCELLBOX
+    sound   "getcellpack"
+  }
+}
+
+thingdelta {
+  name AmmoShells
+  
+  pickupeffect
+  {
+    effects Shell
+    message $GOTSHELLS
+    sound   "getshells"
+  }
+}
+
+thingdelta {
+  name AmmoShellBox
+  
+  pickupeffect {
+    effects ShellBox
+    message $GOTSHELLBOX
+    sound   "getshellbox"
+  }
+}
+
+thingdelta {
+  name AmmoClip
+  
+  pickupeffect
+  {
+    effects Clip
+    message $GOTCLIP
+    sound   "getclip"
+  }
+}
+
+thingdelta {
+  name AmmoBulletBox
+  
+  pickupeffect {
+    effects ClipBox
+    message $GOTCLIPBOX
+    sound   "getbulletbox"
+  }
+}
+
+thingdelta {
+  name AmmoRocket
+  
+  pickupeffect
+  {
+    effects RocketAmmo
+    message $GOTROCKET
+    sound   "getrocket"
+  }
+}
+
+thingdelta {
+  name AmmoRocketBox
+  
+  pickupeffect {
+    effects RocketBox
+    message $GOTROCKBOX
+    sound   "getrocketbox"
+  }
+}
+
+sound "getclip" { lump "GSCLIP"; pitchvariance Doom; }
+sound "getbulletbox" { lump "GSCLIPBOX"; pitchvariance Doom; }
+
+sound "getrocket" { lump "GSROCK"; pitchvariance Doom; }
+sound "getrocketbox" { lump "GSROCKBOX"; pitchvariance Doom; }
+
+sound "getcell" { lump "GSCELL"; pitchvariance Doom; }
+sound "getcellpack" { lump "GSCELLBOX"; pitchvariance Doom; }
+
+sound "getshells" { lump "GSSHELL"; pitchvariance Doom; }
+sound "getshellbox" { lump "GSSHBOX"; pitchvariance Doom; }
+
+sound "getbackpack" { lump "GSBPACK"; pitchvariance Doom; }

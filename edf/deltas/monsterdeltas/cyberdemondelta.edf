@@ -1,0 +1,8 @@
+thingdelta {
+  name Cyberdemon
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood
+  bloodtype.crush DoomBloodSpray
+}

@@ -1,0 +1,11 @@
+thingdelta
+{
+  name Revenant
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood  
+  bloodtype.crush PersistentDoomBlood
+  
+  height 72
+}

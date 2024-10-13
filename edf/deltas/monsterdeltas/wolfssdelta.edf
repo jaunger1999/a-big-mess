@@ -1,0 +1,8 @@
+thingdelta {
+  name WolfSS
+  
+  bloodtype.normal DoomBloodSpray
+  bloodtype.impact DoomBloodSpray
+  bloodtype.rip DoomBloodSpray  
+  bloodtype.crush DoomBloodSpray
+}

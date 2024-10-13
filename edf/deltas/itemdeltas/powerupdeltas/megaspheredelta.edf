@@ -1,0 +1,22 @@
+thingdelta
+{
+  name Megasphere
+  
+  pickupeffect
+  {
+    effects MegasphereHealth, BlueArmor
+    message $GOTMSPHERE
+    sound   "bigboypowerup"
+    flags   ALWAYSPICKUP|COMMERCIALONLY
+  }
+
+  
+  states
+  @"
+  Spawn:
+    SMEG A 6 bright
+	SMEG BCDEFG 3 bright
+	SMEG HI 2 bright
+    loop
+  "@
+}

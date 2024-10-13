@@ -1,0 +1,118 @@
+/**
+ * [skillsaw project]
+ *
+ * Effects: Smoke
+ */
+thingdelta
+{
+  name RocketShot
+  
+  states
+  @"
+  Spawn:
+    MISL A 8 bright
+    MISL A 2 bright A_SpawnEx(OGTracerSmoke, none, -25, 0, 7)
+    goto Spawn + 1
+  Death:
+    MEXP G 2 bright A_Explode()
+    MEXP H 0 bright A_SteamSpawn(RocketExplosionSmoke, 359, 45, 45, 1)
+    MEXP H 0 bright A_SteamSpawn(RocketExplosionSmoke, 359, 45, 45, 1)
+    MEXP H 0 bright A_SteamSpawn(RocketExplosionSmoke, 359, 45, 45, 1)
+    MEXP H 1 bright A_SteamSpawn(RocketExplosionSmoke, 359, 45, 45, 1)
+    MEXP ABC 2 bright
+    MEXP DE 3 bright
+    MEXP F 4 bright
+    TNT1 A 15 bright // for sound
+    stop
+  "@
+}
+
+
+thingdelta
+{
+  name BulletPuff
+
+  states
+  @"
+  Spawn:
+    BPUF A 3 Bright
+    BPUF B 2 Bright
+    BPUF CDEFGH 2
+    stop
+  "@
+}
+
+thingtype OGTracerSmoke {
+  inherits = TracerSmoke
+  
+  states
+  @"
+  Spawn:
+    PUFF CD 4
+    stop
+  "@
+}
+
+thingdelta
+{
+  name TracerSmoke
+  
+  addflags TLSTYLEADD
+  
+  translucency 75%
+  xscale       0.5
+  yscale       0.5
+
+  states
+  @"
+  XDeath:
+  Spawn:
+    REVS ABCDE 4
+    stop
+  "@
+}
+
+thingtype SmokeEffect
+{
+  basictype Projectile
+
+  radius 1.0
+  height 1.0
+  speed  0
+  translucency 75%
+
+  addflags NOCLIP
+
+  states
+  @"
+  Spawn:
+  Death:
+    TNT1 A 3
+    SMX5 ABCDEFGHI 4
+    Stop
+  "@
+}
+
+thingtype RocketTrail
+{
+  inherits = SmokeEffect
+
+  addflags TLSTYLEADD
+
+  translucency 25%
+  xscale       0.3
+  yscale       0.3
+}
+
+thingtype RocketExplosionSmoke
+{
+  inherits = SmokeEffect
+
+  translucency 33%
+  
+  acs_spawndata
+  {
+    num 253
+    modes doom
+  }
+}

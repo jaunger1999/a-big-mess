@@ -1,0 +1,29 @@
+/*
+thingdelta {
+  name PainElemental
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood  
+  bloodtype.crush DoomBloodSpray
+  
+  /*
+  TNT1 A 0 A_SteamSpawn(PainElementalChunk, 359, 90, 45, 17)
+  TNT1 A 0 A_SteamSpawn(PainElementalChunk, 359, 90, 45, 19)
+  TNT1 A 0 A_SteamSpawn(PainElementalChunk, 359, 90, 45, 11)
+  TNT1 A 0 A_SteamSpawn(PainElementalChunk, 359, 90, 45, 17)
+  
+  
+  states
+  @"
+  Death:
+    PAIN H  8 bright
+    PAIN I  8 bright A_Scream
+    PAIN JK 8 bright
+    PAIN L  8 bright A_PainDie
+	
+    PAIN M  8 bright
+    stop
+  "@
+}
+*/

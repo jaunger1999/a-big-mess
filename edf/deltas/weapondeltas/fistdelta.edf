@@ -1,0 +1,27 @@
+weapondelta
+{
+  name Fist
+  
+  states
+  @"
+  Ready:
+    PUNG A 1 A_WeaponReady
+    loop
+  //9 Lower and 4 Raise result in the exact same timing as vanilla doom.
+  Deselect:
+    PUNG A 1 A_Lower(9)
+    loop
+  Select:
+    PUNG A 1 A_Raise(12)
+    loop
+  Fire:	
+	//Two frames before impact makes it look punchier.
+	PKFS B 1
+	PKFS C 3
+	PKFS E 2 A_Punch //A_CustomPlayerMelee(3, 20, 4, punch, punch, 32, BulletPuff) Doesn't work???
+	PKFS FGHI 2
+	PKFS JKL 1
+	PKFS A 5 A_ReFire
+    goto Ready
+  "@
+}

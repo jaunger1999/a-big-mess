@@ -1,0 +1,47 @@
+weapondelta
+{
+  name BFG9000
+  
+  remflags NOAUTOFIRE
+  
+  states
+  @"
+  Ready:
+    BFGG A 1 A_WeaponReady
+      loop
+  //9 Lower and 4 Raise result in the exact same timing as vanilla doom.
+  Deselect:
+    BFGG A 1 A_Lower(9)
+    loop
+  Select:  
+    BFGG A 1 A_Raise(4)
+    loop
+  Fire:
+    BFGG J 4 A_BFGSound
+    BFGG AJAJ 3
+    BFGG AJ 2
+    BFGG KB 2
+    BFGG C 2 A_GunFlash
+    //BFGX A 1
+    BFGG DEF 1
+    BFGG G 2 bright A_FireBFG
+    BFGG H 1 bright
+    BFGG H 1 bright
+    BFGG I 1 bright
+    BFGG I 1 bright
+    BFGG I 1 bright
+    BFGG J 3
+    BFGG J 2 A_ReFire    
+    BFGG A 3
+    BFGG A 15
+    goto Ready
+  Flash:
+    //BFGW A 2 bright
+    //BFGW A 4 bright A_Light2
+    //BFGW A 4 bright A_Light2
+    //BFGX HGFE 1 bright A_Light2
+    //BFGX DCBA 1 bright A_Light2
+    //TNT1 A 0 A_Light0
+    goto LightDone
+  "@
+}

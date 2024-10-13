@@ -1,0 +1,61 @@
+/**
+ * [skillsaw project]
+ *
+ * Weapon: Shotgun (Enhanced)
+ * (c) Xaser Acheron, 2019
+ *    [MIT License]
+ */
+weapondelta
+{
+  name Shotgun
+
+  states
+  @"
+  Ready:
+	XTSG A 1 A_WeaponReady
+	Loop
+  //9 Lower and 4 Raise result in the exact same timing as vanilla doom.
+  Deselect:
+    XTSG A 1 A_Lower(9)
+    loop
+  Select:  
+    XTSG A 1 A_Raise(4)
+    loop
+  Fire:
+		XTSG A 1 //3 prefire tics by default
+		
+		//7 firing tics
+		XTSG B 3 A_FireCustomBullets(SHTFIR, never, 6, 6, 3, Flash)
+		XTSG CD 2
+		
+		//27 tics before refire
+		XTSG A 1 
+		XTSG F 2
+		XTSG G 2
+		XTSG H 2
+		XTSG I 2
+		SGXT a 1 
+		
+		XTSG J 3 A_PlaySoundEx(SHTCOK, 5) //highest weapon raise
+		XTSG K 1
+		XTSG L 3 A_EjectCasing(592, -128, -256, ShotgunCasing) //deepest "pump" frame
+		
+
+		XTSG M 2
+		XTSG J 2
+		XTSG IH 2
+		XTSG GF 1
+		
+		XTSG A 7 A_ReFire
+		Goto Ready
+		
+	Flash:
+		SHTF A 3 Bright A_Light2
+		SHTF B 3 Bright A_Light1
+		SHTF C 2 Bright A_Light1
+		Goto LightDone  
+  "@
+}
+
+sound SHTFIR { pitchvariance Doom; }
+sound SHTCOK { pitchvariance Doom; }

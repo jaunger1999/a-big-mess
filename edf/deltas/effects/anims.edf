@@ -1,0 +1,22 @@
+/**
+ * [skillsaw project]
+ *
+ * Animation defs
+ */
+
+switch sw1shoot
+{
+  on sw2shoot
+}
+
+switch ZRIONGLS
+{
+  on NJSMSH05
+  sound glass1
+}
+
+switch SW1LIFT
+{
+  on SW2LIFT
+}
+
