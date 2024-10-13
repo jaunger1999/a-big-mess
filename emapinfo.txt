@@ -15,9 +15,16 @@
 	killfinale = true
 	disable-jump = true
 [MAP03]
-	levelname = Map 3: Ripping Off Romero
+	levelname = Map 3: Portal & Polyobj Pandemonium
 	creator = jaunger
 	nextlevel = MAP04
+	partime = 840
+	killfinale = true
+	disable-jump = true
+[MAP04]
+	levelname = Map 3: Ripping Off Romero
+	creator = jaunger
+	nextlevel = MAP05
 	partime = 840
 	killfinale = true
 	disable-jump = true
