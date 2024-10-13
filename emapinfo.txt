@@ -35,7 +35,7 @@
 	disable-jump = true
 	finale-early = true
 [MAP06]
-	levelname = Map 6: Consternation! in da Club
+	levelname = Map 6: Constipation! in da Club
 	creator = jaunger
 	music = D_CLUB
 	partime = 720
