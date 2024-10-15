@@ -21,7 +21,7 @@
 	killfinale = true
 	disable-jump = true
 [MAP04]
-	levelname = Map 4: Ripping Off Romero
+	levelname = Map 4: Kinda Ripping Off Romero
 	creator = jaunger
 	music = D_SPIRIT
 	nextlevel = MAP05
@@ -32,6 +32,7 @@
 	levelname = Map 5: The Devil's Punch Bowl
 	creator = jaunger
 	music = D_APRIL
+	nextlevel = MAP06
 	partime = 720
 	disable-jump = true
 	finale-early = true
@@ -39,6 +40,15 @@
 	levelname = Map 6: Constipation! in da Club
 	creator = jaunger
 	music = D_CLUB
+	nextlevel = MAP07
 	partime = 720
 	disable-jump = true
 	finale-early = true
+[MAP07]
+	levelname = Map 7: Ripping Off Romero
+	creator = jaunger
+	music = D_SPIRIT
+	nextlevel = MAP08
+	partime = 840
+	killfinale = true
+	disable-jump = true
