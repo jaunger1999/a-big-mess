@@ -1,0 +1,68 @@
+thingtype Diabolist {	
+  doomednum 30027
+  basictype Monster
+  
+  spawnhealth 700
+  painchance  10
+  speed       15
+  height      56.0
+  mass        500
+  
+  addflags NORADIUSDMG
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood  
+  bloodtype.crush DoomBloodSpray
+  
+  seesound    "diabolist/sight"
+  painsound   "diabolist/pain"
+  deathsound  "diabolist/death"
+  activesound "diabolist/active"
+  
+  states
+  @"
+  Spawn:
+    DIAB AB 10 A_Look
+    loop
+  See:
+    DIAB AABBCCDDEEFF 2 A_VileChase
+    loop
+  Missile:    
+    DIAB A 2 A_RandomWalk
+	DIAB A 2 A_VileChase
+	DIAB B 2 A_RandomWalk
+	DIAB B 2 A_VileChase
+	DIAB C 2 A_RandomWalk
+	DIAB C 2 A_VileChase
+	DIAB D 2 A_RandomWalk
+	DIAB D 2 A_VileChase
+	DIAB E 2 A_RandomWalk
+	DIAB E 2 A_VileChase
+	DIAB F 2 A_RandomWalk
+	DIAB F 2 A_VileChase
+    goto See
+  Heal:
+    DIA2 A 10 bright
+    DIA2 B 10 bright
+    DIA2 C 10 bright
+    goto See
+  Pain:
+    DIAB Q 7 A_Pain
+    DIAB Q 7
+    goto See
+  Death:
+    DIAB Q     7
+    DIAB R     7 A_Scream
+    DIAB S     7 A_Fall
+    DIAB TUVW  7
+    DIAB XY    5
+    DIAB Z    -1
+    stop
+  "@
+}
+
+sound "diabolist/active" { lump "DSDIAACT"; pitchvariance Doom; }
+sound "diabolist/death"  { lump "DSDIADTH"; pitchvariance Doom; }
+sound "diabolist/pain"   { lump "DSDIAPAI"; pitchvariance Doom; }
+sound "diabolist/sight"  { lump "DSDIASIT"; pitchvariance Doom; }

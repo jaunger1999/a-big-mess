@@ -1,0 +1,64 @@
+thingtype StealthMarine
+{
+  doomednum 30019
+  basictype Monster
+
+  spawnhealth  30
+  speed        14
+  radius       20.0
+  height       56.0
+  reactiontime 8
+  painchance   170
+  mass         100
+
+  bloodtype.normal DoomBloodSpray
+  bloodtype.impact DoomBloodSpray
+  bloodtype.rip DoomBloodSpray
+  bloodtype.crush DoomBloodSpray
+
+  activesound "stealthmarine/active"
+  seesound "stealthmarine/sight"
+  deathsound "stealthmarine/death"
+  painsound   popain  
+
+  droptype AmmoCell
+
+  obituary_normal "was betrayed by a fellow marine."
+
+  /*Maybe add an xdeath state where they don't leave a corpse.*/
+  states
+  @"
+    Spawn:
+      SLTH NO 10 A_Look
+      loop
+    See:
+      SLTH AABBCCDD 2 A_Chase
+      loop
+    Missile:
+      SLTH E  10 bright A_FaceTarget
+      SLTH F  10 bright A_FaceTarget
+      SLTH G   4 bright A_BspiAttack
+      SLTH F   4        A_FaceTarget
+      SLTH G   4 bright A_BspiAttack
+	  SLTH F   0        
+      goto See+1
+    Pain:
+      SLTH H 3
+      SLTH H 3 A_Pain
+      goto See
+    Death:
+      SLTH I  5
+      SLTH J  5 A_Scream
+      SLTH K  5 A_Fall
+      SLTH L  5
+      SLTH M -1
+      stop
+    Raise:
+      SLTH MLKJI 5
+      goto See
+  "@
+}
+
+sound "stealthmarine/active"   { lump "DSSLTACT"; pitchvariance Doom; }
+sound "stealthmarine/sight"   { lump "DSSLTSIT"; pitchvariance Doom; }
+sound "stealthmarine/death"   { lump "DSSLTDTH"; pitchvariance Doom; }

@@ -1,0 +1,35 @@
+/**
+ * [skillsaw project]
+ *
+ * Items: Armor
+ */
+
+thingtype OrangeArmor
+{
+  doomednum 27000
+
+  flags SPECIAL
+
+  pickupeffect
+  {
+    effects OrangeArmor
+    message "Picked up the Orange Armor!"
+    sound   itemup
+  }
+
+  states
+  @"
+  Spawn:
+    ARM3 AABC 2 bright
+	ARM3 DEFGHGFED 3
+	ARM3 CB 2 bright
+    loop
+  "@
+}
+
+armoreffect OrangeArmor
+{
+  saveamount  50
+  savefactor  1
+  savedivisor 2
+}

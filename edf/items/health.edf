@@ -1,0 +1,40 @@
+/**
+ * [skillsaw project]
+ *
+ * Items: Health
+ */
+
+thingtype MegaPack
+{
+  doomednum 27001
+
+  flags SPECIAL
+
+  pickupeffect
+  {
+    effects MegaPack
+    message "Picked up a megapack! Nice!"
+    sound   getpow
+  }
+
+  acs_spawndata
+  {
+    num   254
+    modes doom
+  }
+
+  states
+  @"
+  Spawn:
+    MEDP A -1
+    stop
+  "@
+}
+
+healtheffect MegaPack
+{
+  amount     50
+  maxamount  @superhealth
+  lowmessage "Picked up a megapack that you REALLY needed!"
+}
+

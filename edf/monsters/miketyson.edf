@@ -1,0 +1,65 @@
+thingtype MikeTyson {
+  doomednum 30026
+  basictype Monster
+  
+  spawnhealth  700
+  speed        12
+  reactiontime 10
+  painchance   50
+  painsound    plpain
+  deathsound   pldeth
+  radius       16.0
+  height       56.0
+  
+  acs_spawndata
+  {
+    num   156
+    modes doom
+  }
+  states
+  @"
+  Spawn:
+    MIKE ABCB 10 A_Look
+    goto Spawn
+  See:
+    //random movement.
+    TNT1 A 0 A_Jump(128, Wander)
+    Chase:
+	MIKE AABBCCDD 2 A_Chase
+	goto See
+	Wander:
+    MIKE AABBCCDD 2 A_RandomWalk
+    goto See
+  Block:
+    TNT1 A  0 A_UnsetFlags(0, SHOOTABLE)
+	MIKE A 10
+	TNT1 A  0 A_SetFlags(0, SHOOTABLE)
+	goto See
+  Missile:
+  Melee:
+    TNT1 A 0 A_Jump(192, Attack2)
+    Attack1:
+	MIKE G 8 A_FaceTarget
+    MIKE H 8 A_SkelWhoosh	
+    MIKE I 4 A_SkelFist
+	MIKE H 8 A_SkelWhoosh	
+    MIKE I 4 A_SkelFist
+	MIKE H 8 A_SkelWhoosh	
+    MIKE I 4 A_SkelFist
+	goto See
+	Attack2:
+    MIKE H 7 A_SkelWhoosh
+    MIKE I 8 A_SkelFist
+    goto See
+  Pain:
+    MIKE J  4
+    MIKE J 12
+    goto See
+  Death:
+    MIKE J  8
+	MIKE KLKLK  8
+    MIKE L  8 A_Fall
+    MIKE M -1
+    stop
+  "@
+}

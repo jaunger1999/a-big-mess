@@ -1,0 +1,13 @@
+thingtype SpectreCaco
+{
+  doomednum 30021
+  
+  inherits = CacoDemon
+  
+  addflags SHADOW
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood  
+  bloodtype.crush DoomBloodSpray
+}

@@ -1,0 +1,127 @@
+/**
+ * [skillsaw project]
+ *
+ * Monster: Cybruiser
+ */
+
+thingtype Cybruiser
+{
+  doomednum 30006
+  basictype Monster
+
+  spawnhealth  500
+  speed        10
+  radius       24.0
+  height       64.0
+  damage       12
+  reactiontime 8
+  painchance   20
+  mass         1000
+
+  addflags NORADIUSDMG|HIGHERMPROB
+  
+  bloodtype.normal PersistentDoomBlood
+  bloodtype.impact PersistentDoomBlood
+  bloodtype.rip PersistentDoomBlood  
+  bloodtype.crush DoomBloodSpray
+
+  seesound    "cybruiser/sight"
+  painsound   "cybruiser/pain"
+  deathsound  "cybruiser/death"
+  activesound "cybruiser/active"
+  attacksound "cybruiser/attack"
+
+  obituary_normal "rode a Cybruiser's rocket"
+  obituary_melee  "got clawed by a Cybruiser"
+
+  acs_spawndata
+  {
+    num 246
+    modes doom
+  }
+
+  states
+  @"
+  Spawn:
+    CBRU AB 10 A_Look()
+    Loop
+  Inactive:
+    TNT1 A 1 A_UnsetFlags(0, SHOOTABLE)
+    Loop
+  Active:
+    TNT1 A 0 A_HealthJump(AlreadyDead, lessorequal, 0)
+    TNT1 A 0 A_SetFlags(0, SHOOTABLE)
+    Goto Spawn
+  See:
+    CBRU AA 3 A_Chase()
+    TNT1 A 0 A_PlaySoundEx("cybruiser/step", 5)
+    CBRU BB 3 A_Chase()
+    CBRU CC 3 A_Chase()
+    TNT1 A 0 A_PlaySoundEx("cybruiser/step", 5)
+    CBRU DD 3 A_Chase()
+    Loop
+  Missile:
+    CBRU E 12 A_FaceTarget()
+    CBRU F 12 Bright A_MissileAttack(BruiserRocket)
+    CBRU E 12 A_FaceTarget()
+    CBRU F 12 Bright A_MissileAttack(BruiserRocket)
+    CBRU E 12 A_FaceTarget()
+    CBRU F 12 Bright A_MissileAttack(BruiserRocket)
+    Goto See
+  Melee:
+    CBRU G 0 A_FaceTarget()
+    CBRU G 5
+    CBRU H 5 A_FaceTarget()
+    CBRU I 5 A_Scratch(1, 0, "cybruiser/attack")
+    Goto See
+  Pain:
+    CBRU J 2
+    CBRU J 2 A_Pain()
+    Goto See
+  Death:
+    CBRU K 6 Bright A_Scream()
+    CBRU LM 6 Bright
+    CBRU N 6 Bright A_Fall()
+    CBRU O 6 Bright
+    CBRU PQR 6 Bright
+  RestingDeath:
+    CBRU S -1
+    Stop
+  AlreadyDead:
+    TNT1 A 0 A_Fall()
+    goto RestingDeath
+  "@
+}
+
+thingtype BruiserRocket
+{
+  basictype Projectile
+
+  radius 8.0
+  height 12.0
+  speed  20.0
+  damage 10
+
+  seesound   "cybruiser/missile/fire"
+  deathsound "cybruiser/missile/explode"
+
+  states
+  @"
+  Spawn:
+    FBRS A 2 Bright A_SteamSpawn(OGTracerSmoke)
+    Loop
+  Death:
+    BAL3 C 6 Bright A_DetonateEx(24, 48, 0)
+    BAL3 DE 6 Bright
+    Stop
+  "@
+}
+
+sound "cybruiser/step"            { lump "DSBRUSTP"; pitchvariance Doom; }
+sound "cybruiser/sight"           { lump "DSBRUSIT"; pitchvariance Doom; }
+sound "cybruiser/death"           { lump "DSBRUDTH"; pitchvariance Doom; }
+sound "cybruiser/pain"            { lump "DSDMPAIN"; pitchvariance Doom; }
+sound "cybruiser/active"          { lump "DSDMACT" ; pitchvariance Doom; }
+sound "cybruiser/attack"          { lump "DSCLAW"  ; pitchvariance Doom; }
+sound "cybruiser/missile/fire"    { lump "DSBRUFIR"; pitchvariance Doom; }
+sound "cybruiser/missile/explode" { lump "DSHELLEX"; pitchvariance Doom; }

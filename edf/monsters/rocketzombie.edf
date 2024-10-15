@@ -1,0 +1,116 @@
+/**
+ * [skillsaw project]
+ *
+ * Monster: Rocket Zombie
+ */
+
+thingtype RocketZombie
+{
+  doomednum 30008
+  basictype Monster
+
+  spawnhealth  30
+  speed        8
+  radius       20.0
+  height       56.0
+  reactiontime 8
+  painchance   200
+  mass         100
+
+  addflags HARMSPECIESMISSILE
+
+  bloodtype.normal DoomBloodSpray
+  bloodtype.impact DoomBloodSpray
+  bloodtype.rip DoomBloodSpray
+  bloodtype.crush DoomBloodSpray
+
+  seesound    posit1
+  painsound   popain
+  deathsound  podth1
+  activesound posact
+
+  droptype AmmoRocket
+
+  obituary_normal "was splattered by a rocket zombie"
+
+  acs_spawndata
+  {
+    num 248
+    modes doom
+  }
+
+  states
+  @"
+  Spawn:
+    MPOS AB 10 A_Look()
+    Loop
+  Inactive:
+    TNT1 A 1 A_UnsetFlags(0, SHOOTABLE)
+    Loop
+  Active:
+    TNT1 A 0 A_HealthJump(AlreadyDead, lessorequal, 0)
+    TNT1 A 0 A_SetFlags(0, SHOOTABLE)
+    Goto Spawn
+  See:
+    MPOS AABBCCDD 3 A_Chase()
+    Loop
+  Pain:
+    MPOS H 2
+    MPOS H 2 A_Pain()
+    Goto See
+  Missile:
+    MPOS EE 10 A_FaceTarget()
+    MPOS F 5 Bright
+    MPOS G 13 Bright A_MissileAttack(BruiserRocket, 0, 8)
+    Goto See
+  Death:
+    MPOS I 5
+    MPOS J 5 A_Scream()
+    MPOS K 5
+    MPOS L 5 A_Fall()
+  RestingDeath:
+    MPOS M -1
+    Stop
+  XDeath:
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 10)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 12)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 14)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 16)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 18)
+    MPOS N 5
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 9)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 6)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)
+    MPOS O 5 A_XScream
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 2)
+    MPOS P 5
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 4)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 2)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 1)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 6)
+    MPOS Q 5 A_Fall
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 4)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 2)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 1)
+    MPOS RSTU 5 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+  RestingXDeath:
+    MPOS V -1
+    Stop
+  Raise:
+    MPOS MJKJI 5
+    Goto See
+  AlreadyDead:
+    TNT1 A 0 A_Fall()
+    TNT1 A 0 A_HealthJump(RestingXDeath, lessorequal, -30)
+    goto RestingDeath
+  "@
+}

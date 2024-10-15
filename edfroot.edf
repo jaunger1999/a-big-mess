@@ -3,32 +3,7 @@ setdialect("ALFHEIM")
 stdinclude("root.edf") // Includes the file base/root.edf, which in turns includes the other files
                        // that are required for definition of all sprites, sounds, things etc.
 
-// Modded menus
-include("edf/menus/menus.edf")
-include("edf/gameproperties.edf")
-
-// New decorations
-include("edf/decorations/bones.edf")
-include("edf/decorations/candles.edf")
-include("edf/decorations/caves.edf")
-include("edf/decorations/chandeliers.edf")
-include("edf/decorations/containers.edf")
-include("edf/decorations/corpses.edf")
-include("edf/decorations/flames.edf")
-include("edf/decorations/foliage.edf")
-include("edf/decorations/lamps.edf")
-include("edf/decorations/lava.edf")
-include("edf/decorations/mushrooms.edf")
-include("edf/decorations/pots.edf")
-include("edf/decorations/rocks.edf")
-include("edf/decorations/signs.edf")
-include("edf/decorations/skulls.edf")
-include("edf/decorations/statues.edf")
-include("edf/decorations/torches.edf")
-include("edf/decorations/trees.edf")
-
 // New effects
-include("edf/effects/anims.edf")
 include("edf/effects/blood.edf")
 include("edf/effects/casings.edf")
 include("edf/effects/glass.edf") // Glass particles
@@ -43,28 +18,16 @@ include("edf/items/armor.edf")
 include("edf/monsters/miketyson.edf")
 include("edf/monsters/diabolist.edf")
 include("edf/monsters/hivemother.edf")
-include("edf/monsters/afrit.edf")
-include("edf/monsters/nakedrevenant.edf")
-include("edf/monsters/arachnorb.edf")
 include("edf/monsters/spectrecaco.edf")
 include("edf/monsters/marine.edf") //mutineer
 include("edf/monsters/stealthmarine.edf") // mutineer
-include("edf/monsters/alienguardian.edf")
 include("edf/monsters/plasmazombie.edf")
 include("edf/monsters/suicidebomber.edf")
 include("edf/monsters/cybruiser.edf") // Mini cyberdemon
 include("edf/monsters/grell.edf") // Weaker flying enemy
 include("edf/monsters/rocketzombie.edf") // Rocket Zombie
 include("edf/monsters/nightmaredemon.edf") // Nightmare Demon
-include("edf/monsters/weakcyberdemon.edf") // Cyberdemon w/ 1k health
 include("edf/monsters/astralcacodemon.edf")
-include("edf/monsters/babycaco.edf")
-
-// Thing groups for projectile immunity/infighting
-include("edf/groups.edf")
-
-// Modded player
-include("edf/deltas/playerdelta.edf")
 
 // Modded items
 include("edf/deltas/itemdeltas/ammodeltas.edf")

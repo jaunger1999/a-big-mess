@@ -1,0 +1,105 @@
+/**
+ * [skillsaw project]
+ *
+ * Monster: Suicide Bomber
+ */
+
+thingtype SuicideBomber
+{
+  doomednum   30007
+  basictype Monster
+
+  spawnhealth  80
+  speed        10
+  radius       20.0
+  height       56.0
+  damage       20
+  reactiontime 8
+  painchance   80
+  mass         100
+
+  bloodtype.normal DoomBloodSpray
+  bloodtype.impact DoomBloodSpray
+  bloodtype.rip DoomBloodSpray
+  bloodtype.crush DoomBloodSpray
+
+  seesound   "suicidebomber/sight"
+  painsound  "suicidebomber/pain"
+  deathsound "suicidebomber/death"
+
+  obituary_normal "hugged a suicide bomber"
+  obituary_melee  "hugged a suicide bomber"
+
+  acs_spawndata
+  {
+    num 247
+    modes doom
+  }
+
+  states
+  @"
+  Spawn:
+    SUIC AB 10 A_Look()
+    Loop
+  Inactive:
+    TNT1 A 1 A_UnsetFlags(0, SHOOTABLE)
+    Loop
+  Active:
+    TNT1 A 0 A_HealthJump(AlreadyDead, lessorequal, 0)
+    TNT1 A 0 A_SetFlags(0, SHOOTABLE)
+    Goto Spawn
+  See:
+    SUIC G 0 A_PlaySoundEx("suicidebomber/aaaaaaaa")
+		SUIC AAABBBCCCDDD 2  A_Chase
+		Loop
+  Pain:
+    SUIC A 3
+    SUIC A 3 A_Pain()
+    Goto See
+  Melee:
+    Goto Death
+  Death:
+    SUIC E 0 Bright DetonateEx(48, 192, 1, 1, 0, 0, 0, 1, 0)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 10)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 12)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 14)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 16)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 18)
+    SUIC E 5 Bright A_PlaySoundEx(barexp, chan_body)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 9)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 6)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)      
+    SUIC F 5 Bright
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 2)      
+    SUIC G 5 A_Fall()
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 4)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 2)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 1)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 6)      
+    SUIC H 5 A_XScream()
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 4)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 2)
+    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 1)      
+    SUIC IJK 5
+  RestingDeath:
+    SUIC L -1
+    Stop
+  AlreadyDead:
+    TNT1 A 0 A_Fall()
+    goto RestingDeath
+  "@
+}
+
+sound "suicidebomber/aaaaaaaa" { lump "DSSUSCRM"; pitchvariance Doom; }
+sound "suicidebomber/sight"    { lump "DSSUSIT" ; pitchvariance Doom; }
+sound "suicidebomber/pain"     { lump "DSPOPAIN"; pitchvariance Doom; }
+sound "suicidebomber/death"    { lump "DSBAREXP"; pitchvariance Doom; }
