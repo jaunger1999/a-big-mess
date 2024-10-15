@@ -23,6 +23,7 @@
 [MAP04]
 	levelname = Map 4: Ripping Off Romero
 	creator = jaunger
+	music = D_SPIRIT
 	nextlevel = MAP05
 	partime = 840
 	killfinale = true

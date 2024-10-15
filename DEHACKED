@@ -1,0 +1,62 @@
+Patch File for DeHackEd v3.0
+# Created with WhackEd4 1.2.4 BETA
+# Note: Use the pound sign ('#') to start comment lines.
+
+Doom version = 21
+Patch format = 6
+
+
+Thing 7 (Revenant fireball)
+Missile damage = 9
+
+Thing 17 (Mancubus fireball)
+Missile damage = 7
+
+Thing 17 (Baron fireball)
+Missile damage = 7
+
+Thing 37 (Arachnotron projectile)
+Missile damage = 4
+
+Frame 47
+Duration = 4
+
+Frame 48
+Duration = 3
+
+Frame 185
+Sprite subnumber = 32773
+
+Frame 419
+Sprite subnumber = 32773
+
+Frame 615
+Sprite subnumber = 0
+
+Frame 647
+Sprite subnumber = 0
+
+Frame 685
+Sprite subnumber = 32773
+
+Frame 687
+Sprite subnumber = 32773
+
+Frame 689
+Sprite subnumber = 32773
+
+[STRINGS]
+CC_HEAVY = UNION BUSTER
+CC_PAIN = CHILD LABOR GENERATOR
+CC_HELL = BOURGEOIS PRICK
+CC_REVEN = STARVING CAPITALISM APOLOGIST
+CC_DEMON = CAPITALIST PIG
+CC_IMP = LITTLE TIMMY FROM THE FACTORY
+CC_ZOMBIE = DISGRUNTLED CASHIER
+CC_SPIDER = HOW ELON PICTURES HIMSELF TWEETING
+CC_MANCU = JABBA THE BUTT
+CC_SHOTGUN = SCAB
+CC_ARACH = PREPPY IVY LEAGUE CUNT
+CC_BARON = BIG BOUGIE PRICK WITH A SMALL DICK
+GOTBLUECARD = Picked up a purple key
+GOTBLUESKUL = Picked up a purple skull key

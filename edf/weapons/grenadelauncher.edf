@@ -1,0 +1,124 @@
+weaponinfo GrenadeLauncher : Weapon
+{
+  ammotype     AmmoMissile
+  ammouse      1
+
+  slotnumber         5
+  slotselectionorder 1.1
+  selectionorder 7.1
+
+  flags        DISABLEAPS|SILENCEABLE
+  recoil       100.0
+  hapticrecoil 6
+  haptictime   8
+
+  states
+  @"
+  Ready:
+    CBMG A 1 A_WeaponReady()
+    Loop
+  //9 Lower and 4 Raise result in the exact same timing as vanilla doom.
+  Deselect:
+    CBMG A 1 A_Lower(9)
+    Loop
+  Select:
+    CBMG A 1 A_Raise(4)
+    Loop
+  Fire:
+    CBMG A 3
+    CBMG A 2 A_GunFlash()
+    CBMG B 2 A_PlaySoundEx("bomfir", chan_weapon)
+	TNT1 A 0 A_SubtractAmmo 
+    CBMG C 2 A_SpawnEx(GrenadeShot, none, 12, 0, 28, 36, 0, 4.75, 0, 256) //A_FirePlayerMissile(GrenadeShot, 0)
+    CBMG D 2
+    CBMG C 1
+    CBMG B 1 A_PlaySoundEx("bomrel", 5)
+    CBMG EFAEF 2
+    CBMG A 0 A_ReFire()
+    Goto Ready
+  Flash:
+    CBMF A 2 Bright A_Light1()
+    CBMF BC 2 Bright A_Light2()
+    CBMF D 2 Bright A_Light1()
+    CBMF E 1 Bright A_Light1()
+    Goto LightDone
+  "@
+}
+
+weapongiver GiverGrenadeLauncher
+{
+  weapon    GrenadeLauncher
+  ammogiven AmmoMissile, 3
+}
+
+thingtype WeaponGrenadeLauncher : Mobj, 32500
+{
+  flags SPECIAL
+
+  pickupeffect {
+    effects GiverGrenadeLauncher
+    message "You got a grenade launcher!"
+    sound   wpnup
+  }
+
+  states
+  @"
+  Spawn:
+    CLAU A -1
+    stop
+  "@
+}
+
+thingtype GrenadeShot
+{
+  basictype PlayerProjectile
+
+  speed  36.0
+  radius 20.0
+  height 12.0
+  damage 40
+
+  xscale 1.5
+  yscale 1.5
+  
+  addflags BOUNCES
+  remflags NOGRAVITY
+
+  states
+  @"
+  Spawn:
+    BOMC A 1
+    BOMC A 0 A_Jump(128, Spawn2)
+  Spawn1:
+    BOMC ABCDE 2 bright	
+    loop
+  Spawn2:
+    BOMC CBAED 2 bright
+    loop
+  Death:
+    MEXP G 0 bright A_PlaySoundEx(bomlxp, chan_auto)
+    MEXP G 1 bright A_DetonateEx(192, 192, 1, 0, 0, 0, 1, 0)
+    MEXP H 1 bright
+    MEXP A 0 bright A_SteamSpawn(GrenadeSmoke, 359, 45, 45, 1)
+    MEXP A 2 bright A_SteamSpawn(GrenadeSmoke, 359, 45, 45, 1)
+    MEXP BC 2 bright
+    MEXP DE 3 bright
+    MEXP F 4 bright
+    TNT1 A 15 bright // for sound
+    stop
+  "@
+}
+
+thingtype GrenadeSmoke : SmokeEffect
+{
+  translucency 25%
+  xscale       1.5
+  yscale       1.5
+}
+
+sound bomfir { pitchvariance Doom; }
+sound bomrel { pitchvariance Doom; }
+sound bomlx1 { pitchvariance Doom; }
+sound bomlx2 { pitchvariance Doom; }
+sound bomlx3 { pitchvariance Doom; }
+sound bomlxp { random { bomlx1, bomlx2, bomlx3 } }

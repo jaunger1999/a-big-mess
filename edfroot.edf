@@ -3,12 +3,94 @@ setdialect("ALFHEIM")
 stdinclude("root.edf") // Includes the file base/root.edf, which in turns includes the other files
                        // that are required for definition of all sprites, sounds, things etc.
 
+// Modded menus
+include("edf/menus/menus.edf")
+include("edf/gameproperties.edf")
+
+// New decorations
+include("edf/decorations/bones.edf")
+include("edf/decorations/candles.edf")
+include("edf/decorations/caves.edf")
+include("edf/decorations/chandeliers.edf")
+include("edf/decorations/containers.edf")
+include("edf/decorations/corpses.edf")
+include("edf/decorations/flames.edf")
+include("edf/decorations/foliage.edf")
+include("edf/decorations/lamps.edf")
+include("edf/decorations/lava.edf")
+include("edf/decorations/mushrooms.edf")
+include("edf/decorations/pots.edf")
+include("edf/decorations/rocks.edf")
+include("edf/decorations/signs.edf")
+include("edf/decorations/skulls.edf")
+include("edf/decorations/statues.edf")
+include("edf/decorations/torches.edf")
+include("edf/decorations/trees.edf")
+
 // New effects
+include("edf/effects/anims.edf")
 include("edf/effects/blood.edf")
 include("edf/effects/casings.edf")
 include("edf/effects/glass.edf") // Glass particles
 include("edf/effects/painelementalchunk.edf")
 include("edf/effects/smoke.edf")
+
+// New items
+include("edf/items/health.edf")
+include("edf/items/armor.edf")
+
+// New monsters
+include("edf/monsters/miketyson.edf")
+include("edf/monsters/diabolist.edf")
+include("edf/monsters/hivemother.edf")
+include("edf/monsters/afrit.edf")
+include("edf/monsters/nakedrevenant.edf")
+include("edf/monsters/arachnorb.edf")
+include("edf/monsters/spectrecaco.edf")
+include("edf/monsters/marine.edf") //mutineer
+include("edf/monsters/stealthmarine.edf") // mutineer
+include("edf/monsters/alienguardian.edf")
+include("edf/monsters/plasmazombie.edf")
+include("edf/monsters/suicidebomber.edf")
+include("edf/monsters/cybruiser.edf") // Mini cyberdemon
+include("edf/monsters/grell.edf") // Weaker flying enemy
+include("edf/monsters/rocketzombie.edf") // Rocket Zombie
+include("edf/monsters/nightmaredemon.edf") // Nightmare Demon
+include("edf/monsters/weakcyberdemon.edf") // Cyberdemon w/ 1k health
+include("edf/monsters/astralcacodemon.edf")
+include("edf/monsters/babycaco.edf")
+
+// Thing groups for projectile immunity/infighting
+include("edf/groups.edf")
+
+// Modded player
+include("edf/deltas/playerdelta.edf")
+
+// Modded items
+include("edf/deltas/itemdeltas/ammodeltas.edf")
+include("edf/deltas/itemdeltas/armordeltas.edf")
+include("edf/deltas/itemdeltas/keydeltas.edf")
+
+// Modded powerups
+include("edf/deltas/itemdeltas/powerupdeltas/berserkdelta.edf")
+include("edf/deltas/itemdeltas/powerupdeltas/computerareamapdelta.edf")
+include("edf/deltas/itemdeltas/powerupdeltas/invulnerabilityspheredelta.edf")
+include("edf/deltas/itemdeltas/powerupdeltas/lightamplificationgogglesdelta.edf")
+include("edf/deltas/itemdeltas/powerupdeltas/megaspheredelta.edf")
+include("edf/deltas/itemdeltas/powerupdeltas/partialinvisibilitydelta.edf")
+include("edf/deltas/itemdeltas/powerupdeltas/soulspheredelta.edf")
+
+// Modded weapons
+include("edf/weapons/grenadelauncher.edf")
+include("edf/deltas/weapondeltas/fistdelta.edf")
+include("edf/deltas/weapondeltas/chainsawdelta.edf")
+include("edf/deltas/weapondeltas/pistoldelta.edf")
+include("edf/deltas/weapondeltas/shotgundelta.edf")
+include("edf/deltas/weapondeltas/supershotgundelta.edf")
+include("edf/deltas/weapondeltas/chaingundelta.edf")
+include("edf/deltas/weapondeltas/rocketlauncherdelta.edf")
+include("edf/deltas/weapondeltas/plasmarifledelta.edf")
+include("edf/deltas/weapondeltas/bfgdelta.edf")
 
 // Modded monsters
 include("edf/deltas/monsterdeltas/arachnotrondelta.edf")
@@ -30,23 +112,6 @@ include("edf/deltas/monsterdeltas/spectredelta.edf")
 include("edf/deltas/monsterdeltas/spiderdemondelta.edf")
 include("edf/deltas/monsterdeltas/wolfssdelta.edf")
 include("edf/deltas/monsterdeltas/zombiemandelta.edf")
-
-// Modded weapons
-//include("edf/weapons/grenadelauncher.edf")
-include("edf/deltas/weapondeltas/fistdelta.edf")
-include("edf/deltas/weapondeltas/chainsawdelta.edf")
-include("edf/deltas/weapondeltas/pistoldelta.edf")
-include("edf/deltas/weapondeltas/shotgundelta.edf")
-include("edf/deltas/weapondeltas/supershotgundelta.edf")
-include("edf/deltas/weapondeltas/chaingundelta.edf")
-include("edf/deltas/weapondeltas/rocketlauncherdelta.edf")
-include("edf/deltas/weapondeltas/plasmarifledelta.edf")
-include("edf/deltas/weapondeltas/bfgdelta.edf")
-
-// Modded items
-include("edf/deltas/itemdeltas/ammodeltas.edf")
-include("edf/deltas/itemdeltas/armordeltas.edf")
-include("edf/deltas/itemdeltas/keydeltas.edf")
 
 //sound code
 include("edf/sound/sounddefs.edf")
