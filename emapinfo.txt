@@ -1,10 +1,10 @@
 [MAP01]
 	levelname = Map 1: A Big Mess
 	creator = jaunger
+	music = D_SPIRIT
 	inter-levelname = A Big Mess
 	nextlevel = MAP02
 	disable-jump = true
-
 [MAP02]
 	levelname = Map 2: Mike Tyson's Lunch Out
 	creator = jaunger
@@ -23,7 +23,7 @@
 [MAP04]
 	levelname = Map 4: Kinda Ripping Off Romero
 	creator = jaunger
-	music = D_SPIRIT
+	music = D_MACH
 	nextlevel = MAP05
 	partime = 840
 	killfinale = true
@@ -47,7 +47,7 @@
 [MAP07]
 	levelname = Map 7: Ripping Off Romero
 	creator = jaunger
-	music = D_SPIRIT
+	music = D_WALLS
 	nextlevel = MAP08
 	partime = 840
 	killfinale = true
