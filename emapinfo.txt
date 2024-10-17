@@ -1,7 +1,7 @@
 [MAP01]
 	levelname = Map 1: A Big Mess
 	creator = jaunger
-	music = D_SPIRIT
+	music = D_ETERN
 	inter-levelname = A Big Mess
 	nextlevel = MAP02
 	disable-jump = true

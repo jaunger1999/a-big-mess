@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -1464.606f;
-		viewpositionx = -460.5709f;
+		viewpositiony = -383.7534f;
+		viewpositionx = 1153.263f;
 		
 		testprecommand
 		{
@@ -48,11 +48,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 16;
+			gridsize = 4;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.7970261f;
+		viewscale = 3.847045f;
 		
 		reloadresourceprecommand
 		{
@@ -97,17 +97,17 @@ maps
 					prefab1
 					{
 						name = "[Previous]";
-						numberofsectors = 6;
+						numberofsectors = 2;
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 32;
+						sectordepth = 16;
 						spacing = 0;
 						frontside = true;
-						singlesectors = false;
+						singlesectors = true;
 						distinctsectors = false;
 						singledirection = false;
-						distinctbaseheights = false;
+						distinctbaseheights = true;
 						flipping = 0;
 						numberofcontrolpoints = 1;
 						applyfloormod = true;
@@ -124,7 +124,7 @@ maps
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = true;
-						lowertexture = "-";
+						lowertexture = "BRICK5";
 						lowerunpegged = true;
 					}
 				}

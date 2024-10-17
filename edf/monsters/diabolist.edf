@@ -28,7 +28,7 @@ thingtype Diabolist {
   See:
     DIAB AABBCCDDEEFF 2 A_VileChase
     loop
-  Missile:    
+  Missile:
     DIAB A 2 A_RandomWalk
 	DIAB A 2 A_VileChase
 	DIAB B 2 A_RandomWalk

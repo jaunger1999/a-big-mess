@@ -1,3 +1,5 @@
+#define HEY 0
+
 playerdelta
 {
   name DoomMarine
