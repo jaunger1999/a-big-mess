@@ -30,6 +30,9 @@ include("edf/monsters/rocketzombie.edf") // Rocket Zombie
 include("edf/monsters/nightmaredemon.edf") // Nightmare Demon
 include("edf/monsters/astralcacodemon.edf")
 
+// Modded Player
+include("edf/deltas/playerdelta.edf")
+
 // Modded items
 include("edf/deltas/itemdeltas/ammodeltas.edf")
 include("edf/deltas/itemdeltas/armordeltas.edf")

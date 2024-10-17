@@ -52,3 +52,19 @@
 	partime = 840
 	killfinale = true
 	disable-jump = true
+[MAP08]
+	levelname = Map 8: Residence Malevolence
+	creator = jaunger
+	music = D_ROCKIT
+	nextlevel = MAP08
+	partime = 840
+	killfinale = true
+	disable-jump = true
+[MAP09]
+	levelname = Map 8: In Space...
+	creator = jaunger
+	music = D_WALLS
+	nextlevel = MAP08
+	partime = 840
+	killfinale = true
+	disable-jump = true

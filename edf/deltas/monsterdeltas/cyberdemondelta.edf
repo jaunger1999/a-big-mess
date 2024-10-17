@@ -1,6 +1,8 @@
 thingdelta {
   name Cyberdemon
   
+  spawnhealth 3000
+  
   bloodtype.normal PersistentDoomBlood
   bloodtype.impact PersistentDoomBlood
   bloodtype.rip PersistentDoomBlood

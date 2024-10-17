@@ -1,6 +1,8 @@
 thingdelta {
   name Spiderdemon
   
+  spawnhealth 2000
+  
   bloodtype.normal PersistentDoomBlood
   bloodtype.impact PersistentDoomBlood
   bloodtype.rip PersistentDoomBlood  
