@@ -79,3 +79,10 @@
 	aircontrol = 10000
 	disable-jump = false
 	killfinale = true
+[MAP11]
+	levelname = E2M1: George's Lavaside Rendezvous
+	creator = jaunger
+	levelpic = CWILV10
+	nextlevel = MAP12
+	partime = 720
+	killfinale = true
