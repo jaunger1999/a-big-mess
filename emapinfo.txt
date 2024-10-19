@@ -4,72 +4,80 @@
 	music = D_ETERN
 	inter-levelname = A Big Mess
 	nextlevel = MAP02
+	aircontrol = 10000
+	disable-jump = false
 	killfinale = true
-	disable-jump = false
-	disable-jump = false
 [MAP02]
 	levelname = Map 2: Mike Tyson's Lunch Out
 	creator = jaunger
 	music = D_GOSS
 	nextlevel = MAP03
 	partime = 840
-	killfinale = true
+	aircontrol = 10000
 	disable-jump = false
+	killfinale = true
 [MAP03]
 	levelname = Map 3: Portal & Polyobj Pandemonium
 	creator = jaunger
 	nextlevel = MAP04
 	partime = 840
-	killfinale = true
+	aircontrol = 10000
 	disable-jump = false
+	killfinale = true
 [MAP04]
 	levelname = Map 4: Kinda Ripping Off Romero
 	creator = jaunger
 	music = D_MACH
 	nextlevel = MAP05
 	partime = 840
-	killfinale = true
+	aircontrol = 10000
 	disable-jump = false
+	killfinale = true
 [MAP05]
 	levelname = Map 5: The Devil's Punch Bowl
 	creator = jaunger
 	music = D_APRIL
 	nextlevel = MAP06
 	partime = 720
-	killfinale = true
+	aircontrol = 10000
 	disable-jump = false
+	killfinale = true
 [MAP06]
 	levelname = Map 6: Constipation! in da Club
 	creator = jaunger
 	music = D_CLUB
 	nextlevel = MAP07
 	partime = 720
-	killfinale = true
+	aircontrol = 10000
 	disable-jump = false
+	killfinale = true
 [MAP07]
 	levelname = Map 7: Ripping Off Romero
 	creator = jaunger
 	music = D_WALLS
 	nextlevel = MAP08
 	partime = 840
-	killfinale = true
+	aircontrol = 10000
 	disable-jump = false
+	killfinale = true
 [MAP08]
 	levelname = Map 8: Residence Malevolence
 	creator = jaunger
 	music = D_ROCKIT
 	nextlevel = MAP09
 	partime = 840
-	killfinale = true
+	aircontrol = 10000
 	disable-jump = false
+	killfinale = true
 [MAP09]
 	levelname = Map 9: In Space...
 	creator = jaunger
 	music = D_WALLS
 	nextlevel = MAP10
 	partime = 840
-	killfinale = true
+	aircontrol = 10000
 	disable-jump = false
+	killfinale = true
 [MAP10]
 	levelname = Map 10: Eagle's Tower
 	creator = jaunger
@@ -85,4 +93,6 @@
 	levelpic = CWILV10
 	nextlevel = MAP12
 	partime = 720
+	aircontrol = 10000
+	disable-jump = false
 	killfinale = true

@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 750.8022f;
-		viewpositionx = 1136f;
+		viewpositiony = -467.5235f;
+		viewpositionx = 1916.186f;
 		
 		testprecommand
 		{
@@ -52,7 +52,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.08288892f;
+		viewscale = 0.08288891f;
 		
 		reloadresourceprecommand
 		{
@@ -62,41 +62,7 @@ maps
 		}
 		defaulttoptexture = "FIREBLU1";
 		overridebottomtexture = false;
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				ypanningfloor = 1;
-			}
-		}
 		defaultbottomtexture = "FIREBLU1";
-		
-		scriptdocuments
-		{
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				caretposition = 3063;
-				firstvisibleline = 96;
-				activetab = true;
-			}
-			
-			document0
-			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-			}
-		}
 		defaultfloortexture = "CRATOP2";
 		overrideceilheight = false;
 		overridebrightness = false;
@@ -117,6 +83,40 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
+		}
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				ypanningfloor = 1;
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 2694;
+				firstvisibleline = 68;
+				activetab = true;
+			}
 		}
 	}
 }
