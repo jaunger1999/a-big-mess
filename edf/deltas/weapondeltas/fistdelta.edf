@@ -18,7 +18,7 @@ weapondelta
 	//Two frames before impact makes it look punchier.
 	PKFS B 1
 	PKFS C 3
-	PKFS E 2 A_Punch //A_CustomPlayerMelee(2, 10, 10, punch, punch, BulletPuff) Doesn't work
+	PKFS E 2 A_CustomPlayerMelee(4, 20, 3, punch, punch, 64.0, BulletPuff) // ugh. example in the docs were wrong.
 	PKFS FGHI 2
 	PKFS JKL 1
 	PKFS A 5 A_ReFire
