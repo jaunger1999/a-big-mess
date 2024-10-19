@@ -23,7 +23,6 @@ include("edf/monsters/marine.edf") //mutineer
 include("edf/monsters/stealthmarine.edf") // mutineer
 include("edf/monsters/plasmazombie.edf")
 include("edf/monsters/suicidebomber.edf")
-//include("edf/monsters/cybruiser.edf") // Mini cyberdemon. commented out because cyberbaron is way epicer.
 include("edf/monsters/cyberbaron.edf") // Cool design that uses counter variables.
 include("edf/monsters/grell.edf") // Weaker flying enemy
 include("edf/monsters/rocketzombie.edf") // Rocket Zombie
