@@ -8,7 +8,7 @@ thingdelta
   bloodtype.crush DoomBloodSpray
 
   cleardropitems
-  droptype AmmoClip
+  droptype AmmoBulletBox
     
   states
   @"

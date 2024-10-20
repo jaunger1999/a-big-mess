@@ -68,17 +68,22 @@ thingdelta {
   name AmmoBulletBox
   
   pickupeffect {
-    effects ClipBox
+    effects J_ClipBox
     message $GOTCLIPBOX
     sound   "getbulletbox"
   }
 }
 
+ammoeffect J_ClipBox {
+	ammo   AmmoClip
+	amount 50
+	dropamount 25
+}
+
 thingdelta {
   name AmmoRocket
   
-  pickupeffect
-  {
+  pickupeffect {
     effects RocketAmmo
     message $GOTROCKET
     sound   "getrocket"
