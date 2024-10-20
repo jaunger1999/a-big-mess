@@ -1,5 +1,6 @@
 /*
  * Change item pickup sounds for better audio feedback.
+ * Also, ammo drops amounts added for ammo dropped by new and changed enemies.
  */
 thingdelta {
   name Backpack
@@ -16,10 +17,16 @@ thingdelta {
   name AmmoCell
   
   pickupeffect {
-    effects Cell
+    effects J_Cell
     message $GOTCELL
     sound   "getcell"
   }
+}
+
+ammoeffect J_Cell {
+	ammo   AmmoCell
+	amount 20
+	dropamount 10
 }
 
 thingdelta {
@@ -37,10 +44,16 @@ thingdelta {
   
   pickupeffect
   {
-    effects Shell
+    effects J_Shell
     message $GOTSHELLS
     sound   "getshells"
   }
+}
+
+ammoeffect J_Shell {
+	ammo   AmmoShell
+	amount 4
+	dropamount 2
 }
 
 thingdelta {
@@ -76,8 +89,8 @@ thingdelta {
 
 ammoeffect J_ClipBox {
 	ammo   AmmoClip
-	amount 50
-	dropamount 25
+	amount 30
+	dropamount 15
 }
 
 thingdelta {
