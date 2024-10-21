@@ -1,12 +1,12 @@
 thingdelta {
   name Spiderdemon
   
-  spawnhealth 2000
+  spawnhealth 2800
   radius        96.0 // she still thicc but hopefully not too thicc.
   
   bloodtype.normal PersistentDoomBlood
   bloodtype.impact PersistentDoomBlood
-  bloodtype.rip PersistentDoomBlood  
+  bloodtype.rip PersistentDoomBlood
   bloodtype.crush DoomBloodSpray
   
   remflags NORADIUSDMG
