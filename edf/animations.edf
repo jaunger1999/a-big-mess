@@ -1,0 +1,43 @@
+// Exit portal.
+animation {
+  flat OTLPTBA0
+
+  lastpic OTLPTBA9
+  
+  tics 2
+}
+
+animation {
+  flat OTLPTBB0
+
+  lastpic OTLPTBB9
+  
+  tics 2
+}
+
+animation {
+  flat OTLPTBC0
+
+  lastpic OTLPTBC9
+  
+  tics 2
+}
+
+animation {
+  flat OTLPTBD0
+
+  lastpic OTLPTBD9
+  
+  tics 2
+}
+
+// Tar
+animation
+{
+  // One of the following:
+  flat OTAR__01
+
+  lastpic OTAR__08
+  tics 4
+  flags SWIRL
+}

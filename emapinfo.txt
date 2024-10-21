@@ -25,7 +25,7 @@
 	disable-jump = false
 	killfinale = true
 [MAP04]
-	levelname = Map 4: Kinda Ripping Off Romero
+	levelname = Map 4: Ripping Off Romero
 	creator = jaunger
 	music = D_MACH
 	nextlevel = MAP05
@@ -52,7 +52,7 @@
 	disable-jump = false
 	killfinale = true
 [MAP07]
-	levelname = Map 7: Ripping Off Romero
+	levelname = Map 7: Doom is a 3D Game!
 	creator = jaunger
 	music = D_WALLS
 	nextlevel = MAP08
