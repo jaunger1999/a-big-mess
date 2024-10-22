@@ -10,7 +10,7 @@ thingtype AstralDemon
   painchance  20
   mass        1000
 
-  addflags NOGRAVITY|FLOAT
+  addflags NOGRAVITY|FLOAT|MONSTERPASS
 
   seesound "astral/sight"
   painsound "astral/pain"

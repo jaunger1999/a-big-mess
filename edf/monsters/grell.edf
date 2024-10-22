@@ -16,7 +16,7 @@ thingtype Grell
   painchance  128
   mass        50
 
-  addflags NOGRAVITY|FLOAT|FLOATBOB
+  addflags NOGRAVITY|FLOAT|FLOATBOB|MONSTERPASS
 
   bloodtype.normal DoomBloodSpray
   bloodtype.impact DoomBloodSpray

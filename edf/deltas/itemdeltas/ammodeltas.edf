@@ -44,7 +44,7 @@ thingdelta {
   
   pickupeffect
   {
-    effects J_Shell
+    effects Shell
     message $GOTSHELLS
     sound   "getshells"
   }
@@ -53,7 +53,7 @@ thingdelta {
 ammoeffect J_Shell {
 	ammo   AmmoShell
 	amount 4
-	dropamount 2
+	dropamount 2 // no
 }
 
 thingdelta {

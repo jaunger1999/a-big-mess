@@ -2,6 +2,7 @@ thingdelta {
   name CacoDemon
   
   gibhealth 0
+  addflags MONSTERPASS
   
   bloodcolor = 3 // blue
   bloodtype.normal DoomBloodBlue

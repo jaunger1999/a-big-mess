@@ -40,6 +40,7 @@ include("edf/deltas/itemdeltas/armordeltas.edf")
 include("edf/deltas/itemdeltas/keydeltas.edf")
 
 // Modded powerups
+include("edf/deltas/itemdeltas/bonusdeltas.edf")
 include("edf/deltas/itemdeltas/powerupdeltas/berserkdelta.edf")
 include("edf/deltas/itemdeltas/powerupdeltas/computerareamapdelta.edf")
 include("edf/deltas/itemdeltas/powerupdeltas/invulnerabilityspheredelta.edf")

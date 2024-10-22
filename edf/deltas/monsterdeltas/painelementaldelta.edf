@@ -2,6 +2,8 @@
 thingdelta {
   name PainElemental
   
+  addflags MONSTERPASS
+  
   bloodtype.normal PersistentDoomBlood
   bloodtype.impact PersistentDoomBlood
   bloodtype.rip PersistentDoomBlood  

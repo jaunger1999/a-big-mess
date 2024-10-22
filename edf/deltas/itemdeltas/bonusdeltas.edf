@@ -1,0 +1,22 @@
+thingdelta {
+	name HealthBonus
+	
+	states
+	@"
+	Spawn:
+	BON1 A           7 bright
+	BON1 BCDEFGFEDCB 2 bright
+	loop
+  "@
+}
+
+thingdelta {
+	name ArmorBonus
+	
+	states
+	@"
+	Spawn:
+	BON2 ABCDEFGHGFEDCB 2 bright
+	loop
+  "@
+}

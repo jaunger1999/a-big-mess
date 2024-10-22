@@ -58,3 +58,9 @@ animation
   tics 4
   flags SWIRL
 }
+
+// Glass
+switch ZRIONGLS {
+  on NJSMSH05
+  sound glass1
+}

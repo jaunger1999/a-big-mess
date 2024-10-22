@@ -4,7 +4,7 @@ thingdelta
 	
   spawnhealth 80
 	
-  addflags NOBLOOD
+  addflags NOBLOOD|MONSTERPASS
 
   bloodtype.normal BulletPuff
   bloodtype.impact BulletPuff
