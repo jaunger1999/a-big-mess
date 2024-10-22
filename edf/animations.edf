@@ -31,10 +31,27 @@ animation {
   tics 2
 }
 
+// Lava
+animation
+{
+  flat LAVA1
+  lastpic LAVA1
+
+  flags SWIRL
+}
+
+// Nukage
+animation
+{
+  flat NUKAGE1
+  lastpic NUKAGE1
+
+  flags SWIRL
+}
+
 // Tar
 animation
 {
-  // One of the following:
   flat OTAR__01
 
   lastpic OTAR__08
