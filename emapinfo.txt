@@ -54,7 +54,7 @@
 [MAP07]
 	levelname = Map 7: Doom is a 3D Game!
 	creator = jaunger
-	music = D_WALLS
+	music = D_ARGENT
 	nextlevel = MAP08
 	partime = 840
 	aircontrol = 10000
