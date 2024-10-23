@@ -197,7 +197,7 @@ thingtype CyberbaronRocket
     Stop
   "@
 }
-
+/*
 thingtype TangoCyberBaronRocketArm
 {
 	cflags      NOSPLASH|NOCROSS|CORPSE|FLOORCLIP
@@ -221,7 +221,7 @@ thingtype TangoCyberBaronRocketArm
 		CBRM J -1
 		Stop
 	"@
-}
+}*/
 
 sound "cyberbaron/disarm"          { lump "DSCBADA" ; pitchvariance Doom; }
 sound "cyberbaron/step"            { lump "DSBRUSTP"; pitchvariance Doom; }

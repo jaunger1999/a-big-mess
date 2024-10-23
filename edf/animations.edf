@@ -59,6 +59,20 @@ animation
   flags SWIRL
 }
 
+// Intestines
+animation {
+  flat SFLR6_4
+  
+  flags SWIRL
+}
+
+// Skin face: throws false error
+animation {
+  wall SKINFACE
+
+  flags SWIRL
+}
+
 // Glass
 switch ZRIONGLS {
   on NJSMSH05

@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -897.6285f;
-		viewpositiony = 863.7181f;
-		viewscale = 3.158492f;
+		viewpositionx = -797.4415f;
+		viewpositiony = 314.2018f;
+		viewscale = 0.8506691f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -51,7 +51,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 8;
+			gridsize = 64;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -101,9 +101,9 @@ maps
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 32;
+						sectordepth = 72;
 						spacing = 0;
-						frontside = true;
+						frontside = false;
 						singlesectors = true;
 						distinctsectors = false;
 						singledirection = false;
@@ -119,12 +119,12 @@ maps
 						applyceilingtexture = false;
 						ceilingtexture = "";
 						applyuppertexture = true;
-						uppertexture = "-";
+						uppertexture = "ASHWALL2";
 						upperunpegged = true;
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = true;
-						lowertexture = "-";
+						lowertexture = "ASHWALL2";
 						lowerunpegged = true;
 					}
 				}
@@ -159,7 +159,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 60;
+				caretposition = 1429;
+				firstvisibleline = 2;
 				activetab = true;
 			}
 		}
