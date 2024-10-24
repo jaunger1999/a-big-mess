@@ -1,4 +1,5 @@
 sound "strike" { lump "DSSTRIKE"; pitchvariance Doom; }
+sound "floormove" { lump "DSSTNMOV"; pitchvariance Doom; }
 
 
 // Ambience.
@@ -162,4 +163,13 @@ soundsequence silence
   type sector
   cmds { "playuntildone silent" }
   nostopcutoff true
+}
+
+soundsequence floor {
+	id 17
+	type door
+	
+	commands @" 
+		playrepeat floormove
+	"@
 }

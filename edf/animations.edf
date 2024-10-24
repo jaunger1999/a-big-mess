@@ -56,7 +56,6 @@ animation
 
   lastpic OTAR__08
   tics 4
-  flags SWIRL
 }
 
 // Intestines
@@ -73,12 +72,8 @@ animation {
   flags SWIRL
 }
 
-// Skin face: throws false error
 animation {
   wall FIREBLU1
-
-  //lastpic FIREBLU2
-  //tics 4
   
   flags SWIRL
 }

@@ -90,9 +90,16 @@
 	disable-jump = false
 	killfinale = true
 [MAP11]
-	levelname = E2M1: George's Lavaside Rendezvous
+	levelname = Map 11: George's Lavaside Rendezvous
 	creator = jaunger
-	levelpic = CWILV10
+	nextlevel = MAP12
+	partime = 720
+	aircontrol = 10000
+	disable-jump = false
+	killfinale = true
+[MAP12]
+	levelname = Map 12: Follow that Train BJ!
+	creator = jaunger
 	nextlevel = MAP12
 	partime = 720
 	aircontrol = 10000
