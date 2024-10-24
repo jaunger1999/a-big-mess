@@ -11,6 +11,7 @@ include("edf/effects/casings.edf")
 include("edf/effects/glass.edf") // Glass particles
 include("edf/effects/painelementalchunk.edf")
 include("edf/effects/smoke.edf")
+include("edf/effects/steam.edf")
 
 // New items
 include("edf/items/health.edf")

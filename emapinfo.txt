@@ -75,7 +75,9 @@
 	music = D_WALLS
 	nextlevel = MAP10
 	partime = 840
+	skyname = GLXSKY06
 	aircontrol = 10000
+	boss-specials = E2M8
 	disable-jump = false
 	killfinale = true
 [MAP10]

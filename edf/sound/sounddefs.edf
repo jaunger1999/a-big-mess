@@ -1,1 +1,165 @@
 sound "strike" { lump "DSSTRIKE"; pitchvariance Doom; }
+
+
+// Ambience.
+
+// Fire sound effect - to be used at flame jets
+//sound dsamfire    { prefix false }
+//ambience { sound dsamfire; index 1; volume 96 }
+
+// Waterfall
+//sound dsamfall    { prefix false }
+//ambience { sound dsamfall; index 2; volume 32 }
+
+//sound dsamfal2    { prefix false }
+//ambience { sound dsamfal2; index 3; volume 40 }
+
+//sound dsamfal3    { prefix false }
+//ambience { sound dsamfal3; index 4; volume 96 }
+
+// Doors & Lifts
+
+sound ulift12B { prefix false }
+sound ulift3b  { prefix false }
+sound ulift3a  { prefix false }
+sound ulift2a  { prefix false }
+sound ulift1a  { prefix false }
+sound udoor1c  { prefix false }
+sound udoor1b  { prefix false }
+sound udoor1a  { prefix false }
+sound slift1c  { prefix false }
+sound slift1b  { prefix false }
+sound slift1a  { prefix false }
+sound silent   { prefix false }
+sound sdoor5   { prefix false }
+sound sdoor4   { prefix false }
+sound sdoor2   { prefix false }
+sound q1lift2b { prefix false }
+sound q1lift2a { prefix false }
+sound q1door2a { prefix false }
+sound q1door1  { prefix false }
+sound hllift1b { prefix false }
+sound hllift1a { prefix false }
+sound hldoor3  { prefix false }
+sound hldoor1  { prefix false }
+sound ddoor    { prefix false }
+
+soundsequence door1
+{
+  id 1
+  cmds { "playuntildone ddoor" }
+  type door
+  nostopcutoff true
+}
+
+soundsequence door2
+{
+  id 2
+  cmds { "playuntildone hldoor1" }
+  type door
+  nostopcutoff true
+}
+
+soundsequence door3
+{
+  id 3
+  cmds { "playuntildone hldoor3" }
+  type door
+  nostopcutoff true
+}
+
+soundsequence door4
+{
+  id 4
+  cmds { "playuntildone q1door1" }
+  type door
+  nostopcutoff true
+}
+
+soundsequence door5
+{
+  id 5
+  cmds { "playrepeat qldoor2", "stopsound q1lift2b" }
+  type door
+}
+
+soundsequence door6
+{
+  id 6
+  cmds { "playuntildone sdoor2" }
+  type door
+  nostopcutoff true
+}
+
+soundsequence door7
+{
+  id 7
+  cmds { "playuntildone sdoor4" }
+  type door
+  nostopcutoff true
+}
+
+soundsequence door8
+{
+  id 8
+  cmds { "playuntildone sdoor4" }
+  type door
+  nostopcutoff true
+}
+
+soundsequence door9
+{
+  id 9
+  cmds { "playuntildone udoor1a", "playrepeat udoor1b", "stopsound udoor1c" }
+  type door
+}
+
+soundsequence plat1
+{
+  id 10
+  cmds { "playrepeat hllift1a", "stopsound hllift1b" }
+  type plat
+}
+
+soundsequence plat2
+{
+  id 11
+  cmds { "playrepeat q1lift2a", "stopsound q1lift2b" }
+  type plat
+}
+
+soundsequence plat3
+{
+  id 12
+  cmds { "playuntildone slift1a", "playrepeat slift1b", "stopsound slift1c" }
+  type plat
+}
+
+soundsequence plat4
+{
+  id 13
+  cmds { "playrepeat ulift1a", "stopsound ulift12b" }
+  type plat
+}
+
+soundsequence plat5
+{
+  id 14
+  cmds { "playrepeat ulift2a", "stopsound ulift12b" }
+  type plat
+}
+
+soundsequence plat6
+{
+  id 15
+  cmds { "playrepeat ulift3a", "stopsound ulift3b" }
+  type plat
+}
+
+soundsequence silence
+{
+  id 16
+  type sector
+  cmds { "playuntildone silent" }
+  nostopcutoff true
+}

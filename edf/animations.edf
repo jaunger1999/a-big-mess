@@ -73,6 +73,16 @@ animation {
   flags SWIRL
 }
 
+// Skin face: throws false error
+animation {
+  wall FIREBLU1
+
+  //lastpic FIREBLU2
+  //tics 4
+  
+  flags SWIRL
+}
+
 // Glass
 switch ZRIONGLS {
   on NJSMSH05

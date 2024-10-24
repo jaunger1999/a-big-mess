@@ -1,0 +1,288 @@
+// Steam effects based on smoke sprites from Stronghold.
+
+thingtype SmokeSpawnDownTimed
+{
+	doomednum = 31007
+	spawnstate = SMOKESPAWNDOWNTIMED_START
+	cflags = NOSPLASH|NOGRAVITY|NOCLIP|NOBLOCKMAP|SPAWNCEILING
+}
+
+
+frame SMOKESPAWNDOWNTIMED_START { cmp = "TNT1|A|*|1|*|@next" }
+frame SMOKESPAWNDOWNTIMED_1 { cmp = "TNT1|A|*|1|SteamSpawn(SmokeBit,359,-90,25,4)|@next" }
+frame SMOKESPAWNDOWNTIMED_2 { cmp = "TNT1|A|*|1|SteamSpawn(SmokeBit,359,-90,25,4)|@next" }
+frame SMOKESPAWNDOWNTIMED_3 { cmp = "TNT1|A|*|1|SteamSpawn(SmokeBit,359,-90,25,4)|@next" }
+frame SMOKESPAWNDOWNTIMED_4 { cmp = "TNT1|A|*|1|SteamSpawn(SmokeBit,359,-90,25,4)|@next" }
+frame SMOKESPAWNDOWNTIMED_5 { cmp = "TNT1|A|*|1|SteamSpawn(SmokeBit,359,-90,25,3)|@next" }
+frame SMOKESPAWNDOWNTIMED_6 { cmp = "TNT1|A|*|1|SteamSpawn(SmokeBit,359,-90,25,3)|@next" }
+frame SMOKESPAWNDOWNTIMED_7 { cmp = "TNT1|A|*|1|SteamSpawn(SmokeBit,359,-90,25,3)|@next" }
+frame SMOKESPAWNDOWNTIMED_8 { cmp = "TNT1|A|*|1|SteamSpawn(SmokeBit,359,-90,25,3)|@next" }
+frame SMOKESPAWNDOWNTIMED_9 { cmp = "TNT1|A|*|32|SteamSpawn(SmokeBit,359,-90,25,3)|SMOKESPAWNDOWNTIMED_1" }
+
+thingtype SmokeSpawnSideFloor
+{
+	doomednum = 31001
+	spawnstate = SMOKESPAWNSIDE
+	cflags = NOSPLASH|NOGRAVITY|NOCLIP|NOBLOCKMAP
+}
+
+thingtype SmokeSpawnSideCeil
+{
+	doomednum = 31002
+	spawnstate = SMOKESPAWNSIDE
+	cflags = NOSPLASH|NOGRAVITY|NOCLIP|NOBLOCKMAP|SPAWNCEILING
+}
+
+frame SMOKESPAWNSIDE { cmp = "TNT1|A|*|4|SteamSpawn(SmokeBit,64,0,40,3)}@this" }
+
+thingtype SmokeSpawnDown
+{
+	doomednum = 31003
+	spawnstate = SMOKESPAWNDOWN
+	cflags = NOSPLASH|NOGRAVITY|NOCLIP|NOBLOCKMAP|SPAWNCEILING
+}
+
+frame SMOKESPAWNDOWN { cmp = "TNT1|A|*|4|SteamSpawn(SmokeBit,359,-90,40,3)|@this" }
+
+thingtype SmokeSpawnDownDiag
+{
+	doomednum = 31004
+	spawnstate = SMOKESPAWNDOWNDIAG
+	cflags = NOSPLASH|NOGRAVITY|NOCLIP|NOBLOCKMAP|SPAWNCEILING
+}
+
+frame SMOKESPAWNDOWNDIAG { cmp = "TNT1|A|*|4|SteamSpawn(SmokeBit,64,-40,40,3)|@this" }
+
+thingtype SmokeSpawnUp
+{
+	doomednum = 31005
+	spawnstate = SMOKESPAWNUP
+	cflags = NOSPLASH|NOGRAVITY|NOCLIP|NOBLOCKMAP
+}
+
+frame SMOKESPAWNUP { cmp = "TNT1|A|*|4|SteamSpawn(SmokeBit,359,90,40,3)|@this" }
+
+thingtype SmokeSpawnUpDiag
+{
+	doomednum = 31006
+	spawnstate = SMOKESPAWNUPDIAG
+	cflags = NOSPLASH|NOGRAVITY|NOCLIP|NOBLOCKMAP
+}
+
+frame SMOKESPAWNUPDIAG { cmp = "TNT1|A|*|4|SteamSpawn(SmokeBit,64,30,40,3)|@this" }
+
+
+thingtype SmokeSpawnUpTimed1
+{
+	doomednum = 31008
+	cflags = NOSPLASH|NOGRAVITY|NOCLIP|NOBLOCKMAP|NORANDOM
+	states @"
+	Spawn:
+	TNT1 A 1
+	TNT1 AAA 5 SteamSpawn(SmokeBit,359,90,40,3)
+	TNT1 A 96
+	loop
+	"@
+}
+
+thingtype SmokeSpawnUpTimed2
+{
+	doomednum = 31009
+	inherits = SmokeSpawnUpTimed1
+	states @"
+	Spawn:
+	TNT1 A 1
+	TNT1 A 32
+	TNT1 AAA 5 SteamSpawn(SmokeBit,359,90,40,3)
+	TNT1 A 64
+	loop
+	"@
+}
+
+thingtype SmokeSpawnUpTimed3
+{
+	doomednum = 31010
+	inherits = SmokeSpawnUpTimed1
+	states @"
+	Spawn:
+	TNT1 A 1
+	TNT1 A 64
+	TNT1 AAA 5 SteamSpawn(SmokeBit,359,90,40,3)
+	TNT1 A 32
+	loop
+	"@
+}
+
+thingtype SmokeSpawnUpTimed4
+{
+	doomednum = 31011
+	inherits = SmokeSpawnUpTimed1
+	states @"
+	Spawn:
+	TNT1 A 1
+	TNT1 A 96
+	TNT1 AAA 5 SteamSpawn(SmokeBit,359,90,40,3)
+	loop
+	"@
+}
+
+
+// smoke bit frames
+// these randomly pick an animation to use, run through it, and fade away
+
+thingtype SmokeBit
+{
+	spawnstate = SmokeBitSpawn
+	
+	cflags = NOBLOCKMAP|NOGRAVITY|NOSPLASH|TLSTYLEADD|NOCLIP
+	translucency = 50%
+}
+
+frame SmokeBitSpawn { cmp = "TNT1|*|*|1|*|@next" }
+frame SmokeBitCalc1 { cmp = "TNT1|A|*|0|SetCounter(1, 9, randmod)|@next" }
+frame SmokeBitCalc2 { cmp = "TNT1|A|*|0|CounterSwitch(1,SmokeSwitch1,9)|@next" }
+
+frame SmokeSwitch1 { cmp = "TNT1|*|*|1|*|SmokeBit1_A" }
+frame SmokeSwitch2 { cmp = "TNT1|*|*|1|*|SmokeBit2_A" }
+frame SmokeSwitch3 { cmp = "TNT1|*|*|1|*|SmokeBit3_A" }
+frame SmokeSwitch4 { cmp = "TNT1|*|*|1|*|SmokeBit4_A" }
+frame SmokeSwitch5 { cmp = "TNT1|*|*|1|*|SmokeBit5_A" }
+frame SmokeSwitch6 { cmp = "TNT1|*|*|1|*|SmokeBit6_A" }
+frame SmokeSwitch7 { cmp = "TNT1|*|*|1|*|SmokeBit7_A" }
+frame SmokeSwitch8 { cmp = "TNT1|*|*|1|*|SmokeBit8_A" }
+frame SmokeSwitch9 { cmp = "TNT1|*|*|1|*|SmokeBit9_A" }
+
+frame SmokeBit1_A { cmp = "SMX1|I|*|6|*|@next" }
+frame SmokeBit1_B { cmp = "SMX1|H|*|6|*|@next" }
+frame SmokeBit1_C { cmp = "SMX1|G|*|6|*|@next" }
+frame SmokeBit1_D { cmp = "SMX1|F|*|6|*|@next" }
+frame SmokeBit1_E { cmp = "SMX1|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_F { cmp = "SMX1|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_G { cmp = "SMX1|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_H { cmp = "SMX1|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_I { cmp = "SMX1|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_J { cmp = "SMX1|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_K { cmp = "SMX1|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_L { cmp = "SMX1|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_M { cmp = "SMX1|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit1_N { cmp = "SMX1|A|*|3|FadeOut(0.04)|@null" }
+
+frame SmokeBit2_A { cmp = "SMX2|I|*|6|*|@next" }
+frame SmokeBit2_B { cmp = "SMX2|H|*|6|*|@next" }
+frame SmokeBit2_C { cmp = "SMX2|G|*|6|*|@next" }
+frame SmokeBit2_D { cmp = "SMX2|F|*|6|*|@next" }
+frame SmokeBit2_E { cmp = "SMX2|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_F { cmp = "SMX2|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_G { cmp = "SMX2|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_H { cmp = "SMX2|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_I { cmp = "SMX2|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_J { cmp = "SMX2|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_K { cmp = "SMX2|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_L { cmp = "SMX2|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_M { cmp = "SMX2|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit2_N { cmp = "SMX2|A|*|3|FadeOut(0.04)|@null" }
+
+frame SmokeBit3_A { cmp = "SMX3|I|*|6|*|@next" }
+frame SmokeBit3_B { cmp = "SMX3|H|*|6|*|@next" }
+frame SmokeBit3_C { cmp = "SMX3|G|*|6|*|@next" }
+frame SmokeBit3_D { cmp = "SMX3|F|*|6|*|@next" }
+frame SmokeBit3_E { cmp = "SMX3|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_F { cmp = "SMX3|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_G { cmp = "SMX3|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_H { cmp = "SMX3|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_I { cmp = "SMX3|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_J { cmp = "SMX3|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_K { cmp = "SMX3|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_L { cmp = "SMX3|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_M { cmp = "SMX3|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit3_N { cmp = "SMX3|A|*|3|FadeOut(0.04)|@null" }
+
+frame SmokeBit4_A { cmp = "SMX4|I|*|6|*|@next" }
+frame SmokeBit4_B { cmp = "SMX4|H|*|6|*|@next" }
+frame SmokeBit4_C { cmp = "SMX4|G|*|6|*|@next" }
+frame SmokeBit4_D { cmp = "SMX4|F|*|6|*|@next" }
+frame SmokeBit4_E { cmp = "SMX4|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_F { cmp = "SMX4|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_G { cmp = "SMX4|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_H { cmp = "SMX4|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_I { cmp = "SMX4|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_J { cmp = "SMX4|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_K { cmp = "SMX4|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_L { cmp = "SMX4|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_M { cmp = "SMX4|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit4_N { cmp = "SMX4|A|*|3|FadeOut(0.04)|@null" }
+
+frame SmokeBit5_A { cmp = "SMX5|I|*|6|*|@next" }
+frame SmokeBit5_B { cmp = "SMX5|H|*|6|*|@next" }
+frame SmokeBit5_C { cmp = "SMX5|G|*|6|*|@next" }
+frame SmokeBit5_D { cmp = "SMX5|F|*|6|*|@next" }
+frame SmokeBit5_E { cmp = "SMX5|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_F { cmp = "SMX5|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_G { cmp = "SMX5|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_H { cmp = "SMX5|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_I { cmp = "SMX5|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_J { cmp = "SMX5|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_K { cmp = "SMX5|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_L { cmp = "SMX5|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_M { cmp = "SMX5|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit5_N { cmp = "SMX5|A|*|3|FadeOut(0.04)|@null" }
+
+frame SmokeBit6_A { cmp = "SMX6|I|*|6|*|@next" }
+frame SmokeBit6_B { cmp = "SMX6|H|*|6|*|@next" }
+frame SmokeBit6_C { cmp = "SMX6|G|*|6|*|@next" }
+frame SmokeBit6_D { cmp = "SMX6|F|*|6|*|@next" }
+frame SmokeBit6_E { cmp = "SMX6|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_F { cmp = "SMX6|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_G { cmp = "SMX6|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_H { cmp = "SMX6|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_I { cmp = "SMX6|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_J { cmp = "SMX6|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_K { cmp = "SMX6|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_L { cmp = "SMX6|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_M { cmp = "SMX6|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit6_N { cmp = "SMX6|A|*|3|FadeOut(0.04)|@null" }
+
+frame SmokeBit7_A { cmp = "SMX7|I|*|6|*|@next" }
+frame SmokeBit7_B { cmp = "SMX7|H|*|6|*|@next" }
+frame SmokeBit7_C { cmp = "SMX7|G|*|6|*|@next" }
+frame SmokeBit7_D { cmp = "SMX7|F|*|6|*|@next" }
+frame SmokeBit7_E { cmp = "SMX7|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_F { cmp = "SMX7|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_G { cmp = "SMX7|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_H { cmp = "SMX7|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_I { cmp = "SMX7|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_J { cmp = "SMX7|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_K { cmp = "SMX7|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_L { cmp = "SMX7|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_M { cmp = "SMX7|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit7_N { cmp = "SMX7|A|*|3|FadeOut(0.04)|@null" }
+
+frame SmokeBit8_A { cmp = "SMX8|I|*|6|*|@next" }
+frame SmokeBit8_B { cmp = "SMX8|H|*|6|*|@next" }
+frame SmokeBit8_C { cmp = "SMX8|G|*|6|*|@next" }
+frame SmokeBit8_D { cmp = "SMX8|F|*|6|*|@next" }
+frame SmokeBit8_E { cmp = "SMX8|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_F { cmp = "SMX8|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_G { cmp = "SMX8|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_H { cmp = "SMX8|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_I { cmp = "SMX8|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_J { cmp = "SMX8|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_K { cmp = "SMX8|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_L { cmp = "SMX8|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_M { cmp = "SMX8|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit8_N { cmp = "SMX8|A|*|3|FadeOut(0.04)|@null" }
+
+frame SmokeBit9_A { cmp = "SMX9|I|*|6|*|@next" }
+frame SmokeBit9_B { cmp = "SMX9|H|*|6|*|@next" }
+frame SmokeBit9_C { cmp = "SMX9|G|*|6|*|@next" }
+frame SmokeBit9_D { cmp = "SMX9|F|*|6|*|@next" }
+frame SmokeBit9_E { cmp = "SMX9|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_F { cmp = "SMX9|E|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_G { cmp = "SMX9|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_H { cmp = "SMX9|D|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_I { cmp = "SMX9|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_J { cmp = "SMX9|C|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_K { cmp = "SMX9|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_L { cmp = "SMX9|B|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_M { cmp = "SMX9|A|*|3|FadeOut(0.04)|@next" }
+frame SmokeBit9_N { cmp = "SMX9|A|*|3|FadeOut(0.04)|@null" }
