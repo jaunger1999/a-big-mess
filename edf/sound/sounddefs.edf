@@ -1,6 +1,8 @@
 sound "strike" { lump "DSSTRIKE"; pitchvariance Doom; }
 sound "floormove" { lump "DSSTNMOV"; pitchvariance Doom; }
 
+sound "turboopen" { lump "DSBDOPN"; pitchvariance Doom; }
+sound "turboclose" { lump "DSBDCLS"; pitchvariance Doom; }
 
 // Ambience.
 
@@ -171,5 +173,24 @@ soundsequence floor {
 	
 	commands @" 
 		playrepeat floormove
+	"@
+}
+
+soundsequence EEDoorCloseNormal
+{
+  cmds =
+  {
+     "play EE_DoorOpen",
+     "stopsound EE_DoorClose"
+  }
+}
+
+soundsequence turboDoorSound {
+	id 18
+	type door
+	
+	commands @"
+		play turboopen
+		stopsound turboclose
 	"@
 }
