@@ -1,0 +1,34 @@
+thingdelta {
+	name MBFHelperDog
+	
+	painchance  32
+	speed       15
+	states
+	@"
+		Spawn:
+			DOGS AB 10 A_Look
+			loop
+		See:
+			DOGS AABBCCDD 2 A_Chase
+			loop
+		Melee:
+			DOGS EF 4 A_FaceTarget
+			DOGS G  4 A_SargAttack
+			goto See
+		Pain:
+			DOGS H 1
+			DOGS H 2 A_Pain
+			goto See
+		Death:
+			DOGS I  8
+			DOGS J  8 A_Scream
+			DOGS K  4
+			DOGS L  4 A_Fall
+			DOGS M  4
+			DOGS N -1
+			stop
+		Raise:
+			DOGS NMLKJI 5
+			goto See
+	"@
+}

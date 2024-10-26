@@ -1,54 +1,50 @@
-weaponinfo WolfGun : Weapon
+weaponinfo WolfGun : DoomWeapon
 {
-  ammotype     AmmoMissile
+  ammotype     AmmoClip
   ammouse      1
 
-  slotnumber         5
+  slotnumber         4
   slotselectionorder 1.1
-  selectionorder 7.1
+  selectionorder 3.1
 
-  flags        DISABLEAPS|SILENCEABLE
-  recoil       100.0
+  flags        DISABLEAPS|SILENCEABLE|ALWAYSRECOIL
+  recoil       10.0
   hapticrecoil 6
   haptictime   8
 
   states
   @"
   Ready:
-    CBMG A 1 A_WeaponReady()
+    WOLF A 1 A_WeaponReady()
     Loop
   //9 Lower and 4 Raise result in the exact same timing as vanilla doom.
   Deselect:
-    CBMG A 1 A_Lower(9)
+    WOLF A 1 A_Lower(9)
     Loop
   Select:
-    CBMG A 1 A_Raise(4)
+    WOLF A 1 A_Raise(4)
     Loop
   Fire:
-    CBMG A 3
-    CBMG A 2 A_GunFlash()
-    CBMG B 2 A_PlaySoundEx("w3dgun", chan_weapon)
-	TNT1 A 0 A_SubtractAmmo 
-    CBMG C 2 A_SpawnEx(GrenadeShot, none, 12, 0, 28, 18, 0, 1, 0, 256)
-    CBMG D 2
-    CBMG C 1
-    CBMG B 1 A_PlaySoundEx("bomrel", 5)
-    CBMG EFAEF 2
-    CBMG A 0 A_ReFire()
+    WLOW B 10
+    WLOW A 10
+  Firing:
+    TNT1 A 0 A_PlaySoundEx("w3dgun", chan_weapon)
+    MUZZ A 2 A_FireCustomBullets(PISTOL, custom, 1, 6, 3, Flash, 10, 2)
+	TNT1 A 0 A_JumpIfNoAmmo(Deselect)
+    TNT1 A 0 A_PlaySoundEx("w3dgun", chan_weapon)
+    MUZZ B 2 A_FireCustomBullets(PISTOL, custom, 1, 6, 3, Flash, 10, 2)
+    TNT1 A 0 A_RefireTo(Firing, 0)
+  Cooldown:
+    WLOW A 6
+    WLOW B 6
     Goto Ready
-  Flash:
-    CBMF A 2 Bright A_Light1()
-    CBMF BC 2 Bright A_Light2()
-    CBMF D 2 Bright A_Light1()
-    CBMF E 1 Bright A_Light1()
-    Goto LightDone
   "@
 }
 
 weapongiver GiverWolfGun
 {
   weapon    WolfGun
-  ammogiven AmmoBullet, 30
+  ammogiven AmmoClip, 30
 }
 
 thingtype WeaponWolfGun : Mobj, 32501
@@ -64,9 +60,9 @@ thingtype WeaponWolfGun : Mobj, 32501
   states
   @"
   Spawn:
-    CLAU A -1
+    WGUN A -1
     stop
   "@
 }
 
-sound w3dgun { lump W3DGUN; pitchvariance Doom; }
+sound w3dgun { lump DSW3DGUN; pitchvariance Doom; }

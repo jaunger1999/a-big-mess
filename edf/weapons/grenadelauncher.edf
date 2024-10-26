@@ -7,7 +7,7 @@ weaponinfo GrenadeLauncher : Weapon
   slotselectionorder 1.1
   selectionorder 7.1
 
-  flags        DISABLEAPS|SILENCEABLE
+  flags        DISABLEAPS|SILENCEABLE|ALWAYSRECOIL
   recoil       100.0
   hapticrecoil 6
   haptictime   8

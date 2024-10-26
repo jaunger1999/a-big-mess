@@ -105,3 +105,19 @@
 	aircontrol = 10000
 	disable-jump = false
 	killfinale = true
+[MAP13]
+	levelname = Map 13: Self Fellating Brick Laying
+	creator = jaunger
+	nextlevel = MAP12
+	partime = 720
+	aircontrol = 10000
+	disable-jump = false
+	killfinale = true
+[MAP13]
+	levelname = Map 14: You Don't Scare Me, Archie!!
+	creator = jaunger
+	nextlevel = MAP12
+	partime = 720
+	aircontrol = 10000
+	disable-jump = false
+	killfinale = true
