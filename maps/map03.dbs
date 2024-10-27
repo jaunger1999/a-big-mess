@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -1631.333f;
-		viewpositionx = 39.88029f;
+		viewpositiony = -2025.448f;
+		viewpositionx = 2950.322f;
 		
 		testprecommand
 		{
@@ -48,11 +48,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 32;
+			gridsize = 64;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 1.342745f;
+		viewscale = 1.03288f;
 		
 		reloadresourceprecommand
 		{
@@ -62,15 +62,6 @@ maps
 		}
 		defaulttoptexture = "STARTAN2";
 		overridebottomtexture = false;
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				ypanningfloor = 1;
-			}
-		}
 		defaultbottomtexture = "STARTAN2";
 		defaultfloortexture = "FLOOR0_1";
 		overrideceilheight = false;
@@ -92,6 +83,61 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
+		}
+		
+		plugins
+		{
+			
+			stairsectorbuilder
+			{
+				
+				prefabs
+				{
+					
+					prefab1
+					{
+						name = "[Previous]";
+						numberofsectors = 1;
+						outervertexmultiplier = 1;
+						innervertexmultiplier = 1;
+						stairtype = 0;
+						sectordepth = 256;
+						spacing = 0;
+						frontside = false;
+						singlesectors = true;
+						distinctsectors = true;
+						singledirection = false;
+						distinctbaseheights = true;
+						flipping = 0;
+						numberofcontrolpoints = 1;
+						applyfloormod = true;
+						floormod = 0;
+						applyceilingmod = true;
+						ceilingmod = 0;
+						applyfloortexture = false;
+						floortexture = "";
+						applyceilingtexture = false;
+						ceilingtexture = "";
+						applyuppertexture = true;
+						uppertexture = "-";
+						upperunpegged = true;
+						applymiddletexture = false;
+						middletexture = "-";
+						applylowertexture = true;
+						lowertexture = "-";
+						lowerunpegged = true;
+					}
+				}
+			}
+		}
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				ypanningfloor = 1;
+			}
 		}
 	}
 }

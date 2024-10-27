@@ -16,6 +16,8 @@ thingtype Cyberbaron
   reactiontime    8
   painchance     30
   mass         1000
+  mod BruiserMOD
+  damagefactor BruiserMOD, immune
 
   addflags NORADIUSDMG|HIGHERMPROB
   
@@ -192,7 +194,7 @@ thingtype CyberbaronRocket
     FBRS A 2 Bright A_SteamSpawn(OGTracerSmoke)
     Loop
   Death:
-    BAL3 C 6 Bright A_DetonateEx(24, 48, 0)
+    BAL3 C 6 Bright A_DetonateEx(24, 48, 0, 1, 0, 0, 0, 1, 0)
     BAL3 DE 6 Bright
     Stop
   "@
@@ -222,6 +224,12 @@ thingtype TangoCyberBaronRocketArm
 		Stop
 	"@
 }*/
+
+thinggroup Bruiser {
+  flags PROJECTILEALLIANCE|NOSPLASHDAMAGE|DAMAGEIGNORE //can't figure out how to get this to work so i'm including damage ignore.
+  types { BaronOfHell, HellKnight, Cyberbaron }
+}
+
 
 sound "cyberbaron/disarm"          { lump "DSCBADA" ; pitchvariance Doom; }
 sound "cyberbaron/step"            { lump "DSBRUSTP"; pitchvariance Doom; }

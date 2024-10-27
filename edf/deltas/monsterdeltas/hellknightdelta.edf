@@ -4,6 +4,9 @@ thingdelta
 	
 	gibhealth 0
 	
+	mod BruiserMOD
+	damagefactor BruiserMOD, immune
+	
     bloodcolor 2    // green
     bloodtype.normal DoomBloodGreen
     bloodtype.impact DoomBloodGreen

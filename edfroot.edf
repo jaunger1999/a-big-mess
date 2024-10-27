@@ -3,6 +3,8 @@ setdialect("ALFHEIM")
 stdinclude("root.edf") // Includes the file base/root.edf, which in turns includes the other files
                        // that are required for definition of all sprites, sounds, things etc.
 
+damagetype BruiserMOD { num 100 }
+
 include("edf/animations.edf")
 
 // New effects
@@ -18,6 +20,7 @@ include("edf/items/health.edf")
 include("edf/items/armor.edf")
 
 // New monsters
+include("edf/monsters/turbopinky.edf")
 include("edf/monsters/miketyson.edf")
 include("edf/monsters/diabolist.edf")
 include("edf/monsters/hivemother.edf")

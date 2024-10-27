@@ -1,0 +1,16 @@
+thingtype TurboPinky : Demon, 30028 {
+	states
+  @"
+  See:
+    SARG AABBCCDD 1 A_Chase
+    loop
+  Melee:
+    SARG EF 4 A_FaceTarget
+    SARG G  4 A_SargAttack
+    goto See
+  Pain:
+    SARG H 1
+    SARG H 1 A_Pain
+    goto See
+  "@
+}
