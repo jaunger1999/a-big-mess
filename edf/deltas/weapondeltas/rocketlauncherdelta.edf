@@ -34,3 +34,9 @@ weapondelta
 	Goto LightDone
 	"@
 }
+
+thingdelta {
+	name RocketShot
+	
+	addflags WINDTHRUST
+}

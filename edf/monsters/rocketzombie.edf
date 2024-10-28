@@ -61,7 +61,7 @@ thingtype RocketZombie
   Missile:
     MPOS EE 10 A_FaceTarget()
     MPOS F 5 Bright
-    MPOS G 13 Bright A_MissileAttack(BruiserRocket, 0, 8)
+    MPOS G 13 Bright A_MissileAttack(CyberbaronRocket, 0, 8)
     Goto See
   Death:
     MPOS I 5

@@ -1,0 +1,55 @@
+terrain Water
+{
+  splash   Water
+  footclip 10
+  liquid   true
+  
+  useptclcolors true
+  ptclcolor1    "127 127 255"
+  ptclcolor2    "0 0 255"
+  
+  minversion = 329
+}
+
+splash Water
+{
+  smallclass EETerrainWaterBase
+  smallclip  12
+  smallsound eedrip
+  
+  baseclass  EETerrainWaterBase
+  chunkclass EETerrainWaterSplash
+  sound      gloop   
+  
+  chunkxvelshift 8
+  chunkyvelshift 8
+  chunkzvelshift 8
+  chunkbasezvel  2
+}
+
+floor { flat FWATER1; terrain Water }
+
+thingtype TeleGlitterBlue : Mobj, -1
+{
+  cflags DRAWSBLOOD|DROPOFF|MISSILE|NOBLOCKMAP|NOGRAVITY|NORANDOMIZE|NOSPLASH|NOZERODAMAGE|SPACMISSILE
+  states
+  @"
+  Spawn:
+    TGLT F 2 bright
+    TGLT G 2 bright A_AccelGlitter
+    TGLT H 2 bright
+    TGLT I 2 bright A_AccelGlitter
+    TGLT J 2 bright
+    loop
+  "@
+}
+
+thingtype GlitterSpawner {
+	doomednum 30030
+	states
+	@"
+		Spawn:
+			TNT1 A 8 A_SpawnGlitter(TeleGlitterBlue, 2)
+			loop
+	"@
+}

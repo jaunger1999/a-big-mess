@@ -2,8 +2,8 @@ thingdelta {
   name CacoDemon
   
   gibhealth 0
-  addflags MONSTERPASS
   
+  addflags MONSTERPASS|WINDTHRUST
   bloodcolor = 3 // blue
   bloodtype.normal DoomBloodBlue
   bloodtype.impact DoomBloodBlue

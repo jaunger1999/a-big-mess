@@ -4,7 +4,7 @@ thingtype SpectreCaco
   
   inherits = CacoDemon
   
-  addflags SHADOW|MONSTERPASS
+  addflags SHADOW
   
   bloodtype.normal PersistentDoomBlood
   bloodtype.impact PersistentDoomBlood

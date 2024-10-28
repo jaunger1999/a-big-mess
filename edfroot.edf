@@ -7,6 +7,9 @@ damagetype BruiserMOD { num 100 }
 
 include("edf/animations.edf")
 
+// Terrain
+include("edf/effects/terrain.edf")
+
 // New effects
 include("edf/effects/blood.edf")
 include("edf/effects/casings.edf")
@@ -19,21 +22,6 @@ include("edf/effects/steam.edf")
 include("edf/items/health.edf")
 include("edf/items/armor.edf")
 
-// New monsters
-include("edf/monsters/turbopinky.edf")
-include("edf/monsters/miketyson.edf")
-include("edf/monsters/diabolist.edf")
-include("edf/monsters/hivemother.edf")
-include("edf/monsters/spectrecaco.edf")
-include("edf/monsters/marine.edf") //mutineer
-include("edf/monsters/stealthmarine.edf") // mutineer
-include("edf/monsters/plasmazombie.edf")
-include("edf/monsters/suicidebomber.edf")
-include("edf/monsters/cyberbaron.edf") // Cool design that uses counter variables.
-include("edf/monsters/grell.edf") // Weaker flying enemy
-include("edf/monsters/rocketzombie.edf") // Rocket Zombie
-include("edf/monsters/nightmaredemon.edf") // Nightmare Demon
-include("edf/monsters/astralcacodemon.edf")
 
 // Modded Player
 include("edf/deltas/playerdelta.edf")
@@ -87,6 +75,22 @@ include("edf/deltas/monsterdeltas/spectredelta.edf")
 include("edf/deltas/monsterdeltas/spiderdemondelta.edf")
 include("edf/deltas/monsterdeltas/wolfssdelta.edf")
 include("edf/deltas/monsterdeltas/zombiemandelta.edf")
+
+// New monsters
+include("edf/monsters/turbopinky.edf")
+include("edf/monsters/miketyson.edf")
+include("edf/monsters/diabolist.edf")
+include("edf/monsters/hivemother.edf")
+include("edf/monsters/spectrecaco.edf")
+include("edf/monsters/marine.edf") //mutineer
+include("edf/monsters/stealthmarine.edf") // mutineer
+include("edf/monsters/plasmazombie.edf")
+include("edf/monsters/suicidebomber.edf")
+include("edf/monsters/cyberbaron.edf") // Cool design that uses counter variables.
+include("edf/monsters/grell.edf") // Weaker flying enemy
+include("edf/monsters/rocketzombie.edf") // Rocket Zombie
+include("edf/monsters/nightmaredemon.edf") // Nightmare Demon
+include("edf/monsters/astralcacodemon.edf")
 
 //sound code
 include("edf/sound/sounddefs.edf")

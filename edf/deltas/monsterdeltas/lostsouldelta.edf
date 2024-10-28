@@ -2,7 +2,7 @@ thingdelta
 {
   name LostSoul
 	
-  spawnhealth 80
+  spawnhealth 100
 	
   addflags NOBLOOD|MONSTERPASS
 

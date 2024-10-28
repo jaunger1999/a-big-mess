@@ -1,3 +1,74 @@
+// Tango's shotgun from paradise rewritten in edf.
+weapondelta {
+	name Shotgun
+	ammouse 0 // we consume ammo when we reload now.
+	
+	//I include timing info for the fire animation so I can more easily adjust it for balance reasons.
+	states
+	@"
+		// COUNTER 0: Remaining ammo in magazine
+		Ready:
+			SHTG A 1 A_WeaponReady
+			loop
+		Select:
+			SHTG A 1 A_Raise(4)
+			loop
+		Deselect:
+			SHTG A 1 A_Lower(9)
+			loop
+		Fire:
+			TNT1 A      0        A_WeaponCtrJump(Reload, equal, 0, 0, 0) // Reload, equal, EMPTY MAG, REMAINING AMMO COUNTER, AFFECTS WEAPON SPRITE (not flash)
+			
+			// 7 firing tics
+			SHTG A      3        
+			TNT1 A      0        A_Light1
+			TNT1 A      0        A_WeaponSetCtr(0, 1, sub) // remove one shell from our magazine
+			SHTF A      2 bright A_FireCustomBullets(SHTFIR, never, 7, 5, 3)
+			SHTF B      1 bright A_Light2
+			SHTF C      1        A_Light0
+			
+			// 24 tics before refire.
+			SHTF DEF    1        
+			SHTG BCDEFG 1        
+			SHTG G      2        A_PlaySoundEx(SHTCOK, 5) //highest weapon raise
+			SHTG H      1        
+			SHTG I      1        
+			SHTG J      3        A_EjectCasing(592, -128, -256, ShotgunCasing) //deepest "pump" frame
+			SHTG IH     1        
+			SHTG GF     1        
+			SHTG EDCB   1        
+			TNT1 A      0        A_ReFire
+			goto Ready
+		Reload:
+			TNT1 A    0 A_WeaponCtrJump(ActualReloadFinish, greaterorequal, 8, 0, 0) // Ready, greaterorequal, MAX AMMO IN MAG, REMAINING AMMO COUNTER
+			TNT1 A    0 A_JumpIfNoAmmo(Deselect)
+			SHTG BCD  1
+			SHTG EFG  1
+		ReloadLoop:
+			TNT1 A    0 A_WeaponCtrJump(ReloadFinish, greaterorequal, 8, 0, 0) // ReloadFinish, greaterorequal, MAX AMMO IN MAG, REMAINING AMMO COUNTER, AFFECTS WEAPON SPRITE (not flash)
+			TNT1 A    0 A_JumpIfNoAmmo(ReloadFinish)
+			SHTR ABC  1
+			TNT1 A    0 A_WeaponSetCtr(0, 1, add) // add one shell to our magazine
+			TNT1 A    0 A_ConsumeAmmo(1)
+			SHTR D    1 A_PlaySoundEx(SHELIN, 0)
+			SHTR E    1
+			SHTR FGH  1
+			SHTR I    1 A_WeaponReady
+			goto ReloadLoop
+		ReloadFinish:
+			SHTG GFEDCB 1
+		ActualReloadFinish: // Without this one tic between the reload and ready state when we're full on ammo everything goes to shit ie crashes.
+			SHTG A 1
+			goto Ready
+		Flash: // remove the shotguns flash state. paradise's flash sprites are built into the firing animation.
+			goto LightDone
+	"@
+}
+
+sound SHTFIR { pitchvariance Doom; }
+sound SHTCOK { pitchvariance Doom; }
+sound SHELIN { pitchvariance Doom; }
+
 /**
  * [skillsaw project]
  *
@@ -5,7 +76,7 @@
  * (c) Xaser Acheron, 2019
  *    [MIT License]
  */
-weapondelta
+/*weapondelta
 {
   name Shotgun
 
@@ -55,7 +126,4 @@ weapondelta
 		SHTF C 2 Bright A_Light1
 		Goto LightDone  
   "@
-}
-
-sound SHTFIR { pitchvariance Doom; }
-sound SHTCOK { pitchvariance Doom; }
+}*/
