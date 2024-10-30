@@ -1,0 +1,105 @@
+thingtype Dsparil : Mobj, 30029
+{
+  spawnhealth     800
+  painchance       64
+  speed            14
+  radius           16.0
+  height           70.0
+  mass            300
+  activesound     ht_soract
+  seesound        ht_sorsit
+  attacksound     ht_soratk
+  painsound       ht_sorpai
+  addflags        SHOOTABLE|DROPOFF|COUNTKILL|BOSS|FOOTCLIP|LOUDACTIVE|DMGIGNORED|BOSSIGNORE|SPACMONSTER|PASSMOBJ|TRANSLUCENT
+
+  states
+  @"
+  Spawn:
+    SOR2 MN 10 A_Look
+    loop
+  See:
+    SOR2 MNOP 4 A_Chase
+    loop
+  Pain:
+    SOR2 Q 3
+    SOR2 Q 6 A_Pain
+	SOR2 Q 1 //A_RandomWalk
+	SOR2 Q 1 //A_FadeOut(0.1)
+	SOR2 Q 1 //A_FadeIn(0.1)
+    goto See
+  Missile:
+    SOR2 R  9 //A_Srcr2Decide
+    SOR2 S  9 A_FaceTarget
+    SOR2 T 20 //A_Srcr2Attack
+    goto See
+  Death:
+    SDTH A   8 //A_Sor2DthInit
+    SDTH B   8
+    SDTH C   8 //A_SorDSph
+    SDTH DE  7
+    SDTH F   7 //A_Sor2DthLoop
+    SDTH G   6 //A_SorDExp
+    SDTH H   6
+    SDTH I  18
+    SDTH J   6 A_Fall
+    SDTH K   6 //A_SorDBon
+    SDTH LMN 6
+    SDTH O  -1 //A_HticBossDeath
+    stop
+  "@
+}
+
+thingtype Wizard : Mobj, 30031
+{
+  spawnhealth     800
+  painchance       64
+  speed            14
+  radius           16.0
+  height           70.0
+  mass            300
+  activesound     ht_soract
+  seesound        ht_sorsit
+  attacksound     ht_soratk
+  painsound       ht_sorpai
+  addflags        SHOOTABLE|DROPOFF|COUNTKILL|BOSS|FOOTCLIP|LOUDACTIVE|DMGIGNORED|BOSSIGNORE|SPACMONSTER|PASSMOBJ|TRANSLUCENT
+
+  states
+  @"
+  Spawn:
+    WZRD AB 10 A_Look
+    loop
+  See:
+    WZRD A 3 A_Chase
+    WZRD A 4 A_Chase
+    WZRD A 3 A_Chase
+    WZRD A 4 A_Chase
+    WZRD B 3 A_Chase
+    WZRD B 4 A_Chase
+    WZRD B 3 A_Chase
+    WZRD B 4 A_Chase
+    loop
+  Missile:
+    WZRD C  4 A_WizardAtk1
+    WZRD C  4 A_WizardAtk2
+    WZRD C  4 A_WizardAtk1
+    WZRD C  4 A_WizardAtk2
+    WZRD C  4 A_WizardAtk1
+    WZRD C  4 A_WizardAtk2
+    WZRD C  4 A_WizardAtk1
+    WZRD C  4 A_WizardAtk2
+    WZRD D 12 A_WizardAtk3
+    goto See
+  Pain:
+    WZRD E 3 A_GhostOff
+    WZRD E 3 A_Pain
+    goto See
+  Death:
+    WZRD F  6 A_GhostOff
+    WZRD G  6 A_Scream
+    WZRD HI 6 
+    WZRD J  6 A_Fall
+    WZRD KL 6
+    WZRD M -1
+    stop
+  "@
+}

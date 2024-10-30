@@ -106,17 +106,35 @@
 	disable-jump = false
 	killfinale = true
 [MAP13]
-	levelname = Map 13: Self Fellating Brick Laying
+	levelname = Map 13: A Big Entryway
 	creator = jaunger
-	nextlevel = MAP12
+	music = D_RUNNIN
+	nextlevel = MAP14
 	partime = 720
 	aircontrol = 10000
 	disable-jump = false
 	killfinale = true
-[MAP13]
-	levelname = Map 14: You Don't Scare Me, Archie!!
+[MAP14]
+	levelname = Map 14: Gotta Get Up to Get Down
 	creator = jaunger
-	nextlevel = MAP12
+	music = D_ACTION
+	nextlevel = MAP15
+	partime = 720
+	aircontrol = 10000
+	disable-jump = false
+	killfinale = true
+[MAP15]
+	levelname = Map 15: You Don't Scare Me, Archie!!
+	creator = jaunger
+	nextlevel = MAP16
+	partime = 720
+	aircontrol = 10000
+	disable-jump = false
+	killfinale = true
+[MAP16]
+	levelname = Map 16: Self Fellating Brick Laying
+	creator = jaunger
+	nextlevel = MAP17
 	partime = 720
 	aircontrol = 10000
 	disable-jump = false
