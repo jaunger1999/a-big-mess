@@ -43,29 +43,48 @@ thingdelta
   bloodtype.rip DoomBloodSpray
   bloodtype.crush DoomBloodSpray
 
-  states
-  @" 
-  XDeath:
-	TNT1 A 0 A_SetCounter(0, 0, assign)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 17)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 19)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 11)
-    POSS M 5
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 12)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 10)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 6)
-    POSS N 5 A_XScream()
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)
-    POSS O 5 A_Fall()
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 4)
-    TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
-    POSS PQRST 5 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
-  RestingXDeath:
-	TNT1 A 0 A_SetCounter(0, 0, assign)
-    POSS U -1
-    stop
-  "@
+	states
+		@"
+		Spawn: // They patrol the area now.
+			TNT1 A 0 A_Look
+			POSS AA 4 A_RandomWalk
+			TNT1 A 0 A_Look
+			POSS BB 4 A_RandomWalk
+			TNT1 A 0 A_Look
+			POSS CC 4 A_RandomWalk
+			TNT1 A 0 A_Look
+			POSS DD 4 A_RandomWalk
+		See: 
+			TNT1 A 0 A_SetCounter(0, 1, add)
+			TNT1 A 0 A_CounterJump(Spawn, greaterorequal, 4, 0) // Eventually they forget about the player.
+			POSS AABBCCDD 4 A_Chase
+			loop
+		Death: // They alert monsters when they die now...
+			POSS H 5
+			TNT1 A 0 A_AlertMonsters
+			POSS I 5 A_Scream
+			POSS J 5 A_Fall
+			POSS K 5
+			POSS L -1
+			stop
+		XDeath: // ...but not if you gib them :)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 17)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 19)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 11)
+			POSS M 5
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 12)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 10)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 6)
+			POSS N 5 A_XScream()
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 8)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 5)
+			POSS O 5 A_Fall()
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 7)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 4)
+			TNT1 A 0 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+			POSS PQRST 5 A_SteamSpawn(BloodSpray, 359, 90, 45, 3)
+			POSS U -1
+			stop
+	"@
 }

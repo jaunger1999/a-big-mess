@@ -26,5 +26,5 @@ powereffect Silence
 
 string GOTSLNC {
    num -1
-   val "You got the silencer! Pew! Pew! I mean: psshh, psshh."
+   val "You got a silencer! Pew! Pew! I mean: psh, psh."
 }
