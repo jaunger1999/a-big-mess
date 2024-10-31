@@ -4,6 +4,7 @@
 weapondelta
 {
   name Chainsaw
+  remflags SILENCEABLE
   
   states
   @"

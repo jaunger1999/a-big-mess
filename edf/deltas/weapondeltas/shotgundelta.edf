@@ -1,8 +1,8 @@
 // Tango's shotgun from paradise rewritten in edf.
 weapondelta {
 	name Shotgun
-	ammouse 0 // we consume ammo when we reload now.
-	
+	ammouse 1 
+		
 	//I include timing info for the fire animation so I can more easily adjust it for balance reasons.
 	states
 	@"
@@ -11,6 +11,7 @@ weapondelta {
 			SHTG A 1 A_WeaponReady
 			loop
 		Select:
+			TNT1 A 0 A_WeaponSetCtr(0, 8, assign) //tactical reload
 			SHTG A 1 A_Raise(4)
 			loop
 		Deselect:
@@ -41,15 +42,14 @@ weapondelta {
 			goto Ready
 		Reload:
 			TNT1 A    0 A_WeaponCtrJump(ActualReloadFinish, greaterorequal, 8, 0, 0) // Ready, greaterorequal, MAX AMMO IN MAG, REMAINING AMMO COUNTER
-			TNT1 A    0 A_CheckReloadEx(ActualReloadFinish, equal, 0, 0) // ActualReloadFinish, equal, 0 shells outside of mag, AFFECTS WEAPON SPRITE (not flash)
+			TNT1 A    0 A_CheckReloadEx(ActualReloadFinish, lessorequal_counter, 0, 0) // ActualReloadFinish, lessorequal_counter, shells inside of mag, AFFECTS WEAPON SPRITE (not flash)
 			SHTG BCD  1
 			SHTG EFG  1
 		ReloadLoop:
 			TNT1 A     0 A_WeaponCtrJump(ReloadFinish, greaterorequal, 8, 0, 0) // ReloadFinish, greaterorequal, MAX AMMO IN MAG, REMAINING AMMO COUNTER, AFFECTS WEAPON SPRITE (not flash)
-			TNT1 A     0 A_CheckReloadEx(ActualReloadFinish, equal, 0, 0) // ActualReloadFinish, equal, 0 shells outside of mag, AFFECTS WEAPON SPRITE (not flash)
+			TNT1 A     0 A_CheckReloadEx(ActualReloadFinish, lessorequal_counter, 0, 0) // ActualReloadFinish, lessorequal_counter, shells inside of mag, AFFECTS WEAPON SPRITE (not flash)
 			SHTR ABC   1
 			TNT1 A     0 A_WeaponSetCtr(0, 1, add) // add one shell to our magazine
-			TNT1 A     0 A_ConsumeAmmo(1)
 			SHTR D     1 A_PlaySoundEx(SHELIN, 0)
 			SHTR EFGHI 1 A_WeaponReady // Allows us to cancel out of the reload.
 			goto ReloadLoop

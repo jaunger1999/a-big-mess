@@ -1,0 +1,29 @@
+thingtype Wings : Mobj, 30034 {
+	cflags SPECIAL|COUNTITEM
+	
+	pickupeffect {
+		effects Flight
+		message $GOTWNGS
+		sound   getpow
+		flags   ALWAYSPICKUP
+	}
+	
+	states @"
+		Spawn:
+		SOAR ABCB 1
+		loop
+	"@
+}
+
+powereffect Flight
+{
+  duration -1
+  type     PowerFlight
+
+  +overridesself
+}
+
+string GOTWNGS {
+   num -1
+   val "You got the wings!"
+}

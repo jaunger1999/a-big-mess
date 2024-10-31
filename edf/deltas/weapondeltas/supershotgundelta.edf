@@ -1,6 +1,7 @@
 weapondelta
 {
   name SuperShotgun
+  remflags SILENCEABLE
 
   states
   @"

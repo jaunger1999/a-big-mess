@@ -2,7 +2,7 @@ weapondelta
 {
   name BFG9000
   
-  remflags NOAUTOFIRE
+  remflags NOAUTOFIRE|SILENCEABLE
   
   states
   @"

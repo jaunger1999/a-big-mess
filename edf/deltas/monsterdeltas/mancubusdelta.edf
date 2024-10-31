@@ -9,8 +9,9 @@ thingdelta
   bloodtype.rip PersistentDoomBlood  
   bloodtype.crush DoomBloodSpray
 
-  painchance 90
-  radius 42
+  painchance 80
+  radius     48
+  speed       4
   
   states
   @"

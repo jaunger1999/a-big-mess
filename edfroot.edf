@@ -21,6 +21,8 @@ include("edf/effects/steam.edf")
 // New items
 include("edf/items/health.edf")
 include("edf/items/armor.edf")
+include("edf/items/silencer.edf")
+include("edf/items/wings.edf")
 
 
 // Modded Player

@@ -1,0 +1,30 @@
+thingtype Silencer : Mobj, 30033 {
+	cflags SPECIAL|COUNTITEM
+	
+	pickupeffect {
+		effects Silence
+		message $GOTSLNC
+		sound   getpow
+		flags   ALWAYSPICKUP
+	}
+	
+	states @"
+		Spawn:
+		SLNC A -1
+		stop
+	"@
+}
+
+
+powereffect Silence
+{
+  duration -1
+  type     PowerSilent
+
+  +overridesself
+}
+
+string GOTSLNC {
+   num -1
+   val "You got the silencer! Pew! Pew! I mean: psshh, psshh."
+}

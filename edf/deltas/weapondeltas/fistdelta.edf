@@ -2,9 +2,7 @@ weapondelta
 {
   name Fist
   
-  ammotype     AmmoClip
-  
-  ammouse     0
+  addflags SILENT
   
   states
   @"

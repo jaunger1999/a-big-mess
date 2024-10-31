@@ -1,6 +1,7 @@
 weapondelta
 {
   name PlasmaRifle
+  remflags SILENCEABLE
   
   states
   @"

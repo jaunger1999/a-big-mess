@@ -5,7 +5,7 @@ strictpatches = 0;
 maps
 {
 	
-	MAP14
+	MAP15
 	{
 		
 		resources
@@ -21,7 +21,7 @@ maps
 				requiredarchives = "";
 			}
 		}
-		defaultfloortexture = "STEP2";
+		defaultfloortexture = "FLOOR0_1";
 		defaultceiltexture = "CEIL1_1";
 		defaulttoptexture = "STARTAN2";
 		defaultwalltexture = "STARTAN2";
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -2270.692f;
-		viewpositiony = 821.8367f;
-		viewscale = 1.352517f;
+		viewpositionx = -54.57661f;
+		viewpositiony = 165.5925f;
+		viewscale = 1.856464f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -51,7 +51,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 8;
+			gridsize = 32;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -83,76 +83,6 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
-		}
-		
-		plugins
-		{
-			
-			stairsectorbuilder
-			{
-				
-				prefabs
-				{
-					
-					prefab1
-					{
-						name = "[Previous]";
-						numberofsectors = 1;
-						outervertexmultiplier = 1;
-						innervertexmultiplier = 1;
-						stairtype = 0;
-						sectordepth = 32;
-						spacing = 0;
-						frontside = true;
-						singlesectors = true;
-						distinctsectors = false;
-						singledirection = false;
-						distinctbaseheights = true;
-						flipping = 0;
-						numberofcontrolpoints = 1;
-						applyfloormod = true;
-						floormod = 0;
-						applyceilingmod = true;
-						ceilingmod = 0;
-						applyfloortexture = false;
-						floortexture = "";
-						applyceilingtexture = false;
-						ceilingtexture = "";
-						applyuppertexture = true;
-						uppertexture = "-";
-						upperunpegged = true;
-						applymiddletexture = false;
-						middletexture = "-";
-						applylowertexture = true;
-						lowertexture = "-";
-						lowerunpegged = true;
-					}
-				}
-			}
-		}
-		
-		scriptdocuments
-		{
-			
-			document0
-			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-			}
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				caretposition = 291;
-				activetab = true;
-			}
 		}
 	}
 }

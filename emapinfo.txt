@@ -124,17 +124,27 @@
 	disable-jump = false
 	killfinale = true
 [MAP15]
-	levelname = Map 15: You Don't Scare Me, Archie!!
-	creator = jaunger
-	nextlevel = MAP16
-	partime = 720
-	aircontrol = 10000
+	levelname = Map 15: Kim Jong Unpossible
+	creator      = jaunger
+	music        = D_MISION
+	nextlevel    = MAP16
+	partime      = 720
+	aircontrol   = 10000
+	airfriction  = 0
 	disable-jump = false
-	killfinale = true
+	killfinale   = true
 [MAP16]
 	levelname = Map 16: Self Fellating Brick Laying
 	creator = jaunger
 	nextlevel = MAP17
+	partime = 720
+	aircontrol = 10000
+	disable-jump = false
+	killfinale = true
+[MAP17]
+	levelname = Map 17: You Don't Scare Me, Archie!!
+	creator = jaunger
+	nextlevel = MAP18
 	partime = 720
 	aircontrol = 10000
 	disable-jump = false

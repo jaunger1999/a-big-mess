@@ -1,6 +1,7 @@
 weapondelta
 {
   name Chaingun
+  remflags SILENCEABLE
   
   states
   @"

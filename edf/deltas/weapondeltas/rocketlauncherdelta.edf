@@ -2,7 +2,7 @@ weapondelta
 {
   name RocketLauncher
   
-  remflags NOAUTOFIRE
+  remflags NOAUTOFIRE|SILENCEABLE
   
   states
   @"

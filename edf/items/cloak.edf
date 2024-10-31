@@ -1,0 +1,8 @@
+
+powereffect Cloak
+{
+  duration 60
+  type     PowerTotalInvisibility
+
+  +overridesself
+}
