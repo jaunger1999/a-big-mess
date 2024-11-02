@@ -1,26 +1,24 @@
-playerdelta
-{
-  name DoomMarine
+playerdelta {
+	name DoomMarine
+	weaponslot 1 { weapons : Fist, Chainsaw }
   
-  clearrebornitems
-      
-  rebornitem AmmoClip, 25
-  rebornitem Fist
-  rebornitem Pistol
+	clearrebornitems
+
+	rebornitem AmmoClip, 25
+	rebornitem Fist
+	rebornitem Pistol
 }
 
-thingdelta
-{
-  name DoomPlayer
-  
-  bloodtype.normal PersistentDoomBlood
-  bloodtype.impact PersistentDoomBlood
-  bloodtype.rip PersistentDoomBlood
-  bloodtype.crush PersistentDoomBlood
-  
-  acs_spawndata
-  {
-    num   100
-    modes doom
-  }
+thingdelta {
+	name DoomPlayer
+	
+	bloodtype.normal PersistentDoomBlood
+	bloodtype.impact PersistentDoomBlood
+	bloodtype.rip PersistentDoomBlood
+	bloodtype.crush PersistentDoomBlood
+	  
+	acs_spawndata {
+		num   100
+		modes doom
+	}
 }

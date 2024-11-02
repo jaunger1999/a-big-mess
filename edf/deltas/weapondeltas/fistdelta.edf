@@ -1,7 +1,7 @@
 weapondelta {
 	name Fist
     
-	selectionorder 5.9 // just before the chainsaw
+	selectionorder 6.0 // before the chainsaw
 	
 	states
 	@"

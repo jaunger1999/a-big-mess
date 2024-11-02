@@ -6,6 +6,8 @@ weapondelta
   name Chainsaw
   remflags SILENCEABLE
   
+	selectionorder 9.0 // after the fist
+  
   states
   @"
   Ready:
