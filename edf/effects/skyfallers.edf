@@ -1,0 +1,49 @@
+thingtype Snowflake : Mobj, -1 {
+	cflags = NOBLOCKMAP|NOSPLASH|TLSTYLEADD|NOCLIP
+	translucency = 50%
+	
+	states @"
+		Spawn:
+			SNOW A -1
+			stop
+	"@
+}
+
+thingtype RainDrop : Mobj, -1 {
+	cflags = MISSILE|NOBLOCKMAP|NOSPLASH|TLSTYLEADD|NOZERODAMAGE
+	translucency = 50%
+	
+	mass 100
+	
+	states @"
+		Spawn:
+			RAIN A 1
+			loop
+		Death:
+			RAIN B 1
+			RAIN C 1
+			RAIN D 1
+			RAIN E 1
+			stop
+	"@
+}
+
+thingtype RainSpawner : Mobj, 32001 {
+	addflags SPAWNCEILING|NOGRAVITY
+	
+	states @"
+		Spawn:
+			TNT1 A 10 A_SteamSpawn(RainDrop, 0, 192, 0, 10)
+			loop
+	"@
+}
+
+thingtype SnowSpawner : Mobj, 32002 {
+	addflags SPAWNCEILING|NOGRAVITY
+	
+	states @"
+		Spawn:
+			TNT1 A 10 A_SteamSpawn(Snowflake, 0, 192, 0, 10)
+			loop
+	"@
+}

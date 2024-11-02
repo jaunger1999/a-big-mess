@@ -17,4 +17,10 @@ thingdelta
   bloodtype.impact PersistentDoomBlood
   bloodtype.rip PersistentDoomBlood
   bloodtype.crush PersistentDoomBlood
+  
+  acs_spawndata
+  {
+    num   100
+    modes doom
+  }
 }

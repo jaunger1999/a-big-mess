@@ -34,8 +34,7 @@
     POSS L -1
     stop*/
 	
-thingdelta
-{
+thingdelta {
   name Zombieman
 
   bloodtype.normal DoomBloodSpray
@@ -54,16 +53,15 @@ thingdelta
 			POSS CC 4 A_RandomWalk
 			TNT1 A 0 A_Look
 			POSS DD 4 A_RandomWalk
-		See: 
-			TNT1 A 0 A_SetCounter(0, 1, add)
-			TNT1 A 0 A_CounterJump(Spawn, greaterorequal, 4, 0) // Eventually they forget about the player.
+			loop
+		See:
 			POSS AABBCCDD 4 A_Chase
 			loop
 		Death: // They alert monsters when they die now...
 			POSS H 5
-			TNT1 A 0 A_AlertMonsters
 			POSS I 5 A_Scream
 			POSS J 5 A_Fall
+			TNT1 A 0 A_AlertMonsters
 			POSS K 5
 			POSS L -1
 			stop

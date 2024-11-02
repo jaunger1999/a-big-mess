@@ -1,5 +1,4 @@
-weapondelta
-{
+weapondelta {
   name RocketLauncher
   
   remflags NOAUTOFIRE|SILENCEABLE

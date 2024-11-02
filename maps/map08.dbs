@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -661.3273f;
-		viewpositionx = -3968.735f;
+		viewpositiony = 123.8613f;
+		viewpositionx = -3458.002f;
 		
 		testprecommand
 		{
@@ -52,7 +52,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 1.11427f;
+		viewscale = 40.96492f;
 		
 		reloadresourceprecommand
 		{
@@ -62,17 +62,8 @@ maps
 		}
 		defaulttoptexture = "DOORBLU";
 		overridebottomtexture = false;
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				ypanningfloor = 1;
-			}
-		}
 		defaultbottomtexture = "DOORBLU";
-		defaultfloortexture = "FLAT5_2";
+		defaultfloortexture = "DNCARP01";
 		overrideceilheight = false;
 		overridebrightness = false;
 		

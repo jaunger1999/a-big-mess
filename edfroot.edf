@@ -12,6 +12,7 @@ include("edf/effects/terrain.edf")
 
 // New effects
 include("edf/effects/blood.edf")
+include("edf/effects/skyfallers.edf")
 include("edf/effects/casings.edf")
 include("edf/effects/glass.edf") // Glass particles
 include("edf/effects/painelementalchunk.edf")
