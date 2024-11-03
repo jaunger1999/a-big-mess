@@ -27,3 +27,10 @@ thingdelta {
     stop
   "@
 }
+
+thingdelta {
+	name CacodemonShot
+	
+	speed     6.0
+	fastspeed 6.0
+}

@@ -82,6 +82,7 @@ include("edf/deltas/monsterdeltas/zombiemandelta.edf")
 // New monsters
 include("edf/heretic volcano.edf")
 include("edf/monsters/sorcerer.edf")
+include("edf/monsters/catharsi.edf")
 include("edf/monsters/turbopinky.edf")
 include("edf/monsters/miketyson.edf")
 include("edf/monsters/diabolist.edf")

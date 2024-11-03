@@ -63,7 +63,7 @@
 [MAP08]
 	levelname = Map 8: Residence Malevolence
 	creator = jaunger
-	music = D_ROCKIT
+	music = D_MACABR
 	nextlevel = MAP09
 	partime = 840
 	aircontrol = 10000
@@ -145,6 +145,14 @@
 	levelname = Map 17: You Don't Scare Me, Archie!!
 	creator = jaunger
 	nextlevel = MAP18
+	partime = 720
+	aircontrol = 10000
+	disable-jump = false
+	killfinale = true
+[MAP18]
+	levelname = Map 18: Jaunger's Projectile Hell
+	creator = jaunger
+	nextlevel = MAP19
 	partime = 720
 	aircontrol = 10000
 	disable-jump = false

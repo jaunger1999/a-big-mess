@@ -10,7 +10,7 @@ thingtype Grell
   basictype FlyingMonster
 
   spawnhealth 70
-  speed       12
+  speed        8
   radius      22
   height      56
   painchance  128
@@ -43,17 +43,17 @@ thingtype Grell
     TNT1 A 0 A_SetFlags(0, SHOOTABLE)
     Goto Spawn
   See:
-    GREL AABBCC 3 A_Chase()
+    GREL AABBCC 2 fast A_Chase()
     Loop
   Pain:
     GREL G 3
     GREL G 3 A_Pain()
     Goto See
   Missile:
-    GREL D 0 A_PlaySoundEx("grell/attack")
-    GREL D 4 A_FaceTarget()
-    GREL E 4 Bright A_FaceTarget()
-    GREL F 4 Bright A_MissileAttack("GrellBall", 0, 0)
+    TNT1 A   0        A_PlaySoundEx("grell/attack")
+    GREL D   4        A_FaceTarget()
+    GREL E   4 bright A_FaceTarget()
+    GREL F   4 bright A_MissileAttack("GrellBall", 0, 0)
     Goto See
   Death:
     GREL H 0 A_UnsetFlags(0,FLOATBOB)
@@ -97,9 +97,9 @@ thingtype GrellBall
 {
   basictype Projectile
 
-  radius  3.0
-  height  3.0
-  speed  40.0
+  radius  4.0
+  height  4.0
+  speed  32.0
   damage  4
 
   addflags SPACMISSILE|NOBLOCKMAP|MISSILE|TRANSLUCENT|TLSTYLEADD
