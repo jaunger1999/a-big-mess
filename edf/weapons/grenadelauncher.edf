@@ -5,7 +5,7 @@ weaponinfo GrenadeLauncher : Weapon
 
   slotnumber         5
   slotselectionorder 1.1
-  selectionorder 7.1
+  selectionorder 7.2
 
   flags        DISABLEAPS|SILENCEABLE|ALWAYSRECOIL
   recoil       100.0

@@ -46,6 +46,7 @@ include("edf/deltas/itemdeltas/powerupdeltas/partialinvisibilitydelta.edf")
 include("edf/deltas/itemdeltas/powerupdeltas/soulspheredelta.edf")
 
 // Modded weapons
+include("edf/weapons/flamethrower.edf")
 include("edf/weapons/grenadelauncher.edf")
 include("edf/weapons/wolfgun.edf")
 include("edf/deltas/weapondeltas/fistdelta.edf")

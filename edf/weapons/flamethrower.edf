@@ -1,0 +1,180 @@
+/**
+ * [skillsaw project]
+ *
+ * Weapon: Flamethrower (replaces Plasma Rifle)
+ * (c) Xaser Acheron, 2019
+ *    [MIT License]
+ */
+
+weaponinfo Flamethrower : Weapon
+{
+  ammotype AmmoCell
+  ammouse  1
+
+  slotnumber         6
+  slotselectionorder 1.1
+  selectionorder     7.1
+
+  states
+  @"
+  Ready:
+    FLMG A 1 A_WeaponReady()
+    Loop
+  Deselect:
+    FLMG A 1 A_Lower()
+    Loop
+  Select:
+    FLMG A 1 A_Raise()
+    Loop
+  Fire:
+    FLMG A 0 GunFlash()
+    FLMF A 1 bright A_FirePlayerMissile(FlameShot, false)
+    FLMF B 1 bright
+    FLMG A 1
+    FLMG A 0 A_ReFire()
+    Goto Ready
+  Flash:
+    TNT1 A 2 A_Light2()
+    TNT1 A 1 A_Light1()
+    Goto LightDone
+  "@
+}
+
+weapongiver GiverFlamethrower
+{
+  weapon    GrenadeLauncher
+  ammogiven AmmoCell, 20
+}
+
+thingtype WeaponFlamethrower : Mobj, 32501
+{
+  flags SPECIAL
+
+  pickupeffect {
+    effects GiverFlamethrower
+    message "You got the flamethrower!"
+    sound   wpnup
+  }
+
+  states
+  @"
+  Spawn:
+    FTHW A -1
+    stop
+  "@
+}
+
+damagetype Fire
+{
+  num 27
+  obituaryself "self-immolated"
+}
+
+thingtype FlameShot
+{
+  basictype PlayerProjectile
+
+  speed  40.0
+  radius 13.0
+  height 8.0
+  damage 5
+  xscale 0.75
+  yscale 0.75
+  mod    Fire
+
+  addflags RIP
+
+  translucency 75%
+
+  seesound   flmfir
+  deathsound flmhit
+
+  states
+  @"
+  Spawn:
+    TNT1 A 1 bright
+    FLAM A 2 bright A_Jump(128, MirroredSpawn)
+    FLAM B 2 bright A_PlaySoundEx(flmbrn, 5)
+    FLAM C 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM D 2 bright
+    FLAM E 2 bright A_PlaySoundEx(flmbrn, 5)
+    FLAM F 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM GH 2 bright
+    stop
+  MirroredSpawn:
+    FLAM I 2 bright
+    FLAM J 2 bright A_PlaySoundEx(flmbrn, 5)
+    FLAM K 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM L 2 bright
+    FLAM M 2 bright A_PlaySoundEx(flmbrn, 5)
+    FLAM N 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM OP 2 bright
+    stop
+  Death:
+    FLAM A 0 bright A_Jump(128, MirroredDeath)
+    FLAM A 2 bright A_DetonateEx(5, 64, 0, 0, 64)
+    FLAM B 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM A 2 bright A_PlaySoundEx(flmhit, chan_body)
+    FLAM B 2 bright A_DetonateEx(5, 64, 1, 0, 64)
+    FLAM C 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM B 2 bright A_PlaySoundEx(flmhit, chan_body)
+    FLAM C 2 bright A_DetonateEx(5, 64, 0, 0, 64)
+    FLAM D 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM C 2 bright A_PlaySoundEx(flmbrn, chan_body)
+    FLAM D 2 bright A_DetonateEx(5, 64, 1, 0, 64)
+    FLAM E 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM D 2 bright A_PlaySoundEx(flmbrn, chan_body, 0, attn_normal, 96)
+    FLAM E 2 bright A_DetonateEx(5, 64, 0, 0, 64)
+    FLAM F 2 bright
+    FLAM E 2 bright A_PlaySoundEx(flmbrn, chan_body, 0, attn_normal, 64)
+    FLAM F 2 bright A_DetonateEx(5, 64, 1, 0, 64)
+    FLAM G 2 bright
+    FLAM F 2 bright A_PlaySoundEx(flmbrn, chan_body, 0, attn_normal, 32)
+    FLAM G 2 bright
+    FLAM HGH 2 bright
+    stop
+  MirroredDeath:
+    FLAM I 2 bright A_DetonateEx(5, 64, 0, 0, 64)
+    FLAM J 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM I 2 bright A_PlaySoundEx(flmhit, chan_body)
+    FLAM J 2 bright A_DetonateEx(5, 64, 1, 0, 64)
+    FLAM K 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM J 2 bright A_PlaySoundEx(flmhit, chan_body)
+    FLAM K 2 bright A_DetonateEx(5, 64, 0, 0, 64)
+    FLAM L 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM K 2 bright A_PlaySoundEx(flmbrn, chan_body)
+    FLAM L 2 bright A_DetonateEx(5, 64, 1, 0, 64)
+    FLAM M 2 bright A_SteamSpawn(FlameSmoke, 359, 90, 45, 2)
+    FLAM L 2 bright A_PlaySoundEx(flmbrn, chan_body, 0, attn_normal, 96)
+    FLAM M 2 bright A_DetonateEx(5, 64, 0, 0, 64)
+    FLAM N 2 bright
+    FLAM M 2 bright A_PlaySoundEx(flmbrn, chan_body, 0, attn_normal, 64)
+    FLAM N 2 bright A_DetonateEx(5, 64, 1, 0, 64)
+    FLAM O 2 bright
+    FLAM N 2 bright A_PlaySoundEx(flmbrn, chan_body, 0, attn_normal, 32)
+    FLAM O 2 bright
+    FLAM POP 2 bright
+    stop
+  "@
+}
+
+thingtype FlameSmoke : SmokeEffect
+{
+  translucency 25%
+  xscale       0.75
+  yscale       0.75
+}
+
+sound flmfir { pitchvariance Doom; }
+sound flmbn1 { pitchvariance Doom; }
+sound flmbn2 { pitchvariance Doom; }
+sound flmbn3 { pitchvariance Doom; }
+sound flmbn4 { pitchvariance Doom; }
+sound flmbn5 { pitchvariance Doom; }
+sound flmht1 { pitchvariance Doom; }
+sound flmht2 { pitchvariance Doom; }
+sound flmht3 { pitchvariance Doom; }
+sound flmht4 { pitchvariance Doom; }
+sound flmht5 { pitchvariance Doom; }
+sound flmbrn { random { flmbn1, flmbn2, flmbn3, flmbn4, flmbn5 } }
+sound flmhit { random { flmht1, flmht2, flmht3, flmht4, flmht5 } }
