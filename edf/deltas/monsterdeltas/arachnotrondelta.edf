@@ -10,6 +10,7 @@ thingdelta
   bloodtype.crush DoomBloodSpray
   
   radius 48
+  damagefactor Plasma, 1.5
   
   states
   @"

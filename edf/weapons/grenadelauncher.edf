@@ -77,6 +77,7 @@ thingtype GrenadeShot
   radius 20.0
   height 12.0
   damage 40
+  mod Grenade
 
   xscale 1.5
   yscale 1.5

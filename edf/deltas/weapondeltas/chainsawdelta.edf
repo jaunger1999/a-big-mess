@@ -26,3 +26,7 @@ weapondelta
     goto Ready
   "@
 }
+
+damagetype Saw { 
+  obituaryself "self-immolated"
+}

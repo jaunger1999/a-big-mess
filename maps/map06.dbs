@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 275.8811f;
-		viewpositionx = 635.6925f;
+		viewpositiony = -2.450949f;
+		viewpositionx = 1095.021f;
 		
 		testprecommand
 		{
@@ -52,7 +52,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 1.368512f;
+		viewscale = 1.757142f;
 		
 		reloadresourceprecommand
 		{
@@ -85,6 +85,52 @@ maps
 			stderriserror = true;
 		}
 		
+		plugins
+		{
+			
+			stairsectorbuilder
+			{
+				
+				prefabs
+				{
+					
+					prefab1
+					{
+						name = "[Previous]";
+						numberofsectors = 1;
+						outervertexmultiplier = 1;
+						innervertexmultiplier = 1;
+						stairtype = 0;
+						sectordepth = 16;
+						spacing = 0;
+						frontside = true;
+						singlesectors = true;
+						distinctsectors = false;
+						singledirection = false;
+						distinctbaseheights = true;
+						flipping = 0;
+						numberofcontrolpoints = 1;
+						applyfloormod = true;
+						floormod = 0;
+						applyceilingmod = true;
+						ceilingmod = 0;
+						applyfloortexture = false;
+						floortexture = "";
+						applyceilingtexture = false;
+						ceilingtexture = "";
+						applyuppertexture = true;
+						uppertexture = "-";
+						upperunpegged = true;
+						applymiddletexture = false;
+						middletexture = "-";
+						applylowertexture = true;
+						lowertexture = "SP_HOT1";
+						lowerunpegged = true;
+					}
+				}
+			}
+		}
+		
 		fieldtypes
 		{
 			
@@ -113,8 +159,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 2694;
-				firstvisibleline = 68;
+				caretposition = 3559;
+				firstvisibleline = 102;
 				activetab = true;
 			}
 		}

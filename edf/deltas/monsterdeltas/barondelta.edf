@@ -6,6 +6,7 @@ thingdelta
 	
 	mod BruiserMOD
 	damagefactor BruiserMOD, immune
+	damagefactor Fire, 0.5
 	
     bloodcolor 2    // green
     bloodtype.normal DoomBloodGreen
