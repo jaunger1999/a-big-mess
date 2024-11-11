@@ -49,6 +49,15 @@ animation
   flags SWIRL
 }
 
+// Fan
+animation
+{
+  flat DNXFAN01
+
+  lastpic DNXFAN04
+  tics 4
+}
+
 // Tar
 animation
 {

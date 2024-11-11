@@ -1,0 +1,105 @@
+// Just the EDF for the HE Shotgun (TPHHEShotgun),
+// because it inherits from the SSG but replaces the BFG
+
+damagetype TPHHEShotgun { obituary $OB_HESHOTGUN }
+
+thingtype WeaponBFG : WeaponSSG, 2006, 73
+{
+  pickupeffect
+  {
+    effects GiverTPHHEShotgun
+    message $GOTHESHOTGUN
+    sound   wpnup
+  }
+  
+  states
+  @"
+  Spawn:
+    BFUG A -1
+    stop
+  "@
+}
+
+weapongiver GiverTPHHEShotgun
+{
+  weapon BFG9000
+  ammogiven AmmoMissile, 10
+}
+
+weaponinfo BFG9000 : SuperShotgun, 6
+{
+  ammotype AmmoMissile
+  ammouse  2
+  
+  mod TPHHEShotgun
+  
+  flags NOAUTOFIRE
+
+  selectionorder 4.0
+  
+  states
+  @"
+  Ready: 
+    SHT2 A 1 A_WeaponReady
+    loop
+  Deselect:
+    SHT2 AAAA 0 A_Lower
+    SHT2 A 1 A_Lower
+    loop
+  Select:
+    SHT2 AAAA 0 A_Raise
+    SHT2 A 1 A_Raise
+    loop
+  Fire:
+    SHT2 A 3
+    SHT2 A 0 A_GunFlash
+    SHT2 C 3 Bright A_FireCustomBullets(dshtgn, custom, 20, 7, 3, 0, 30, 14, HEPuff) //A_FireBullets (15,7,20,7,"HEPuff")
+    SHT2 DE 2 Bright
+    SHT2 B 2 A_CheckReload
+    SHT2 FGHI 2
+    SHT2 J 2 A_PlaySoundEx(dbopn, CHAN_AUTO)
+    SHT2 KLMN 2
+    SHT2 O 2 A_PlaySoundEx(dbload, CHAN_AUTO)
+    SHT2 PQRST 2
+    SHT2 U 2 A_PlaySoundEx(dbload, CHAN_AUTO)
+    SHT2 VWXIY 2
+    SHT2 G 2 A_PlaySoundEx(dbcls, CHAN_AUTO)
+    SHT2 F 3
+    SHT2 A 3 A_ReFire
+    goto Ready  
+  Flash:
+    TNT1 A 2 bright A_Light1
+    TNT1 A 3 bright A_Light2
+    TNT1 A 2 bright A_Light1
+    TNT1 A 0 bright A_Light0
+    stop
+  "@
+}
+
+pufftype HEPuff
+{
+  thingtype HEPuff
+  
+  +PUFFONACTORS
+  +TARGETSHOOTER
+}
+
+thingtype HEPuff 
+{
+	radius 4.0
+	height 4.0
+
+	translucency 65536
+	xscale 0.3
+  yscale 0.3
+	cflags NOGRAVITY|NOBLOCKMAP|TRANSLUCENT
+
+	states
+	@"
+	Spawn:
+		HPUF A 0 Bright
+		HPUF A 2 A_DetonateEx(10,128)
+		HPUF BCDEF 2 Bright
+		Stop
+	"@
+}

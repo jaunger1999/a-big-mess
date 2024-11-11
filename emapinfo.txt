@@ -124,7 +124,7 @@
 	disable-jump = false
 	killfinale = true
 [MAP15]
-	levelname = Map 15: Kim Jong Unpossible
+	levelname = Map 15: Kim Jong Unpossible: A POE Heist Starring Tom Cruise
 	creator      = jaunger
 	music        = D_MISION
 	nextlevel    = MAP16
