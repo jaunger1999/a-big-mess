@@ -5,7 +5,7 @@ strictpatches = 0;
 maps
 {
 	
-	MAP15
+	MAP20
 	{
 		
 		resources
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -54.8244f;
-		viewpositiony = 185.5945f;
-		viewscale = 1.428041f;
+		viewpositionx = -405.918f;
+		viewpositiony = 435.5901f;
+		viewscale = 0.2958574f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -51,7 +51,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 4;
+			gridsize = 64;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -85,27 +85,12 @@ maps
 			stderriserror = true;
 		}
 		
-		scriptdocuments
+		fieldtypes
 		{
 			
-			document0
+			sector
 			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-			}
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				caretposition = 296;
-				activetab = true;
+				ypanningfloor = 1;
 			}
 		}
 	}

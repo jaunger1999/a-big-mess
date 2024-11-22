@@ -21,11 +21,11 @@ maps
 				requiredarchives = "";
 			}
 		}
-		defaultfloortexture = "FLOOR0_1";
-		defaultceiltexture = "CEIL1_1";
-		defaulttoptexture = "STARTAN2";
-		defaultwalltexture = "STARTAN2";
-		defaultbottomtexture = "STARTAN2";
+		defaultfloortexture = "FLOOR4_8";
+		defaultceiltexture = "FLOOR5_1";
+		defaulttoptexture = "STONE3";
+		defaultwalltexture = "STONE3";
+		defaultbottomtexture = "STONE3";
 		custombrightness = 196;
 		customfloorheight = 0;
 		customceilheight = 128;
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 70.66135f;
-		viewpositiony = 903.6656f;
-		viewscale = 0.6156274f;
+		viewpositionx = 13.54927f;
+		viewpositiony = -166.7196f;
+		viewscale = 6.528419f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -51,7 +51,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 64;
+			gridsize = 8;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -101,11 +101,11 @@ maps
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 128;
+						sectordepth = 48;
 						spacing = 0;
-						frontside = false;
-						singlesectors = true;
-						distinctsectors = true;
+						frontside = true;
+						singlesectors = false;
+						distinctsectors = false;
 						singledirection = false;
 						distinctbaseheights = true;
 						flipping = 0;
@@ -119,12 +119,12 @@ maps
 						applyceilingtexture = false;
 						ceilingtexture = "";
 						applyuppertexture = true;
-						uppertexture = "-";
+						uppertexture = "STARTAN2";
 						upperunpegged = true;
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = true;
-						lowertexture = "-";
+						lowertexture = "STARTAN2";
 						lowerunpegged = true;
 					}
 				}

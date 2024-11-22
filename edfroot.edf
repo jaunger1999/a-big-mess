@@ -3,11 +3,6 @@ setdialect("ALFHEIM")
 stdinclude("root.edf") // Includes the file base/root.edf, which in turns includes the other files
                        // that are required for definition of all sprites, sounds, things etc.
 
-gameproperties
-{
-  flags.add    BERZERKISPENTA
-}
-
 damagetype BruiserMOD { num 100 }
 
 include("edf/animations.edf")
