@@ -5,7 +5,7 @@ strictpatches = 0;
 maps
 {
 	
-	MAP15
+	MAP21
 	{
 		
 		resources
@@ -21,11 +21,11 @@ maps
 				requiredarchives = "";
 			}
 		}
-		defaultfloortexture = "FLAT5_5";
+		defaultfloortexture = "FLOOR0_1";
 		defaultceiltexture = "CEIL1_1";
-		defaulttoptexture = "REDWALL";
-		defaultwalltexture = "REDWALL";
-		defaultbottomtexture = "REDWALL";
+		defaulttoptexture = "STARTAN2";
+		defaultwalltexture = "STARTAN2";
+		defaultbottomtexture = "STARTAN2";
 		custombrightness = 196;
 		customfloorheight = 0;
 		customceilheight = 128;
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -510.8968f;
-		viewpositiony = 446.7449f;
-		viewscale = 0.8449882f;
+		viewpositionx = 465.88f;
+		viewpositiony = -114.3793f;
+		viewscale = 1.040408f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -51,7 +51,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 8;
+			gridsize = 32;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -85,27 +85,12 @@ maps
 			stderriserror = true;
 		}
 		
-		scriptdocuments
+		fieldtypes
 		{
 			
-			document0
+			sector
 			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-			}
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				caretposition = 296;
-				activetab = true;
+				ypanningfloor = 1;
 			}
 		}
 	}

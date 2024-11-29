@@ -86,8 +86,6 @@ include("edf/monsters/sorcerer.edf")
 include("edf/monsters/catharsi.edf")
 include("edf/monsters/turbopinky.edf")
 include("edf/monsters/miketyson.edf")
-include("edf/monsters/diabolist.edf")
-include("edf/monsters/hivemother.edf")
 include("edf/monsters/spectrecaco.edf")
 include("edf/monsters/marine.edf") //mutineer
 include("edf/monsters/stealthmarine.edf") // mutineer
@@ -96,8 +94,7 @@ include("edf/monsters/suicidebomber.edf")
 include("edf/monsters/cyberbaron.edf") // Cool design that uses counter variables.
 include("edf/monsters/grell.edf") // Weaker flying enemy
 include("edf/monsters/rocketzombie.edf") // Rocket Zombie
-include("edf/monsters/nightmaredemon.edf") // Nightmare Demon
-include("edf/monsters/astralcacodemon.edf")
+include("edf/monsters/minimastermind.edf") // Tanky hitscanner
 
 //sound code
 include("edf/sound/sounddefs.edf")

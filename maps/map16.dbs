@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 13.54927f;
-		viewpositiony = -166.7196f;
-		viewscale = 6.528419f;
+		viewpositionx = -585.9974f;
+		viewpositiony = 292.9539f;
+		viewscale = 1.352523f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -101,10 +101,10 @@ maps
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 48;
+						sectordepth = 16;
 						spacing = 0;
 						frontside = true;
-						singlesectors = false;
+						singlesectors = true;
 						distinctsectors = false;
 						singledirection = false;
 						distinctbaseheights = true;
@@ -119,12 +119,12 @@ maps
 						applyceilingtexture = false;
 						ceilingtexture = "";
 						applyuppertexture = true;
-						uppertexture = "STARTAN2";
+						uppertexture = "STONE2";
 						upperunpegged = true;
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = true;
-						lowertexture = "STARTAN2";
+						lowertexture = "STONE2";
 						lowerunpegged = true;
 					}
 				}

@@ -1,0 +1,22 @@
+thingtype MiniMastermind : Spiderdemon, 30029 {
+	spawnhealth 500
+	speed        12
+	height       48.0
+	radius       48.0
+	mass        600
+	painchance  128
+	
+	xscale   0.5
+	yscale   0.5
+	
+	remflags E3M8BOSS|BOSS
+	
+	states
+	@"
+		Missile:
+			SPID A  10 bright A_FaceTarget
+			SPID GH  4 bright A_CPosAttack
+			SPID H   1 bright A_SpidRefire
+			goto Missile+1
+	"@
+}
