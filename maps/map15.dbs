@@ -18,14 +18,13 @@ maps
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
-				requiredarchives = "";
 			}
 		}
 		defaultfloortexture = "FLAT5_5";
-		defaultceiltexture = "CEIL1_1";
-		defaulttoptexture = "REDWALL";
-		defaultwalltexture = "REDWALL";
-		defaultbottomtexture = "REDWALL";
+		defaultceiltexture = "CEIL3_2";
+		defaulttoptexture = "COMPBLUE";
+		defaultwalltexture = "COMPBLUE";
+		defaultbottomtexture = "COMPBLUE";
 		custombrightness = 196;
 		customfloorheight = 0;
 		customceilheight = 128;
@@ -38,9 +37,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -510.8968f;
-		viewpositiony = 446.7449f;
-		viewscale = 0.8449882f;
+		viewpositionx = -840.2844f;
+		viewpositiony = 505.7911f;
+		viewscale = 0.4999861f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -51,7 +50,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 8;
+			gridsize = 4;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -83,6 +82,15 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
+		}
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				ypanningfloor = 1;
+			}
 		}
 		
 		scriptdocuments

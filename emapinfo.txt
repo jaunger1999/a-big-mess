@@ -175,3 +175,13 @@
 	aircontrol = 10000
 	disable-jump = false
 	killfinale = true
+[MAP21]
+	levelname       = Map 21: Obligatory Plutonia Inspired Map
+	creator         = jaunger
+	music           = D_BLAKN1
+	inter-levelname = Obligatory Plutonia Inspired Map
+	nextlevel       = MAP22
+	partime         = 120
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
