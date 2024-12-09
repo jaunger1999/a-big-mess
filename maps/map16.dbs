@@ -21,7 +21,7 @@ maps
 				requiredarchives = "";
 			}
 		}
-		defaultfloortexture = "FLOOR4_8";
+		defaultfloortexture = "FLOOR5_1";
 		defaultceiltexture = "FLOOR5_1";
 		defaulttoptexture = "STONE3";
 		defaultwalltexture = "STONE3";
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -585.9974f;
-		viewpositiony = 292.9539f;
-		viewscale = 1.352523f;
+		viewpositionx = 831.575f;
+		viewpositiony = 1040.522f;
+		viewscale = 1.758273f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -101,11 +101,11 @@ maps
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 16;
+						sectordepth = 32;
 						spacing = 0;
-						frontside = true;
+						frontside = false;
 						singlesectors = true;
-						distinctsectors = false;
+						distinctsectors = true;
 						singledirection = false;
 						distinctbaseheights = true;
 						flipping = 0;
@@ -119,12 +119,12 @@ maps
 						applyceilingtexture = false;
 						ceilingtexture = "";
 						applyuppertexture = true;
-						uppertexture = "STONE2";
+						uppertexture = "-";
 						upperunpegged = true;
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = true;
-						lowertexture = "STONE2";
+						lowertexture = "BRICK7";
 						lowerunpegged = true;
 					}
 				}

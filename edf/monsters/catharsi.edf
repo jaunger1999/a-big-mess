@@ -8,12 +8,12 @@ thingtype Catharsi : Mobj, 30009
 {
   basictype Monster
 
-  spawnhealth  80
-  speed        8
-  radius       20.0
-  height       56.0
-  reactiontime 8
-  painchance   140
+  spawnhealth  100
+  speed          8
+  radius        20.0
+  height        56.0
+  reactiontime   8
+  painchance    30
   mass         100
 
   seesound    "catharsi/sight"

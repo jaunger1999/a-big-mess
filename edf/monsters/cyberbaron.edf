@@ -179,11 +179,11 @@ thingtype CyberbaronRocket {
 	states
 	@"
 	Spawn:
-		FBRS A 2 Bright A_SteamSpawn(OGTracerSmoke)
+		MROK A 2 Bright A_SteamSpawn(OGTracerSmoke)
 		loop
 	Death:
-		BAL3 C 6 Bright A_DetonateEx(24, 48, 0, 1, 0, 0, 0, 1, 0)
-		BAL3 DE 6 Bright
+		MEXP A     6 Bright A_DetonateEx(24, 48, 0, 1, 0, 0, 0, 1, 0)
+		MEXP BCDEF 6 Bright
 		stop
 	"@
 }

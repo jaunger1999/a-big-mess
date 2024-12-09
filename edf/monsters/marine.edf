@@ -4,7 +4,7 @@ thingtype Marine
   basictype Monster
 
   spawnhealth  100
-  speed         10
+  speed         20
   radius        16.0
   height        56.0
   reactiontime  64
@@ -36,9 +36,9 @@ thingtype Marine
     Missile:
       ALLY E  15        A_FaceTarget
       ALLY F   2 bright A_BspiAttack
-      ALLY E   1        A_FaceTarget
+      ALLY E   3        A_FaceTarget
       ALLY F   2 bright A_BspiAttack
-      ALLY E   1        A_FaceTarget
+      ALLY E   3        A_FaceTarget
       ALLY F   2 bright A_BspiAttack
       ALLY E   5
       goto See

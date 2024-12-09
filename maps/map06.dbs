@@ -9,7 +9,7 @@ maps
 	{
 		defaultwalltexture = "FIREBLU1";
 		overridemiddletexture = false;
-		defaultceiltexture = "FLOOR6_1";
+		defaultceiltexture = "CEIL4_1";
 		overrideceiltexture = false;
 		custombrightness = 196;
 		scriptcompiler = "zdoom_acs.cfg";
@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 913.7476f;
-		viewpositionx = 3157.138f;
+		viewpositiony = 176.9902f;
+		viewpositionx = -1045.349f;
 		
 		testprecommand
 		{
@@ -48,11 +48,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 128;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.4735605f;
+		viewscale = 0.2291163f;
 		
 		reloadresourceprecommand
 		{
@@ -63,7 +63,7 @@ maps
 		defaulttoptexture = "FIREBLU1";
 		overridebottomtexture = false;
 		defaultbottomtexture = "FIREBLU1";
-		defaultfloortexture = "FLOOR6_1";
+		defaultfloortexture = "CEIL4_1";
 		overrideceilheight = false;
 		overridebrightness = false;
 		
@@ -159,8 +159,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 3559;
-				firstvisibleline = 102;
+				caretposition = 3168;
+				firstvisibleline = 5;
 				activetab = true;
 			}
 		}

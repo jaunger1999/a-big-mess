@@ -1,0 +1,55 @@
+thingtype SSGGuy : Mobj, 30030
+{
+  spawnhealth 140
+  seesound    posit2
+  painchance  128
+  painsound   popain
+  deathsound  podth2
+  speed       8
+  height      56.0
+  radius      20.0
+  activesound posact
+  cflags      SOLID|SHOOTABLE|COUNTKILL|FOOTCLIP|SPACMONSTER|PASSMOBJ
+  droptype    AmmoShellBox
+  obituary_normal "was blasted by a super shotgun guy"
+
+  states
+  @"
+  Spawn:
+    GPOS AB 10 A_Look
+    loop
+  See:
+    GPOS AABBCCDD 3 A_Chase
+    loop
+  Missile:
+    GPOS E 10        A_FaceTarget
+    GPOS F 10 bright A_BulletAttack("fire", 3, 12, 2, 8, 0) 
+	GPOS E 10
+    goto See
+  Pain:
+    GPOS G 3
+    GPOS G 3 A_Pain
+    goto See
+  Death:
+    GPOS H  5
+    GPOS I  5 A_Scream
+    GPOS J  5 A_Fall
+    GPOS K  5
+    GPOS L  5
+	GPOS M  5
+	GPOS N -1
+    stop
+  XDeath:
+    GPOS O  5
+    GPOS P  5 A_XScream
+    GPOS Q  5 A_Fall
+    GPOS RS 5
+    GPOS T -1
+    stop
+  Raise:
+    GPOS LKJIH 5
+    goto See
+  "@
+}
+
+sound "fire"        { lump "DSDSHTGN" ; pitchvariance Doom; }

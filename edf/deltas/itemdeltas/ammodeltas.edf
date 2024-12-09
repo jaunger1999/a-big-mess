@@ -44,7 +44,7 @@ thingdelta {
   
   pickupeffect
   {
-    effects Shell
+    effects J_Shell
     message $GOTSHELLS
     sound   "getshells"
   }
@@ -53,18 +53,25 @@ thingdelta {
 ammoeffect J_Shell {
 	ammo   AmmoShell
 	amount 4
-	dropamount 2 // no
+	dropamount 2 // this conflicts with the visual lol
 }
 
 thingdelta {
   name AmmoShellBox
   
   pickupeffect {
-    effects ShellBox
+    effects J_ShellBox
     message $GOTSHELLBOX
     sound   "getshellbox"
   }
 }
+
+ammoeffect J_ShellBox {
+	ammo   AmmoShell
+	amount     20
+	dropamount 10
+}
+
 
 thingdelta {
   name AmmoClip

@@ -185,3 +185,13 @@
 	aircontrol      = 10000
 	disable-jump    = false
 	killfinale      = true
+[MAP22]
+	levelname       = Map 22: Toilet of Yo Momma
+	creator         = jaunger
+	music           = D_UNHALL
+	inter-levelname = Toilet of Yo Momma
+	nextlevel       = MAP22
+	partime         = 120
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true

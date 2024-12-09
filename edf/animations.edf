@@ -58,9 +58,16 @@ animation
   tics 4
 }
 
+// Poo
+animation {
+  wall PFALL1
+
+  lastpic PFALL4
+  tics 4
+}
+
 // Tar
-animation
-{
+animation {
   flat OTAR__01
 
   lastpic OTAR__08

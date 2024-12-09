@@ -9,12 +9,12 @@ thingtype Grell
   doomednum 30011
   basictype FlyingMonster
 
-  spawnhealth 70
-  speed        8
-  radius      22
-  height      56
-  painchance  128
-  mass        50
+  spawnhealth 140
+  speed         8
+  radius       22
+  height       56
+  painchance   64
+  mass         50
 
   addflags NOGRAVITY|FLOAT|FLOATBOB|MONSTERPASS
 

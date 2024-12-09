@@ -2,8 +2,6 @@ thingdelta
 {
   name LostSoul
 	
-  spawnhealth 100
-	
   addflags NOBLOOD|MONSTERPASS
 
   bloodtype.normal BulletPuff
