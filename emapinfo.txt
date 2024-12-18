@@ -1,197 +1,197 @@
 [MAP01]
-	levelname = Map 1: A Big Mess
-	creator = jaunger
-	music = D_ETERN
+	levelname       = Map 1: A Big Mess
+	creator         = jaunger
+	music           = D_ETERN
 	inter-levelname = A Big Mess
-	nextlevel = MAP02
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
+	nextlevel       = MAP02
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
 [MAP02]
-	levelname = Map 2: Mike Tyson's Lunch Out
-	creator = jaunger
-	music = D_GOSS
-	inter-levelname = Mike Tyson's Lunch Out
-	nextlevel = MAP03
-	partime = 840
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP03]
-	levelname = Map 3: Portal & Polyobj Pandemonium
-	creator = jaunger
-	inter-levelname = Portal & Polyobj Pandemonium
-	nextlevel = MAP04
-	partime = 840
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP04]
-	levelname = Map 4: Ripping Off Romero
-	creator = jaunger
-	music = D_MACH
-	inter-levelname = Ripping Off Romero
-	nextlevel = MAP05
-	partime = 840
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP05]
-	levelname = Map 5: The Devil's Punch Bowl
-	creator = jaunger
-	music = D_APRIL
-	inter-levelname = The Devil's Punch Bowl
-	nextlevel = MAP06
-	partime = 720
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP06]
-	levelname = Map 6: Constipation! in da Club
-	creator = jaunger
-	music = D_CLUB
-	inter-levelname = Constipation! in da Club
-	nextlevel = MAP07
-	partime = 720
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP07]
-	levelname = Map 7: Doom is a 3D Game!
-	creator = jaunger
-	music = D_ARGENT
-	inter-levelname = Doom is a 3D Game!
-	nextlevel = MAP08
-	partime = 840
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP08]
-	levelname = Map 8: Residence Malevolence
-	creator = jaunger
-	music = D_MACABR
-	inter-levelname = Residence Malevolence
-	nextlevel = MAP09
-	partime = 840
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP09]
-	levelname = Map 9: In Space...
-	creator = jaunger
-	music = D_WALLS
-	inter-levelname = In Space...
-	nextlevel = MAP10
-	partime = 840
-	skyname = GLXSKY06
-	aircontrol = 10000
-	boss-specials = E2M8
-	disable-jump = false
-	killfinale = true
-[MAP10]
-	levelname = Map 10: Eagle's Tower
-	creator = jaunger
-	music = D_EAGLE
-	inter-levelname = Eagle's Tower
-	nextlevel = MAP11
-	partime = 840
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP11]
-	levelname = Map 11: George's Lavaside Rendezvous
-	creator = jaunger
-	nextlevel = MAP12
-	inter-levelname = George's Lavaside Rendezvous
-	partime = 720
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP12]
-	levelname = Map 12: Follow that Train BJ!
-	creator = jaunger
-	nextlevel = MAP12
-	inter-levelname = Follow that Train BJ!
-	partime = 720
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP13]
-	levelname = Map 13: A Big Entryway
-	creator = jaunger
-	music = D_RUNNIN
-	inter-levelname = A Big Entryway
-	nextlevel = MAP14
-	partime = 720
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP14]
-	levelname = Map 14: Gotta Get Up to Get Down
-	creator = jaunger
-	music = D_ACTION
+	levelname       = Map 2: Gotta Get Up to Get Down
+	creator         = jaunger
+	music           = D_DREDAY
 	inter-levelname = Gotta Get Up to Get Down
-	nextlevel = MAP15
-	partime = 720
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP15]
-	levelname       = Map 15: Kim Jong Unpossible: A POE Heist Starring Tom Cruise
+	nextlevel       = MAP03
+	partime         = 720
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP03]
+	levelname       = Map 3: Mike Tyson's Lunch Out
+	creator         = jaunger
+	music           = D_GOSS
+	inter-levelname = Mike Tyson's Lunch Out
+	nextlevel       = MAP04
+	partime         = 840
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP04]
+	levelname       = Map 4: Obligatory Plutonia Inspired Map
+	creator         = jaunger
+	music           = D_BLAKN1
+	inter-levelname = Obligatory Plutonia Inspired Map
+	nextlevel       = MAP05
+	partime         = 120
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP05]
+	levelname       = Map 5: Kim Jong Unpossible: A POE Heist Starring Tom Cruise
 	creator         = jaunger
 	music           = D_MISION
 	inter-levelname = Kim Jong Unpossible: A POE Heist Starring Tom Cruise
-	nextlevel       = MAP16
+	nextlevel       = MAP06
 	partime         = 720
 	aircontrol      = 10000
 	airfriction     = 0
 	disable-jump    = false
 	killfinale      = true
-[MAP16]
-	levelname       = Map 16: Self Fellating Brick Laying
+[MAP06]
+	levelname       = Map 6: Constipation! in da Club
+	creator         = jaunger
+	music           = D_CLUB
+	inter-levelname = Constipation! in da Club
+	nextlevel       = MAP07
+	partime         = 720
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP07]
+	levelname       = Map 7: Doom is a 3D Game!
+	creator         = jaunger
+	music           = D_ARGENT
+	inter-levelname = Doom is a 3D Game!
+	nextlevel       = MAP08
+	partime         = 840
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP08]
+	levelname       = Map 8: Residence Malevolence
+	creator         = jaunger
+	music           = D_MACABR
+	inter-levelname = Residence Malevolence
+	nextlevel       = MAP09
+	partime         = 840
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP09]
+	levelname       = Map 9: Self Fellating Brick Laying
 	creator         = jaunger
 	music           = D_DUNKEL
 	inter-levelname = Self Fellating Brick Laying
-	nextlevel       = MAP17
+	nextlevel       = MAP10
+	partime         = 720
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP10]
+	levelname       = Map 10: Toilet of Yo Momma
+	creator         = jaunger
+	music           = D_UNHALL
+	inter-levelname = Toilet of Yo Momma
+	nextlevel       = MAP11
+	partime         = 120
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP11]
+	levelname       = Map 9: In Space...
+	creator         = jaunger
+	music           = D_WALLS
+	inter-levelname = In Space...
+	nextlevel       = MAP10
+	partime         = 840
+	skyname         = GLXSKY06
+	aircontrol      = 10000
+	boss-specials   = E2M8
+	disable-jump    = false
+	killfinale      = true
+[MAP12]
+	levelname       = Map 4: Ripping Off Romero
+	creator         = jaunger
+	music           = D_HUNTER
+	inter-levelname = Ripping Off Romero
+	nextlevel       = MAP05
+	partime         = 840
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP13]
+	levelname       = Map 5: The Devil's Punch Bowl
+	creator         = jaunger
+	music           = D_APRIL
+	inter-levelname = The Devil's Punch Bowl
+	nextlevel       = MAP06
+	partime         = 720
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP14]
+	levelname       = Map 10: Eagle's Tower
+	creator         = jaunger
+	music           = D_EAGLE
+	inter-levelname = Eagle's Tower
+	nextlevel       = MAP11
+	partime         = 840
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP15]
+	levelname       = Map 11: George's Lavaside Rendezvous
+	creator         = jaunger
+	nextlevel       = MAP12
+	inter-levelname = George's Lavaside Rendezvous
+	partime         = 720
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP16]
+	levelname       = Map 12: Follow that Train BJ!
+	creator         = jaunger
+	nextlevel       = MAP12
+	inter-levelname = Follow that Train BJ!
 	partime         = 720
 	aircontrol      = 10000
 	disable-jump    = false
 	killfinale      = true
 [MAP17]
-	levelname = Map 17: You Don't Scare Me, Archie!!
-	creator = jaunger
-	inter-levelname = You Don't Scare Me, Archie!!
-	nextlevel = MAP18
-	partime = 720
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP18]
-	levelname = Map 18: Jaunger's Projectile Hell
-	creator = jaunger
-	inter-levelname = Jaunger's Projectile Hell
-	nextlevel = MAP19
-	partime = 720
-	aircontrol = 10000
-	disable-jump = false
-	killfinale = true
-[MAP21]
-	levelname       = Map 21: Obligatory Plutonia Inspired Map
+	levelname       = Map 13: A Big Entryway
 	creator         = jaunger
-	music           = D_BLAKN1
-	inter-levelname = Obligatory Plutonia Inspired Map
-	nextlevel       = MAP22
-	partime         = 120
+	music           = D_RUNNIN
+	inter-levelname = A Big Entryway
+	nextlevel       = MAP14
+	partime         = 720
 	aircontrol      = 10000
 	disable-jump    = false
 	killfinale      = true
-[MAP22]
-	levelname       = Map 22: Toilet of Yo Momma
+[MAP18]
+	levelname       = Map 17: You Don't Scare Me, Archie!!
 	creator         = jaunger
-	music           = D_UNHALL
-	inter-levelname = Toilet of Yo Momma
-	nextlevel       = MAP22
-	partime         = 120
+	inter-levelname = You Don't Scare Me, Archie!!
+	nextlevel       = MAP18
+	partime         = 720
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP19]
+	levelname       = Map 18: Jaunger's Projectile Hell
+	creator         = jaunger
+	inter-levelname = Jaunger's Projectile Hell
+	nextlevel       = MAP19
+	partime         = 720
+	aircontrol      = 10000
+	disable-jump    = false
+	killfinale      = true
+[MAP31]
+	levelname       = Map 31: Portal & Polyobj Pandemonium
+	creator         = jaunger
+	inter-levelname = Portal & Polyobj Pandemonium
+	nextlevel       = MAP25
+	partime         = 840
 	aircontrol      = 10000
 	disable-jump    = false
 	killfinale      = true

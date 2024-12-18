@@ -22,7 +22,7 @@ maps
 			}
 		}
 		defaultfloortexture = "GRNROCK";
-		defaultceiltexture = "F_SKY1";
+		defaultceiltexture = "CEIL5_1";
 		defaulttoptexture = "STARTAN2";
 		defaultwalltexture = "STARTAN2";
 		defaultbottomtexture = "STARTAN2";
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 93.18429f;
-		viewpositiony = 1331.072f;
-		viewscale = 0.4999799f;
+		viewpositionx = 772.2823f;
+		viewpositiony = -66.41128f;
+		viewscale = 0.8449504f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -51,7 +51,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 4;
+			gridsize = 8;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -162,6 +162,87 @@ maps
 				caretposition = 209;
 				activetab = true;
 			}
+		}
+	}
+	
+	MAP21
+	{
+		defaultwalltexture = "BRICK5";
+		overridemiddletexture = false;
+		defaultceiltexture = "F_SKY1";
+		overrideceiltexture = false;
+		custombrightness = 196;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "D:\\Doom Maps\\a big mess";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+		}
+		viewpositiony = -137.3573f;
+		viewpositionx = 223.6326f;
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		customceilheight = 128;
+		customfloorheight = 0;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 32;
+			background = "";
+			backoffsety = 0;
+		}
+		viewscale = 0.4279739f;
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaulttoptexture = "BRICK5";
+		overridebottomtexture = false;
+		defaultbottomtexture = "BRICK5";
+		defaultfloortexture = "FLOOR7_1";
+		overrideceilheight = false;
+		overridebrightness = false;
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		overridefloorheight = false;
+		overridetoptexture = false;
+		uselongtexturenames = false;
+		overridefloortexture = false;
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
 		}
 	}
 }

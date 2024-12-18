@@ -5,14 +5,8 @@ strictpatches = 0;
 maps
 {
 	
-	MAP02
+	MAP14
 	{
-		defaultwalltexture = "BROWN1";
-		overridemiddletexture = false;
-		defaultceiltexture = "CEIL3_3";
-		overrideceiltexture = false;
-		custombrightness = 196;
-		scriptcompiler = "zdoom_acs.cfg";
 		
 		resources
 		{
@@ -27,32 +21,41 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -2201.909f;
-		viewpositionx = -62.29464f;
-		
-		testprecommand
-		{
-			autocloseonsuccess = true;
-			exitcodeiserror = true;
-			stderriserror = true;
-		}
-		customceilheight = 128;
+		defaultfloortexture = "STEP2";
+		defaultceiltexture = "CEIL1_1";
+		defaulttoptexture = "COMPBLUE";
+		defaultwalltexture = "COMPBLUE";
+		defaultbottomtexture = "COMPBLUE";
+		custombrightness = 196;
 		customfloorheight = 0;
+		customceilheight = 128;
+		overridefloortexture = false;
+		overrideceiltexture = false;
+		overridetoptexture = false;
+		overridemiddletexture = false;
+		overridebottomtexture = false;
+		overridefloorheight = false;
+		overrideceilheight = false;
+		overridebrightness = false;
+		uselongtexturenames = false;
+		viewpositionx = -631.6098f;
+		viewpositiony = 1391.351f;
+		viewscale = 0.6654071f;
+		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
 		{
-			backoffsetx = 0;
-			backsource = 0;
-			gridoriginy = 0;
-			backscaley = 100;
-			gridrotate = 0;
-			backscalex = 100;
-			gridoriginx = 0;
-			gridsize = 16;
 			background = "";
+			backsource = 0;
+			backoffsetx = 0;
 			backoffsety = 0;
+			backscalex = 100;
+			backscaley = 100;
+			gridsize = 8;
+			gridrotate = 0;
+			gridoriginx = 0;
+			gridoriginy = 0;
 		}
-		viewscale = 0.216023f;
 		
 		reloadresourceprecommand
 		{
@@ -60,23 +63,6 @@ maps
 			exitcodeiserror = true;
 			stderriserror = true;
 		}
-		defaulttoptexture = "BROWN1";
-		overridebottomtexture = false;
-		defaultbottomtexture = "BROWN1";
-		defaultfloortexture = "FLOOR0_5";
-		overrideceilheight = false;
-		overridebrightness = false;
-		
-		testpostcommand
-		{
-			autocloseonsuccess = true;
-			exitcodeiserror = true;
-			stderriserror = true;
-		}
-		overridefloorheight = false;
-		overridetoptexture = false;
-		uselongtexturenames = false;
-		overridefloortexture = false;
 		
 		reloadresourcepostcommand
 		{
@@ -85,25 +71,73 @@ maps
 			stderriserror = true;
 		}
 		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		plugins
+		{
+			
+			stairsectorbuilder
+			{
+				
+				prefabs
+				{
+					
+					prefab1
+					{
+						name = "[Previous]";
+						numberofsectors = 6;
+						outervertexmultiplier = 1;
+						innervertexmultiplier = 1;
+						stairtype = 0;
+						sectordepth = 16;
+						spacing = 0;
+						frontside = true;
+						singlesectors = false;
+						distinctsectors = false;
+						singledirection = false;
+						distinctbaseheights = false;
+						flipping = 0;
+						numberofcontrolpoints = 1;
+						applyfloormod = true;
+						floormod = 0;
+						applyceilingmod = true;
+						ceilingmod = 0;
+						applyfloortexture = false;
+						floortexture = "";
+						applyceilingtexture = false;
+						ceilingtexture = "";
+						applyuppertexture = true;
+						uppertexture = "-";
+						upperunpegged = true;
+						applymiddletexture = false;
+						middletexture = "-";
+						applylowertexture = true;
+						lowertexture = "-";
+						lowerunpegged = true;
+					}
+				}
+			}
+		}
+		
 		fieldtypes
 		{
 			
 			sector
 			{
-				blocksound = 3;
 				ypanningfloor = 1;
-			}
-			
-			thing
-			{
-				class4 = 3;
-				class5 = 3;
-				class6 = 3;
-				class7 = 3;
-				class8 = 3;
-				skill6 = 3;
-				skill7 = 3;
-				skill8 = 3;
+				lightcolor = 0;
 			}
 		}
 		
@@ -126,9 +160,100 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 849;
+				caretposition = 291;
 				activetab = true;
 			}
+		}
+	}
+	
+	MAP02
+	{
+		defaultwalltexture = "COMPBLUE";
+		overridemiddletexture = false;
+		defaultceiltexture = "CEIL1_1";
+		overrideceiltexture = false;
+		custombrightness = 196;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "D:\\Doom Maps\\a big mess";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+		}
+		viewpositiony = 657.8961f;
+		viewpositionx = -1130.011f;
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		customceilheight = 128;
+		customfloorheight = 0;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 32;
+			background = "";
+			backoffsety = 0;
+		}
+		viewscale = 1.012071f;
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaulttoptexture = "COMPBLUE";
+		overridebottomtexture = false;
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				ypanningfloor = 1;
+				lightcolor = 0;
+			}
+		}
+		defaultbottomtexture = "COMPBLUE";
+		defaultfloortexture = "STEP2";
+		overrideceilheight = false;
+		overridebrightness = false;
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		overridefloorheight = false;
+		overridetoptexture = false;
+		uselongtexturenames = false;
+		overridefloortexture = false;
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
 		}
 	}
 }

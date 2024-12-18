@@ -21,11 +21,11 @@ maps
 				requiredarchives = "";
 			}
 		}
-		defaultfloortexture = "FLOOR0_1";
-		defaultceiltexture = "CEIL1_1";
-		defaulttoptexture = "BRICK3";
-		defaultwalltexture = "BRICK3";
-		defaultbottomtexture = "BRICK3";
+		defaultfloortexture = "FLOOR7_1";
+		defaultceiltexture = "F_SKY1";
+		defaulttoptexture = "BRICK5";
+		defaultwalltexture = "BRICK5";
+		defaultbottomtexture = "BRICK5";
 		custombrightness = 196;
 		customfloorheight = 0;
 		customceilheight = 128;
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 163.8741f;
-		viewpositiony = -55.94146f;
-		viewscale = 1.35253f;
+		viewpositionx = 154.3306f;
+		viewpositiony = -772.3566f;
+		viewscale = 1.04041f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -51,7 +51,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 16;
+			gridsize = 8;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -97,13 +97,13 @@ maps
 					prefab1
 					{
 						name = "[Previous]";
-						numberofsectors = 1;
+						numberofsectors = 4;
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 64;
+						sectordepth = 8;
 						spacing = 0;
-						frontside = false;
+						frontside = true;
 						singlesectors = true;
 						distinctsectors = false;
 						singledirection = false;
@@ -124,7 +124,7 @@ maps
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = true;
-						lowertexture = "BRICK3";
+						lowertexture = "ASHWALL2";
 						lowerunpegged = true;
 					}
 				}

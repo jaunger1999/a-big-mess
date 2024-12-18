@@ -5,11 +5,11 @@ strictpatches = 0;
 maps
 {
 	
-	MAP03
+	MAP02
 	{
-		defaultwalltexture = "STARTAN2";
+		defaultwalltexture = "BROWN1";
 		overridemiddletexture = false;
-		defaultceiltexture = "CEIL1_1";
+		defaultceiltexture = "CEIL3_3";
 		overrideceiltexture = false;
 		custombrightness = 196;
 		scriptcompiler = "zdoom_acs.cfg";
@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -457.2513f;
-		viewpositionx = 1380.422f;
+		viewpositiony = 299.0829f;
+		viewpositionx = 22.10184f;
 		
 		testprecommand
 		{
@@ -52,7 +52,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.6111716f;
+		viewscale = 0.2808295f;
 		
 		reloadresourceprecommand
 		{
@@ -60,10 +60,10 @@ maps
 			exitcodeiserror = true;
 			stderriserror = true;
 		}
-		defaulttoptexture = "STARTAN2";
+		defaulttoptexture = "BROWN1";
 		overridebottomtexture = false;
-		defaultbottomtexture = "STARTAN2";
-		defaultfloortexture = "FLOOR0_1";
+		defaultbottomtexture = "BROWN1";
+		defaultfloortexture = "FLOOR0_5";
 		overrideceilheight = false;
 		overridebrightness = false;
 		
@@ -85,58 +85,49 @@ maps
 			stderriserror = true;
 		}
 		
-		plugins
-		{
-			
-			stairsectorbuilder
-			{
-				
-				prefabs
-				{
-					
-					prefab1
-					{
-						name = "[Previous]";
-						numberofsectors = 4;
-						outervertexmultiplier = 1;
-						innervertexmultiplier = 1;
-						stairtype = 0;
-						sectordepth = 32;
-						spacing = 0;
-						frontside = false;
-						singlesectors = false;
-						distinctsectors = false;
-						singledirection = false;
-						distinctbaseheights = true;
-						flipping = 0;
-						numberofcontrolpoints = 1;
-						applyfloormod = true;
-						floormod = 16;
-						applyceilingmod = true;
-						ceilingmod = 16;
-						applyfloortexture = false;
-						floortexture = "";
-						applyceilingtexture = false;
-						ceilingtexture = "";
-						applyuppertexture = true;
-						uppertexture = "STARTAN2";
-						upperunpegged = true;
-						applymiddletexture = false;
-						middletexture = "-";
-						applylowertexture = true;
-						lowertexture = "STARTAN2";
-						lowerunpegged = true;
-					}
-				}
-			}
-		}
-		
 		fieldtypes
 		{
 			
 			sector
 			{
+				blocksound = 3;
 				ypanningfloor = 1;
+			}
+			
+			thing
+			{
+				class4 = 3;
+				class5 = 3;
+				class6 = 3;
+				class7 = 3;
+				class8 = 3;
+				skill6 = 3;
+				skill7 = 3;
+				skill8 = 3;
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 849;
+				activetab = true;
 			}
 		}
 	}

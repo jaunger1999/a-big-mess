@@ -88,9 +88,9 @@ maps
 	
 	MAP10
 	{
-		defaultwalltexture = "MARBLE2";
+		defaultwalltexture = "STARTAN2";
 		overridemiddletexture = false;
-		defaultceiltexture = "CEIL1_1";
+		defaultceiltexture = "F_SKY1";
 		overrideceiltexture = false;
 		custombrightness = 196;
 		scriptcompiler = "zdoom_acs.cfg";
@@ -108,8 +108,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 834.9797f;
-		viewpositionx = 14064.11f;
+		viewpositiony = 3407.291f;
+		viewpositionx = 873.3401f;
 		
 		testprecommand
 		{
@@ -133,7 +133,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 1.401399f;
+		viewscale = 0.2903365f;
 		
 		reloadresourceprecommand
 		{
@@ -141,10 +141,10 @@ maps
 			exitcodeiserror = true;
 			stderriserror = true;
 		}
-		defaulttoptexture = "MARBLE2";
+		defaulttoptexture = "STARTAN2";
 		overridebottomtexture = false;
-		defaultbottomtexture = "MARBLE2";
-		defaultfloortexture = "DEM1_5";
+		defaultbottomtexture = "STARTAN2";
+		defaultfloortexture = "SLIME01";
 		overrideceilheight = false;
 		overridebrightness = false;
 		
@@ -164,15 +164,6 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
-		}
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				ypanningfloor = 1;
-			}
 		}
 		
 		scriptdocuments

@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 176.9902f;
-		viewpositionx = -1045.349f;
+		viewpositiony = 3353.094f;
+		viewpositionx = 79.06149f;
 		
 		testprecommand
 		{
@@ -48,11 +48,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 8;
+			gridsize = 0.5;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.2291163f;
+		viewscale = 0.09811039f;
 		
 		reloadresourceprecommand
 		{
@@ -107,7 +107,7 @@ maps
 						singlesectors = false;
 						distinctsectors = false;
 						singledirection = false;
-						distinctbaseheights = false;
+						distinctbaseheights = true;
 						flipping = 0;
 						numberofcontrolpoints = 1;
 						applyfloormod = true;
@@ -119,7 +119,7 @@ maps
 						applyceilingtexture = false;
 						ceilingtexture = "";
 						applyuppertexture = true;
-						uppertexture = "-";
+						uppertexture = "FIREBLU1";
 						upperunpegged = true;
 						applymiddletexture = false;
 						middletexture = "-";
