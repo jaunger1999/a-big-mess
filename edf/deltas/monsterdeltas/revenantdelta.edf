@@ -9,3 +9,17 @@ thingdelta
   
   height 72
 }
+
+thingdelta
+{
+	name TracerShot
+
+	states @"
+		Spawn:
+		TNT1 A    0        A_PlaySoundEx("bstatk", chan_auto)
+		FATB ABAB 2 bright A_Tracer
+    	loop
+	"@
+}
+
+sound bstatk { lump BSTATK; pitchvariance Doom; }
