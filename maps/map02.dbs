@@ -185,10 +185,11 @@ maps
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
+				requiredarchives = "";
 			}
 		}
-		viewpositiony = 568.23f;
-		viewpositionx = 2364.944f;
+		viewpositiony = -107.3457f;
+		viewpositionx = 1367.445f;
 		
 		testprecommand
 		{
@@ -212,7 +213,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 3.757704f;
+		viewscale = 0.2155485f;
 		
 		reloadresourceprecommand
 		{
@@ -243,6 +244,52 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
+		}
+		
+		plugins
+		{
+			
+			stairsectorbuilder
+			{
+				
+				prefabs
+				{
+					
+					prefab1
+					{
+						name = "[Previous]";
+						numberofsectors = 1;
+						outervertexmultiplier = 1;
+						innervertexmultiplier = 1;
+						stairtype = 0;
+						sectordepth = 16;
+						spacing = 0;
+						frontside = false;
+						singlesectors = false;
+						distinctsectors = false;
+						singledirection = false;
+						distinctbaseheights = false;
+						flipping = 0;
+						numberofcontrolpoints = 1;
+						applyfloormod = true;
+						floormod = 0;
+						applyceilingmod = true;
+						ceilingmod = 0;
+						applyfloortexture = false;
+						floortexture = "";
+						applyceilingtexture = false;
+						ceilingtexture = "";
+						applyuppertexture = true;
+						uppertexture = "-";
+						upperunpegged = true;
+						applymiddletexture = false;
+						middletexture = "-";
+						applylowertexture = true;
+						lowertexture = "-";
+						lowerunpegged = true;
+					}
+				}
+			}
 		}
 		
 		fieldtypes
