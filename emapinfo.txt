@@ -20,7 +20,7 @@
 [MAP03]
 	levelname       = Map 3: Mike Tyson's Lunch Out
 	creator         = jaunger
-	music           = D_GOSS
+	music           = D_STILL
 	inter-levelname = Mike Tyson's Lunch Out
 	nextlevel       = MAP04
 	partime         = 840
