@@ -1,0 +1,43 @@
+thingtype Looney_Archvile : Archvile, 30035
+{
+	states @"
+		Raise:
+		  VILE YX       5
+		  VILE WVUTSRQ  7
+		  goto See
+	"@
+}
+
+thingtype Looney_Cyber : Cyberdemon, 30036
+{
+	states @"
+		Raise:
+			CYBR P        30
+			CYBR ONMLKJIH 10
+			goto See
+	 "@
+}
+
+// tarnsman's projectile hell caco
+thingtype Looney_Caco : Cacodemon, 30037
+{
+	states @"
+		See:
+			HEAD A 1 A_Chase
+			loop
+		Missile:
+			HEAD B 5        A_FaceTarget
+			HEAD C 5        A_FaceTarget
+			HEAD D 5 bright A_HeadAttack
+			goto See
+		Pain:
+			HEAD E 3
+			HEAD E 3 A_Pain
+			HEAD F 6
+			goto See
+		Raise:
+			HEAD L 8 A_UnSetFlags(0, FOOTCLIP)
+			HEAD KJIHG 8
+			goto See
+	"@
+}
