@@ -13,7 +13,7 @@
 	music           = D_DREDAY
 	inter-levelname = Gotta Get Up to Get Down
 	nextlevel       = MAP03
-	partime         = 720
+	partime         = 180
 	aircontrol      = 10000
 	disable-jump    = false
 	killfinale      = true

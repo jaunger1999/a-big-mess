@@ -185,11 +185,10 @@ maps
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
-				requiredarchives = "";
 			}
 		}
-		viewpositiony = 657.8961f;
-		viewpositionx = -1130.011f;
+		viewpositiony = 568.23f;
+		viewpositionx = 2364.944f;
 		
 		testprecommand
 		{
@@ -209,11 +208,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 32;
+			gridsize = 4;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 1.012071f;
+		viewscale = 3.757704f;
 		
 		reloadresourceprecommand
 		{
@@ -223,16 +222,6 @@ maps
 		}
 		defaulttoptexture = "COMPBLUE";
 		overridebottomtexture = false;
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				ypanningfloor = 1;
-				lightcolor = 0;
-			}
-		}
 		defaultbottomtexture = "COMPBLUE";
 		defaultfloortexture = "STEP2";
 		overrideceilheight = false;
@@ -254,6 +243,16 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
+		}
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				ypanningfloor = 1;
+				lightcolor = 0;
+			}
 		}
 	}
 }
