@@ -96,6 +96,7 @@ include("edf/monsters/grell.edf") // Weaker flying enemy
 include("edf/monsters/rocketzombie.edf") // Rocket Zombie
 include("edf/monsters/minimastermind.edf") // Tanky hitscanner
 include("edf/monsters/ssgguy.edf") // Kinda tanky hitscanner
+include("edf/monsters/looney.edf")
 
 //sound code
 include("edf/sound/sounddefs.edf")
