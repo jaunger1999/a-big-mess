@@ -3,6 +3,9 @@ thingtype Marine
   doomednum 30018
   basictype Monster
 
+  seesound    bgsit
+  activesound bgact1
+
   spawnhealth  100
   speed         20
   radius        16.0
