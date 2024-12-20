@@ -41,3 +41,14 @@ thingtype Looney_Caco : Cacodemon, 30037
 			goto See
 	"@
 }
+
+thingtype Looney_Spiderdemon : Spiderdemon, 30038
+{
+	states @"
+		Raise:
+			SPID S        30
+			SPID RQPONMLK 10
+			SPID J        20
+			goto See
+	"@
+}
