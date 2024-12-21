@@ -18,5 +18,10 @@ thingtype MiniMastermind : Spiderdemon, 30029 {
 			SPID GH  4 bright A_CPosAttack
 			SPID H   1 bright A_SpidRefire
 			goto Missile+1
+		Raise:
+			SPID S        30
+			SPID RQPONMLK 10
+			SPID J        20
+			goto See
 	"@
 }
