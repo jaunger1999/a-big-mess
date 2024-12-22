@@ -44,7 +44,7 @@ thingdelta {
 
 	states
 		@"
-		Spawn: // They patrol the area now.
+		/*Spawn: // They patrol the area now.
 			TNT1 A 0 A_Look
 			POSS AA 4 A_RandomWalk
 			TNT1 A 0 A_Look
@@ -53,7 +53,7 @@ thingdelta {
 			POSS CC 4 A_RandomWalk
 			TNT1 A 0 A_Look
 			POSS DD 4 A_RandomWalk
-			loop
+			loop*/
 		See:
 			POSS AABBCCDD 4 A_Chase
 			loop
