@@ -89,6 +89,12 @@ animation {
 }
 
 animation {
+	wall P_SKY
+
+	flags SWIRL
+}
+
+animation {
   wall FIREBLU1
   
   flags SWIRL

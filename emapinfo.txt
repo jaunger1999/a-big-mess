@@ -32,6 +32,7 @@
 	creator         = jaunger
 	music           = D_BLAKN1
 	inter-levelname = Obligatory Plutonia Inspired Map
+	skyname         = P_SKY
 	nextlevel       = MAP05
 	partime         = 120
 	aircontrol      = 10000
