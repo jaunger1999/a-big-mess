@@ -8,7 +8,7 @@ thingdelta {
 	bloodtype.rip PersistentDoomBlood	
 	bloodtype.crush DoomBloodSpray
 	
-	radius 48
+	radius 56
 	damagefactor Plasma, 1.5
 	
 	states
