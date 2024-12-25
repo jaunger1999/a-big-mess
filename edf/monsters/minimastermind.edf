@@ -1,8 +1,8 @@
 thingtype MiniMastermind : Spiderdemon, 30029 {
-	spawnhealth 500
+	spawnhealth 600
 	speed        12
 	height       48.0
-	radius       48.0
+	radius       56.0
 	mass        600
 	painchance  128
 	
