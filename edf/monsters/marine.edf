@@ -6,15 +6,15 @@ thingtype Marine
   seesound    bgsit
   activesound bgact1
 
-  spawnhealth  100
-  speed         20
+  spawnhealth   80
+  speed         18 
   radius        16.0
   height        56.0
   reactiontime  64
   painchance   170
   mass         100
 
-  addflags HARMSPECIESMISSILE
+  addflags HARMSPECIESMISSILE|RANGEEIGHTTH
 
   bloodtype.normal DoomBloodSpray
   bloodtype.impact DoomBloodSpray
