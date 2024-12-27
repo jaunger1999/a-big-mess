@@ -79,6 +79,7 @@
 	aircontrol      = 10000
 	disable-jump    = false
 	killfinale      = true
+	lightning       = true
 [MAP09]
 	levelname       = Map 9: Self Fellating Brick Laying
 	creator         = jaunger
@@ -99,6 +100,7 @@
 	aircontrol      = 10000
 	disable-jump    = false
 	killfinale      = true
+	lightning       = true
 [MAP11]
 	levelname       = Map 9: In Space...
 	creator         = jaunger
