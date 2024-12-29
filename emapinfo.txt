@@ -28,10 +28,10 @@
 	disable-jump    = false
 	killfinale      = true
 [MAP04]
-	levelname       = Map 4: Obligatory Plutonia Inspired Map
+	levelname       = Map 4: No Patrick, Revenants & Chaingunners are not an instrument.
 	creator         = jaunger
 	music           = D_BLAKN1
-	inter-levelname = Obligatory Plutonia Inspired Map
+	levelpic        = MAYO
 	skyname         = P_SKY
 	nextlevel       = MAP05
 	partime         = 120
@@ -52,7 +52,7 @@
 [MAP06]
 	levelname       = Map 6: Constipation! in da Club
 	creator         = jaunger
-	music           = D_CLUB
+	music           = D_MAP05
 	inter-levelname = Constipation! in da Club
 	nextlevel       = MAP07
 	partime         = 720

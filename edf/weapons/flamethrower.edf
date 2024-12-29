@@ -46,7 +46,7 @@ weapongiver GiverFlamethrower
   ammogiven AmmoCell, 20
 }
 
-thingtype WeaponFlamethrower : Mobj, 32501
+thingtype WeaponFlamethrower : Mobj, 32502
 {
   flags SPECIAL
 
@@ -77,7 +77,7 @@ thingtype FlameShot
   speed  40.0
   radius 13.0
   height 8.0
-  damage 5
+  damage 1
   xscale 0.75
   yscale 0.75
   mod    Fire
